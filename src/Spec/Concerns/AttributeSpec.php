@@ -128,7 +128,7 @@ abstract class AttributeSpec
      */
     public function enum(): ?array
     {
-        return match ($this->jsonName()) {
+        $values = match ($this->jsonName()) {
             # PLUS properties
             'dataMining'              => $this->enumForDataMining(),
             'minorModelAgeDisclosure' => $this->enumForMinorModelAgeDisclosure(),
@@ -144,6 +144,12 @@ abstract class AttributeSpec
             'licensorTelephoneType2'  => $this->enumForLicensorTelephoneType(),
             default                   => null
         };
+
+        if ($values) {
+            return Exiftool::$printConv ? array_keys($values) : array_values($values);
+        }
+
+        return null;
     }
 
     protected function enumForImageRating(): array

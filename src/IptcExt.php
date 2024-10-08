@@ -23,14 +23,14 @@ class IptcExt
     public function getUgTopics(): array
     {
         return [
-            'admin'     => 'Administrative Details',
-            'gimgcont'  => 'General Image Content',
-            'imgreg'    => 'Image Region',
-            'licensing' => 'Licensing Use',
-            'location'  => 'Location',
-            'othings'   => 'Other Things Shown',
-            'person'    => 'Persons Shown',
-            'rights'    => 'Rights Information',
+            'admin',
+            'gimgcont',
+            'imgreg',
+            'licensing',
+            'location',
+            'othings',
+            'person',
+            'rights',
         ];
     }
 

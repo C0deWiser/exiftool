@@ -79,9 +79,7 @@ class PlainAttribute implements Contracts\Plain
         };
 
         if ($enum = $spec->enum()) {
-            $this->value = $faker->randomElement(Exiftool::$printConv
-                ? array_keys($enum)
-                : array_values($enum));
+            $this->value = $faker->randomElement($enum);
         }
 
         $this->value = match ($spec->jsonName()) {
