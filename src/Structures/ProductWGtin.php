@@ -10,7 +10,7 @@ use Codewiser\Exiftool\Contracts\Structure;
 /**
  * @property null|AltLang $description
  * @property null|Plain $gtin
- * @property null|Multiple|Plain[] $identifiers
+ * @property null|Plain $identifiers
  * @property null|AltLang $name
  */
 interface ProductWGtin extends Structure

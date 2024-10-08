@@ -54,7 +54,7 @@ use Codewiser\Exiftool\Contracts\Plain;
  *
  * @property null|Multiple|Licensor[] $licensors
  * @property null|Multiple|LinkedEncRightsExpr[] $linkedEncRightsExprs
- * @property null|Location $locationCreated
+ * @property null|Multiple|Location[] $locationCreated
  * @property null|Multiple|Location[] $locationsShown
  *
  * @property null|Plain $maxAvailHeight
