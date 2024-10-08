@@ -35,7 +35,7 @@ class IptcExt
     }
 
     /**
-     * Get Controlled Vocabularies urls.
+     * Get Controlled Vocabularies urls associated to attributes.
      */
     public function getNewsCodes(): array
     {
@@ -53,8 +53,8 @@ class IptcExt
             # Unclear
             'contributors.*.role.*'                => 'http://cv.iptc.org/newscodes/contentprodpartyrole',
             'digitalSourceType'                    => 'http://cv.iptc.org/newscodes/digitalsourcetype',
-            'imageRegion.*.rCtype.*.identifiers.*' => 'http://cv.iptc.org/newscodes/imageregiontype',
             'imageRegion.*.rRole.*.identifiers.*'  => 'http://cv.iptc.org/newscodes/imageregionrole',
+            'imageRegion.*.rCtype.*.identifiers.*' => 'http://cv.iptc.org/newscodes/imageregiontype',
 
             # cvId — Enter the globally unique identifier of the Controlled Vocabulary which the term is from
             # cvTermId — Enter the globally unique identifier of the term from a Controlled Vocabulary
@@ -113,7 +113,7 @@ class IptcExt
     }
 
     /**
-     * Get Laravel validation rules.
+     * Get Laravel validation rules for all IPTC attributes.
      */
     public function getValidationRules(): array
     {

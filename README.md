@@ -142,7 +142,7 @@ When exporting, `AltLang` current locale value will be embedded as default.
     ]
 
 `AltLang` attribute is `Stringable` and has `toString` method, that is used
-to get attribute value is current locale.
+to get attribute value in current locale.
 
 ```php
 (string) $data->description;
@@ -256,10 +256,10 @@ For example, `Exiftool` keeps `dataMining` values as `DMI-UNSPECIFIED`,
 `Allowed` etc. Conversely, you should import this attribute with values 
 `Unspecified - no prohibition defined`, `Allowed` etc. 
 
-However, with `$exiftool->printConv()` we will export/import it with keys
-(`DMI-UNSPECIFIED`, `DMI-ALLOWED` etc.) instead of values.
+However, with enabled `$exiftool->printConv()` we will export/import it with 
+keys (`DMI-UNSPECIFIED`, `DMI-ALLOWED` etc.) instead of values.
 
-You may inspect every attribute for its values and use it to build 
+You may inspect every attribute for it enum values and use it to build 
 user-interface:
 
 ```php
@@ -322,7 +322,7 @@ $ext->asDotArray();
 
 Add `json` column to a database and apply `AsIptc` cast to an attribute.
 
-Cast require `Exiftool` to be registered as a service in 
+Cast requires `Exiftool` to be registered as a service in 
 `ApplicationServiceProvider`.
 
 ```php

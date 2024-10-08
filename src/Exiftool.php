@@ -22,7 +22,7 @@ class Exiftool
     }
 
     /**
-     * Export/import values in `raw` format.
+     * Enable `print conversion` exiftool mode.
      */
     public function printConv(bool $enable = true): static
     {
@@ -45,11 +45,17 @@ class Exiftool
         return $this->specification;
     }
 
+    /**
+     * Get new empty Iptc object.
+     */
     public function newMetadata(): Iptc
     {
         return new Iptc($this->specification()->topLevel());
     }
 
+    /**
+     * Get factory to make new structure.
+     */
     public function newStructure(): StructureFactory
     {
         return $this->specification()->factory();

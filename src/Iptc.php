@@ -32,16 +32,16 @@ class Iptc implements Structures\TopLevel, Collection
         return $this;
     }
 
+    /**
+     * Get attribute specification by its json-name.
+     */
     public function getAttributeSpec(string $name): ?AttributeSpec
     {
         return $this->specification->getAttributeByJsonName($name);
     }
 
     /**
-     * IPTC defines LocationCreated as Bag, so ExifTool expects Bag — array of structures.
-     * Therefore, LocationCreated has "propoccurrence": "single"
-     *
-     * @see https://exiftool.org/forum/index.php?topic=4346.msg20684#msg20684
+     * Import rows, exported from exiftool (with -struct -json).
      */
     public function fromExiftool(array $values, ?AttributeSpec $spec = null): static
     {
@@ -61,10 +61,7 @@ class Iptc implements Structures\TopLevel, Collection
     }
 
     /**
-     * IPTC defines LocationCreated as Bag, so ExifTool expects Bag — array of structures.
-     * Therefore, LocationCreated has "propoccurrence": "single"
-     *
-     * @see https://exiftool.org/forum/index.php?topic=4346.msg20684#msg20684
+     * Export rows to import to exiftool.
      */
     public function toExiftool(): array
     {
