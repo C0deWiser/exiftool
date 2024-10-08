@@ -58,7 +58,7 @@ class Exiftool
     /**
      * Get command to read metadata from a file.
      */
-    public function readArguments(): array
+    protected function readArguments(): array
     {
         return array_filter([
             '-struct',
@@ -71,7 +71,7 @@ class Exiftool
     /**
      * Get command to drop all metadata from a file.
      */
-    public function truncateArguments(): array
+    protected function truncateArguments(): array
     {
         return [
             '-all=',
@@ -81,7 +81,7 @@ class Exiftool
     /**
      * Get command to drop some metadata from a file.
      */
-    public function clearArguments(AttributeBag $attributes): array
+    protected function clearArguments(AttributeBag $attributes): array
     {
         $args = [];
 
@@ -154,6 +154,7 @@ class Exiftool
 
         $tags = array_map(fn($tag) => escapeshellarg($tag), $tags);
 
+        // Symphony process escapes arguments so exiftool confused to interprets it
         $args = array_filter([
             '-separator "'.self::$separator.'"',
             '-preserve',
@@ -169,7 +170,7 @@ class Exiftool
 
         $process = Process::fromShellCommandline($cmd);
 
-        $process->run();;
+        $process->run();
 
         $this->removeTemp($filename);
 
@@ -188,7 +189,7 @@ class Exiftool
      * Drop some metadata from a file.
      * @deprecated
      */
-    public function blank(string $filename, AttributeBag $attributes): Process
+    protected function blank(string $filename, AttributeBag $attributes): Process
     {
         return $this->runProcess($filename, $this->clearArguments($attributes));
     }
