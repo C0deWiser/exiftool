@@ -115,33 +115,35 @@ class IptcExt
     /**
      * Get Laravel validation rules for all IPTC attributes.
      */
-    public function getValidationRules(): array
+    public function getValidationRules(array $config = []): array
     {
-        $rules = $this->iterateRules($this->specification->topLevel());
+        $rules = $this->iterateRules($this->specification->topLevel(), $config);
 
         ksort($rules);
 
         return $rules;
     }
 
-    protected function iterateRules(AttributeBag $spec): array
+    protected function iterateRules(AttributeBag $spec, array $config = []): array
     {
         $attributes = [];
 
         foreach ($spec->getAttributes() as $attribute) {
-            $attributes = array_merge($attributes, $this->collectRules($attribute));
+            $attributes = array_merge($attributes, $this->collectRules($attribute, $config));
         }
 
         return $attributes;
     }
 
-    protected function collectRules(AttributeSpec $attribute): array
+    protected function collectRules(AttributeSpec $attribute, array $config = []): array
     {
         $rules = [];
 
         $name = $attribute->jsonName();
         $multi = $attribute->isMultiple();
-        $max = ($max = $attribute->maxBytes()) ? "|max:$max" : '';
+        $max = ($max = $attribute->maxBytes()) && ($config['maxbytes'] ?? false) ? "|max:$max" : '';
+        $numeric = ($config['number'] ?? false) ? 'numeric' : 'string';
+        $datetime = ($config['date-time'] ?? false) ? 'date' : 'string';
 
         if ($struct = $attribute->struct()) {
             $rule = 'array:'.implode(',', $struct->getAttributesJsonNames());
@@ -149,10 +151,10 @@ class IptcExt
             $rule = "string$max";
             $multi = !AltLangAttribute::$collapsed;
         } elseif ($attribute->dataType() == 'number') {
-            $rule = "numeric$max";
+            $rule = "$numeric$max";
         } else {
             $rule = match ($attribute->dataFormat()) {
-                'date-time' => "date",
+                'date-time' => $datetime,
                 default     => "string$max"
             };
         }
@@ -168,7 +170,7 @@ class IptcExt
 
         if ($struct = $attribute->struct()) {
             $prefix = $multi ? '*.' : '';
-            foreach ($this->iterateRules($struct) as $key => $value) {
+            foreach ($this->iterateRules($struct, $config) as $key => $value) {
                 $rules["$name.$prefix$key"] = $value;
             }
         }
