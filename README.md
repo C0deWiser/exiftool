@@ -297,11 +297,11 @@ $ext = new IptcExt($exiftool->specification());
  */
 $ext->getValidationRules([
     // Require numbers to confirm `numeric` rule
-    'number' => true,
+    'number'    => true,
     // Require dates to confirm `date` rule
     'date-time' => true,
     // Require limited values confirms `max` rule
-    'maxbytes' => true,
+    'maxbytes'  => true,
 ]);
 
 /* Get all attributes with key — as full path to attribute
