@@ -35,6 +35,7 @@ class IptcWriteTest extends TestCase
         dump($proc->getErrorOutput());
 
         $embedded = $this->exiftool->read($this->filename);
+
         $this->assertEquals($iptc->jsonSerialize(), $embedded->jsonSerialize());
     }
 }

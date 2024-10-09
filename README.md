@@ -14,6 +14,8 @@ of specification as a framework.
 This package provides object-oriented programmatic interface to work 
 with iptc attributes as objects.
 
+This package provides [some helpers](laravel.md) for Laravel.
+
 ## Known issues
 
 IPTC specification describes `locationCreated` as single element, but 
@@ -22,8 +24,8 @@ IPTC specification describes `locationCreated` as single element, but
 IPTC specification describes `ProductWGtin.identifiers` as multiple element 
 (array), but `Exiftool` requires single element.
 
-Also, while importing, `Exiftool` says, that 
-`'GPSAltitudeRef' is not a field of LocationDetails`.
+`Exiftool` doesnt import `GPSAltitudeRef` as `GPSAltitude` may be positive 
+or negative — this is enough.
 
 This library overrides IPTC specification, making `locationCreated` multiple 
 and `ProductWGtin.identifiers` single. And ignores `GPSAltitudeRef`.
@@ -54,11 +56,35 @@ AltLangAttribute::useLocale('en');
 ## Read metadata
 
 ```php
-use Codewiser\Exiftool\Exiftool;
+use Codewiser\Exiftool\Iptc;
 
-$exiftool = new Exiftool($bin);
+public function read(string $filename): Iptc
+{
+    return $this->exiftool()->read($filenme);
+}
+```
 
-$data = $exiftool->read($filenme);
+## Embed metadata
+
+```php
+use Codewiser\Exiftool\Iptc;
+use Symfony\Component\Process\Process;
+
+public function write(string $filename, Iptc $data): Process
+{
+    return $this->exiftool()->write($filenme, $data);
+}
+```
+
+## Clear metadata
+
+```php
+use Symfony\Component\Process\Process;
+
+public function write(string $filename): Process
+{
+    return $this->exiftool()->clear($filenme, $data);
+}
 ```
 
 ## Fake or empty metadata
@@ -66,10 +92,7 @@ $data = $exiftool->read($filenme);
 You may create empty metadata collection and fill it with fake values:
 
 ```php
-use Codewiser\Exiftool\Exiftool;
-
-$exiftool = new Exiftool($bin);
-
+// empty collection
 $empty = $exiftool->newMetadata();
 
 // requires `fakerphp/faker`
@@ -226,41 +249,37 @@ $data->locationsShown = [
 ];
 ```
 
-## Embed metadata
+## Print Conv
 
-```php
-use Codewiser\Exiftool\Exiftool;
+Read https://exiftool.org/under.html
 
-$exiftool = new Exiftool($bin);
+Without enabling `$exiftool->printConv()` all values is human-readable. For 
+example, `GPSLatitude` may has value `45 deg 20' 11.00"`.
 
-$exiftool->write($filenme, $data);
-```
+If you call `$exiftool->printConv()` before importing/exporting IPTC 
+metadata, you should use _dirty_ values. For example, `GPSLatitude` may has 
+value `45.3363888888889`.
 
-## Clear metadata
+This is very important in context of `enum` attributes — that must use 
+values from limited list. Exiftool will reject value if it is not allowed.
 
-```php
-use Codewiser\Exiftool\Exiftool;
-
-$exiftool = new Exiftool($bin);
-
-$exiftool->clear($filenme);
-```
+Read more below.
 
 ## Enum values
 
 Some attributes, such as `dataMining`, `modelReleaseStatus`, `rbShape` and 
 some others, require their values from a limited list.
 
-For example, `Exiftool` keeps `dataMining` values as `DMI-UNSPECIFIED`, 
-`DMI-ALLOWED` etc, but exports it as `Unspecified - no prohibition defined`, 
-`Allowed` etc. Conversely, you should import this attribute with values 
+For example, `Exiftool` internally keeps `dataMining` values as 
+`DMI-UNSPECIFIED`, `DMI-ALLOWED` etc., 
+but exports it as `Unspecified - no prohibition defined`, `Allowed` etc. 
+Conversely, you should import this attribute with values 
 `Unspecified - no prohibition defined`, `Allowed` etc. 
 
 However, with enabled `$exiftool->printConv()` we will export/import it with 
 keys (`DMI-UNSPECIFIED`, `DMI-ALLOWED` etc.) instead of values.
 
-You may inspect every attribute for it enum values and use it to build 
-user-interface:
+You may inspect attribute specification for it enum values:
 
 ```php
 use Codewiser\Exiftool\Exiftool;
@@ -269,88 +288,27 @@ $exiftool = new Exiftool($bin);
 
 $values = $exiftool->specification()->topLevel()
     ->getAttributeByJsonName('dataMining')->enum();
-
-// $values is key->value array
 ```
 
-## Laravel
-
-This package provides some helpers for Laravel.
-
-### Rules
+For example, this is allowed values for `modelReleaseStatus` attribute:
 
 ```php
-use Codewiser\Exiftool\Exiftool;
-use Codewiser\Exiftool\IptcExt;
-
-$exiftool = new Exiftool($bin);
-
-$ext = new IptcExt($exiftool->specification());
-
-/* Get validation rules
- [
-    ...,
-    "artworkOrObjects.*.title"   => "nullable|array",
-    "artworkOrObjects.*.title.*" => "filled|string",
-    ...
- ]
- */
-$ext->getValidationRules([
-    // Require numbers to confirm `numeric` rule
-    'number'    => true,
-    // Require dates to confirm `date` rule
-    'date-time' => true,
-    // Require limited values confirms `max` rule
-    'maxbytes'  => true,
-]);
-
-/* Get all attributes with key — as full path to attribute
- [
-    ...,
-    "artworkOrObjects.*.title" => [
-        "name"           => "Title",
-        "ipmdschema"     => "IptcExt",
-        "sortorder"      => "s0217",
-        "specidx"        => "#title",
-        "datatype"       => "struct",
-        "dataformat"     => "AltLang",
-        "propoccurrence" => "single",
-        "isrequired"     => "0",
-        "XMPid"          => "Iptc4xmpExt:AOTitle",
-        "etTag"          => "AOTitle"
-      ],
-      ...
-  ]
- */
-$ext->asDotArray();
+[
+    'MR-NON' => 'None',
+    'MR-NAP' => 'Not Applicable',
+    'MR-UMR' => 'Unlimited Model Releases',
+    'MR-LMR' => 'Limited or Incomplete Model Releases',
+]
 ```
 
-### Casts
+If you call `enum()` on this attribute without enabling `printConv`, you will 
+gat values of this array. If you call `enum()` on this attribute with enabled 
+`printConv`, you will gat keys of this array.
 
-Add `json` column to a database and apply `AsIptc` cast to an attribute.
+## Controlled Vocabularies
 
-Cast requires `Exiftool` to be registered as a service in 
-`ApplicationServiceProvider`.
+Some attributes, such as `sceneCodes`, `subjectCodes` and some others, 
+should use values from external controlled vocabularies, called 
+[NewsCodes](https://iptc.org/standards/newscodes/).
 
-```php
-use Codewiser\Exiftool\Iptc;
-use Codewiser\Exiftool\Laravel\Casts\AsIptc;
-use Illuminate\Database\Eloquent\Model;
-
-/**
- * @property null|Iptc $iptc 
- */
-class Media extends Model
-{
-    protected function casts(): array
-    {
-        return [
-            'iptc' => AsIptc::class        
-        ]   
-    }
-}
-
-use Codewiser\Exiftool\Exiftool;
-
-$media->iptc = app(Exiftool::class)->read('filename.jpg');
-```
+[Read more](laravel.md#controlled-vocabularies)

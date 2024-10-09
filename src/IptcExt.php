@@ -18,7 +18,7 @@ class IptcExt
     }
 
     /**
-     * Get Ug Topics descriptions.
+     * Get list of attribute Topics.
      */
     public function getUgTopics(): array
     {
@@ -144,6 +144,9 @@ class IptcExt
         $max = ($max = $attribute->maxBytes()) && ($config['maxbytes'] ?? false) ? "|max:$max" : '';
         $numeric = ($config['number'] ?? false) ? 'numeric' : 'string';
         $datetime = ($config['date-time'] ?? false) ? 'date' : 'string';
+        $enum = (($config['enum'] ?? false) && $attribute->enum() && Exiftool::$printConv)
+            ? '|in:'.implode(',', $attribute->enum())
+            : null;
 
         if ($struct = $attribute->struct()) {
             $rule = 'array:'.implode(',', $struct->getAttributesJsonNames());
@@ -163,9 +166,9 @@ class IptcExt
 
         if ($multi) {
             $rules[$name] = "$requirement|array";
-            $rules["$name.*"] = "filled|$rule";
+            $rules["$name.*"] = "filled|$rule$enum";
         } else {
-            $rules[$name] = "$requirement|$rule";
+            $rules[$name] = "$requirement|$rule$enum";
         }
 
         if ($struct = $attribute->struct()) {
