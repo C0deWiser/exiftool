@@ -1,33 +1,38 @@
 {
-    "name": "codewiser/exiftool",
-    "description": "Light-weight IPTC reader/writer",
-    "keywords": ["exiftool", "iptc", "laravel"],
-    "type": "library",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Codewiser\\Exiftool\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
-    "authors": [
-        {
-            "name": "pm",
-            "email": "pm@101media.ru"
-        }
-    ],
-    "minimum-stability": "stable",
-    "require": {
-        "php": "^8.1",
-        "symfony/process": "^7.1"
-    },
-    "require-dev": {
-        "laravel/framework": "^11.26",
-        "fakerphp/faker": "^1.23",
-        "phpunit/phpunit": "^10"
+  "name": "codewiser/exiftool",
+  "description": "Light-weight IPTC reader/writer",
+  "keywords": [
+    "exiftool",
+    "iptc",
+    "laravel"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Codewiser\\Exiftool\\": "src/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "pm",
+      "email": "pm@101media.ru"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8.1",
+    "ext-intl": "*",
+    "symfony/process": "^7.1"
+  },
+  "require-dev": {
+    "laravel/framework": "^11.26",
+    "fakerphp/faker": "^1.23",
+    "phpunit/phpunit": "^10"
+  }
 }
