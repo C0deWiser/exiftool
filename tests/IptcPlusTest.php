@@ -83,11 +83,7 @@ class IptcPlusTest extends TestCase
 
                 /** @var Plain $attribute */
                 $attribute = $iptc->$jsonName;
-                $this->assertTrue(in_array($attribute->toString(), $mode
-                    // Faker generates keys when printConv=true
-                    ? array_keys($values)
-                    // Faker generates values when printConv=false
-                    : array_values($values)));
+                $this->assertTrue(in_array($attribute->toString(), $values));
             }
         }
     }

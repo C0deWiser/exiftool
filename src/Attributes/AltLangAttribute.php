@@ -59,8 +59,8 @@ class AltLangAttribute implements Contracts\AltLang
                 'es' => Factory::create('es_ES')->name(),
             ],
             default => [
-                'en' => Factory::create('en_GB')->realText(50),
-                'es' => Factory::create('es_ES')->realText(50),
+                'en' => Factory::create('en_GB')->sentence(),
+                'es' => Factory::create('es_ES')->sentence(),
             ]
         };
 

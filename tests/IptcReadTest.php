@@ -2,13 +2,19 @@
 
 namespace Tests;
 
+use Codewiser\Exiftool\Attributes\AltLangAttribute;
+
 class IptcReadTest extends TestCase
 {
     protected string $filename = __DIR__.'/IPTC-PhotometadataRef-Std2023.2.jpg';
 
     public function test()
     {
-        $iptc = $this->exiftool->read($this->filename);
+        AltLangAttribute::collapse(false);
+
+        $iptc = $this->exiftool
+            ->printConv(false)
+            ->read($this->filename);
 
         $this->assertEquals(
             "The description aka caption (ref2023.2)",
