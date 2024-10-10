@@ -306,9 +306,9 @@ For example, this is enum values for `modelReleaseStatus` attribute:
 ]
 ```
 
-If you call `enum()` on this attribute without enabling `printConv`, you will 
-gat values of this array. If you call `enum()` on this attribute with enabled 
-`printConv`, you will gat keys of this array.
+If you call `enum()` on attribute without enabling `printConv`, you will 
+gat values of such array. If you call `enum()` on attribute with enabled 
+`printConv`, you will gat keys of such array.
 
 ## Controlled Vocabularies
 
