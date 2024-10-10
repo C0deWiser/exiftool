@@ -45,14 +45,6 @@ $exiftool = new Exiftool('/bin/exiftool');
 $exiftool = new Exiftool('/bin/exiftool', '/path/to/specification.json');
 ```
 
-Set up `AltLang` with locale information.
-
-```php
-use Codewiser\Exiftool\Attributes\AltLangAttribute;
-
-AltLangAttribute::useLocale('en');
-```
-
 ## Read metadata
 
 ```php
@@ -133,7 +125,7 @@ $data->captionWriter = 'me';
 to get `DateTimeInterface` value.
 
 ```php
-(string)$data->dateCreated;
+(string) $data->dateCreated;
 // the same as
 $data->dateCreated?->toDateTime()->format('c');
 
@@ -143,7 +135,14 @@ $data->dateCreated = new \DateTime();
 
 ### AltLang
 
-`AltLang` attribute keeps array of strings, each for different locale.
+`AltLang` attribute keeps array of strings, each for different locale. 
+Default current locale is `en`. You may change it:
+
+```php
+use Codewiser\Exiftool\Attributes\AltLangAttribute;
+
+AltLangAttribute::useLocale('de');
+```
 
 When importing data, `AltLang` stores default value to current locale. 
 When exporting, `AltLang` current locale value will be embedded as default.
@@ -204,8 +203,8 @@ return json_encode($data->jsonSerialized());
 
 ### Structure
 
-`Structure` is nested collection of attributes. All structures well 
-documented with all their attributes. Every nested attribute may be any of 
+`Structure` is a collection of attributes. All structures well 
+documented with all their attributes. Every attribute may be any of 
 types.
 
 ```php
@@ -239,8 +238,14 @@ foreach ($data->keywords as $keyword) {
 
 count($data->keywords);
 
-$data->keywords[0]->toArray();
+(string) $data->keywords[0];
+
+$data->keywords = ['value 1', 'value 2'];
+
+// etc.
 ```
+
+Of course, `Multiple` may consist of structures:
 
 ```php
 $data->locationsShown = [
@@ -261,7 +266,7 @@ metadata, you should use _dirty_ values. For example, `GPSLatitude` may has
 value `45.3363888888889`.
 
 This is very important in context of `enum` attributes — that must use 
-values from limited list. Exiftool will reject value if it is not allowed.
+values from limited list. Exiftool will reject value if it is not from a list.
 
 Read more below.
 
@@ -290,7 +295,7 @@ $values = $exiftool->specification()->topLevel()
     ->getAttributeByJsonName('dataMining')->enum();
 ```
 
-For example, this is allowed values for `modelReleaseStatus` attribute:
+For example, this is enum values for `modelReleaseStatus` attribute:
 
 ```php
 [
