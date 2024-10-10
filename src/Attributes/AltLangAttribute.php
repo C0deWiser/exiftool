@@ -85,14 +85,27 @@ class AltLangAttribute implements Contracts\AltLang
     {
         $data = [];
 
+        // Hardcode
+        $noAltLang = [
+            'IFD0:Copyright',
+            'IPTC:ObjectName',
+            'IPTC:CopyrightNotice',
+            'IPTC:Caption-Abstract',
+            'IFD0:ImageDescription',
+        ];
+
         foreach ($spec->etNamesWithPrefix() as $etName) {
-            foreach ($this->values as $lang => $value) {
-                if ($lang === $this->getLocale()) {
-                    $key = $etName;
-                } else {
-                    $key = $etName.'-'.str_replace('_', '-', $lang);
+            if (in_array($etName, $noAltLang)) {
+                $data[$etName] = $this->toString();
+            } else {
+                foreach ($this->toArray() as $lang => $value) {
+                    if ($lang === $this->getLocale()) {
+                        $key = $etName;
+                    } else {
+                        $key = $etName.'-'.str_replace('_', '-', $lang);
+                    }
+                    $data[$key] = $value;
                 }
-                $data[$key] = $value;
             }
         }
 

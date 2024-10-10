@@ -59,6 +59,12 @@ class DateTimeAttribute implements Contracts\DateTime
         $datetime = $this->datetime;
 
         foreach ($spec->etNamesWithPrefix() as $etName) {
+
+            if (str_starts_with($etName, 'ExifIFD')) {
+                // skip
+                continue;
+            }
+
             $data[$etName] = match ($etName) {
                 // Hardcode
                 'IPTC:DateCreated' => $datetime->format('Y-m-d'),
