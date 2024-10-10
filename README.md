@@ -68,6 +68,8 @@ public function write(string $filename, Iptc $data): Process
 }
 ```
 
+Method returns `Process` object for you to inspect possible error output.
+
 ## Clear metadata
 
 ```php
