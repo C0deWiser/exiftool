@@ -104,7 +104,11 @@ class StructureAttribute implements Contracts\Structure
         $values = array_filter($values, fn($v) => !is_null($v));
 
         foreach ($values as $jsonName => $value) {
-            $attr = AttributeFactory::for($this->structure->getAttributeByJsonName($jsonName));
+            $spec = $this->structure->getAttributeByJsonName($jsonName);
+            if (!$spec) {
+                continue;
+            }
+            $attr = AttributeFactory::for($spec);
 
             if ($this->structure->name == 'ProductWGtin' &&
                 $jsonName == 'identifiers')
