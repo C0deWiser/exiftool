@@ -48,11 +48,12 @@ class OpenApi
     protected function makeTop(array $attributes): array
     {
         $top = [
-            'description' => 'IPTC',
-            'externalDocs' =>
-                ['url' => "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata"],
-            'type'        => 'object',
-            'properties'  => []
+            'externalDocs' => [
+                'description' => 'IPTC',
+                'url'         => "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata"
+            ],
+            'type'         => 'object',
+            'properties'   => []
         ];
 
         foreach ($attributes as $attr) {
@@ -71,9 +72,10 @@ class OpenApi
     protected function makeDefault(AttributeSpec $attr): array
     {
         $api = [
-            'description' => $attr->name(),
-            'externalDocs' =>
-            ['url' => "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata{$attr->specIdx()}"],
+            'externalDocs' => [
+                'description' => $attr->name(),
+                'url'         => "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata{$attr->specIdx()}"
+            ],
         ];
 
         if (str_contains($attr->name(), '(legacy)')) {
