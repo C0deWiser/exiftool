@@ -46,12 +46,6 @@ class Specification
         if (!self::$specification) {
             throw new \RuntimeException('Empty specification data');
         }
-
-        // Exiftool holds LocationCreated as a Bag
-        self::$specification['ipmd_top']['locationCreated']['propoccurrence'] = 'multi';
-
-        // Exiftool holds ProductWGtin.identifiers as single value
-        self::$specification['ipmd_struct']['ProductWGtin']['identifiers']['propoccurrence'] = 'single';
     }
 
     /**
