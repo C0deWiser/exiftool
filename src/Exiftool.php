@@ -18,7 +18,7 @@ class Exiftool
 
     public function __construct(protected string $binary = 'exiftool', null|string|array $specification = null)
     {
-        $this->specification = $specification ?? __DIR__.'/../iptc-pmd-techreference_2023.2.json';
+        $this->specification = $specification ?? __DIR__.'/../iptc-pmd-techreference_2024.1.json';
     }
 
     /**
