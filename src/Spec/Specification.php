@@ -55,6 +55,30 @@ class Specification
     }
 
     /**
+     * Get specification release comment.
+     */
+    public function releaseComment(): string
+    {
+        return self::$specification['release_comment'];
+    }
+
+    /**
+     * Get specification external reference.
+     */
+    public function externalDocumentation(): string
+    {
+        return self::$specification['documentation_available_at'];
+    }
+
+    /**
+     * Get specification release date.
+     */
+    public function releaseDate(): \DateTimeInterface
+    {
+        return new \DateTime(self::$specification['release_timestamp']);
+    }
+
+    /**
      * Get top-level attributes specification.
      */
     public function topLevel(): TopLevel

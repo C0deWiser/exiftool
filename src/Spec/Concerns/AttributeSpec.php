@@ -17,11 +17,43 @@ abstract class AttributeSpec
     protected array $spec;
 
     /**
-     * Get human-readable label of an attribute.
+     * Get name of an attribute.
      */
     public function name(): string
     {
         return $this->spec['name'];
+    }
+
+    /**
+     * Get human-readable label of an attribute.
+     */
+    public function label(): string
+    {
+        return $this->spec['label'];
+    }
+
+    /**
+     * Get help text of an attribute.
+     */
+    public function helpText(): string
+    {
+        return $this->spec['helptext'];
+    }
+
+    /**
+     * Get user notes of an attribute.
+     */
+    public function userNotes(): ?string
+    {
+        return $this->spec['usernotes'] ?: null;
+    }
+
+    /**
+     * Get specification anchor.
+     */
+    public function specIdx(): string
+    {
+        return $this->spec['specidx'];
     }
 
     /**

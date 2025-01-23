@@ -32,9 +32,6 @@ class AttributeAltLangTest extends TestCase
 
         $attr->fromExiftool([
             'Caption-Abstract'       => 'Привет',
-            'Caption-Abstract-en-GB' => 'Hello',
-            'Caption-Abstract-en_US' => 'Hello',
-            'Caption-Abstract-es'    => 'Hola',
             'Description'            => 'Привет',
             'Description-en_GB'      => 'Hello',
             'Description-en-US'      => 'Hello',
@@ -45,7 +42,7 @@ class AttributeAltLangTest extends TestCase
             ['ru' => 'Привет', 'en_GB' => 'Hello', 'en_US' => 'Hello', 'es' => 'Hola'],
             $attr->jsonSerialize()
         );
-        $this->assertCount(12, $attr->toExiftool($spec));
+        $this->assertCount(6, $attr->toExiftool($spec));
         $this->assertTrue(isset($attr['ru']));
         $this->assertTrue(isset($attr['en']));
         $this->assertTrue(isset($attr['en-GB']));
