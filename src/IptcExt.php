@@ -18,7 +18,7 @@ class IptcExt
     }
 
     /**
-     * Get list of attribute Topics.
+     * Get a list of attribute Topics.
      */
     public function getUgTopics(): array
     {

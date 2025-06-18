@@ -6,9 +6,6 @@ It is expecting, that you register `Exiftool` in `ApplicationServiceProvider`.
 
 Add `json` column to a database and apply `AsIptc` cast to an attribute.
 
-Cast requires `Exiftool` to be registered as a service in
-`ApplicationServiceProvider`.
-
 ```php
 use Codewiser\Exiftool\Iptc;
 use Codewiser\Exiftool\Laravel\Casts\AsIptc;
@@ -32,7 +29,9 @@ use Codewiser\Exiftool\Exiftool;
 $media->iptc = app(Exiftool::class)->read('filename.jpg');
 ```
 
-## Rules
+## Request validation rules
+
+We may use iptc specification to automatically build request validation rules. 
 
 Specification marks some attributes as numeric, as uri, as url or as date-time.
 Actually, most of url and uri attributes accepts comma-separated values, so 
@@ -41,7 +40,8 @@ we shouldn't apply `url` rule to them.
 Sometimes we work with legacy data, where values meets `max` limitations.
 
 That's why, `getValidationRules()` without configuration will return 
-rules, that requires all attributes to be just a string.  
+rules, that requires all attributes to be just a string. But you may enable 
+strict behaviour as shown below:
 
 ```php
 use Codewiser\Exiftool\Exiftool;
@@ -51,7 +51,7 @@ $exiftool = new Exiftool();
 
 $ext = new IptcExt($exiftool->specification());
 
-$ext->getValidationRules([
+$rules = $ext->getValidationRules([
     // Require numbers conform to `numeric` rule
     'number'    => true,
     // Require dates conform to `date` rule
@@ -64,10 +64,12 @@ $ext->getValidationRules([
 ]);
 ```
 
+Finally, you may apply collected rules to a `FormRequest`.
+
 ## Flatten array of attributes
 
-Flatten array of attributes may be useful to automatically building of 
-user-interface. It is a key-value array, there key is full-qualified 
+Flatten array of attributes may be useful for automated building of 
+user interface. It is a key-value array, there key is full-qualified 
 attribute name (as in `rules` array) and value is raw attribute specification. 
 
 Some attributes may have an `enum` property. [Read more](README.md#enum-values).
@@ -85,7 +87,7 @@ $ext->asDotArray();
 
 ## Controlled Vocabularies
 
-You may get list of controlled vocabularies urls, associated to attributes.
+You may get a list of controlled vocabulary urls associated with attributes.
 
 List is a key-value array, there key is full-qualified
 attribute name (as in `rules` array) and value is controlled vocabularies url.

@@ -11,15 +11,15 @@ As specification describes how exiftool exports/imports metadata, describes
 every attribute and every structure — this package uses json-version 
 of specification as a framework.
 
-This package provides object-oriented programmatic interface to work 
+This package provides an object-oriented programmatic interface to work 
 with iptc attributes as objects.
 
 This package provides [some helpers](laravel.md) for Laravel.
 
 ## Known issues
 
-IPTC specification describes `locationCreated` as single element, but 
-`Exiftool` counts it as a bag and requires array of `Location` structures.
+IPTC specification describes `locationCreated` as a single element, but 
+`Exiftool` counts it as a bag and requires an array of `Location` structures.
 
 IPTC specification describes `ProductWGtin.identifiers` as multiple element 
 (array), but `Exiftool` requires single element.
@@ -32,18 +32,21 @@ and `ProductWGtin.identifiers` single. And ignores `GPSAltitudeRef`.
 
 ## Configuration
 
-Construct `Exiftool` with path to `exiftool` binary and, optionally, with 
-path to specification file.
+Construct `Exiftool` with a path to `exiftool` binary and, optionally, with 
+path to a specification file.
 
 ```php
 use Codewiser\Exiftool\Exiftool;
 
-// With latest specification
+// With the latest specification
 $exiftool = new Exiftool('/bin/exiftool');
 
 // Or with another
 $exiftool = new Exiftool('/bin/exiftool', '/path/to/specification.json');
 ```
+
+You may find the latest specification on 
+[iptc.org repository](https://iptc.org/std/photometadata/specification/).
 
 ## Read metadata
 
@@ -77,13 +80,13 @@ use Symfony\Component\Process\Process;
 
 public function write(string $filename): Process
 {
-    return $this->exiftool()->clear($filenme, $data);
+    return $this->exiftool()->clear($filenme);
 }
 ```
 
 ## Fake or empty metadata
 
-You may create empty metadata collection and fill it with fake values:
+You may create an empty metadata collection and fill it with fake values:
 
 ```php
 // empty collection
@@ -96,13 +99,13 @@ $faked = $exiftool->newMetadata()->fake();
 ## Properties
 
 Whole collection and every attribute are `JsonSerializable`: this 
-method exports metadata to json format.
+method exports metadata to JSON format.
 
 ```php
 $json = $data->jsonSerialize();
 ```
 
-Whole collection and every single attribute may be filled with json data:
+The whole collection and every single attribute may be filled with JSON data:
 
 ```php
 $data->fromJson(['captionWriter' => 'me']);
@@ -137,7 +140,7 @@ $data->dateCreated = new \DateTime();
 
 ### AltLang
 
-`AltLang` attribute keeps array of strings, each for different locale. 
+`AltLang` attribute keeps an array of strings, each for different locale. 
 Default current locale is `en`. You may change it:
 
 ```php
@@ -191,8 +194,8 @@ $data->description['en'] = 'about';
 ```
 
 When your backend-end responds with metadata to a front-end, the `AltLang` 
-attribute responds as array. Sometimes you may want to collapse `AltLang` 
-values to a string with current locale (or best matched) value. To do that 
+attribute responds as an array. Sometimes you may want to collapse `AltLang` 
+values to a string with current locale (or best matched) value. To do that,  
 instruct attribute to collapse values before respond.
 
 ```php
@@ -205,7 +208,7 @@ return json_encode($data->jsonSerialized());
 
 ### Structure
 
-`Structure` is a collection of attributes. All structures well 
+`Structure` is a collection of attributes. All structures are well 
 documented with all their attributes. Every attribute may be any of 
 types.
 
@@ -215,13 +218,13 @@ $data->creatorContactInfo?->address?->toString();
 $data->locationCreated?->name['en']
 ```
 
-To add structure fill it with a json:
+To add structure, fill it with a JSON:
 
 ```php
 $data->locationCreated = ['city' => 'London', 'country' => 'UK'];
 ```
 
-Or use factory to create empty object:
+Or use factory to create an empty object:
 
 ```php
 $data->locationCreated = $exiftool->newStructure()->location();
@@ -231,7 +234,7 @@ $data->locationCreated->city = 'London';
 ### Multiple
 
 `Multiple` attribute is array of other attributes of any type. It is 
-`Iterator`, `ArrayAccess` and `Countable`, so you may handle it as true array.
+`Iterator`, `ArrayAccess` and `Countable`, so you may handle it as a true array.
 
 ```php
 foreach ($data->keywords as $keyword) {
@@ -261,14 +264,14 @@ $data->locationsShown = [
 Read https://exiftool.org/under.html
 
 Without enabling `$exiftool->printConv()` all values is human-readable. For 
-example, `GPSLatitude` may has value `45 deg 20' 11.00"`.
+example, `GPSLatitude` may have value `45 deg 20' 11.00"`.
 
 If you call `$exiftool->printConv()` before importing/exporting IPTC 
-metadata, you should use _dirty_ values. For example, `GPSLatitude` may has 
+metadata, you should use _dirty_ values. For example, `GPSLatitude` may have 
 value `45.3363888888889`.
 
 This is very important in context of `enum` attributes — that must use 
-values from limited list. Exiftool will reject value if it is not from a list.
+values from a limited list. Exiftool will reject value if it is not from a list.
 
 Read more below.
 
@@ -286,7 +289,7 @@ Conversely, you should import this attribute with values
 However, with enabled `$exiftool->printConv()` we will export/import it with 
 keys (`DMI-UNSPECIFIED`, `DMI-ALLOWED` etc.) instead of values.
 
-You may inspect attribute specification for it enum values:
+You may inspect the attribute specification for its enum values:
 
 ```php
 use Codewiser\Exiftool\Exiftool;
@@ -309,8 +312,8 @@ For example, this is enum values for `modelReleaseStatus` attribute:
 ```
 
 If you call `enum()` on attribute without enabling `printConv`, you will 
-gat values of such array. If you call `enum()` on attribute with enabled 
-`printConv`, you will gat keys of such array.
+gat values of such an array. If you call `enum()` on attribute with enabled 
+`printConv`, you will gat keys of such an array.
 
 ## Controlled Vocabularies
 

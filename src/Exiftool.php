@@ -46,7 +46,7 @@ class Exiftool
     }
 
     /**
-     * Get new empty Iptc object.
+     * Get a new empty Iptc object.
      */
     public function newMetadata(): Iptc
     {

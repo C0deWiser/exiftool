@@ -41,7 +41,7 @@ class Iptc implements Structures\TopLevel, Collection
     }
 
     /**
-     * Import rows, exported from exiftool (with -struct -json).
+     * Import rows, exported from exiftool `exiftool -struct -json`.
      */
     public function fromExiftool(array $values, ?AttributeSpec $spec = null): static
     {

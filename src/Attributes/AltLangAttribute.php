@@ -29,7 +29,7 @@ class AltLangAttribute implements Contracts\AltLang
     }
 
     /**
-     * When collapsed, AltLang would be jsonSerialized to string, not to array.
+     * When collapsed, AltLang would be jsonSerialized to a string, not to array.
      */
     public static function collapse(bool $collapse = true): void
     {
