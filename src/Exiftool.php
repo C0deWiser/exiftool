@@ -172,11 +172,11 @@ class Exiftool
             $this->getExecutable() . ' ' .
             implode(' ', $tags) . ' '.
             implode(' ', $args) . ' '.
-            $filename;
+            '"${:TARGET}"';
 
         $process = Process::fromShellCommandline($cmd);
 
-        $process->run();
+        $process->run(env:['TARGET' => $filename]);
 
         $this->removeTemp($filename);
 
