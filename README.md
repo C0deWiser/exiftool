@@ -48,6 +48,10 @@ $exiftool = new Exiftool('/bin/exiftool', '/path/to/specification.json');
 You may find the latest specification on 
 [iptc.org repository](https://iptc.org/std/photometadata/specification/).
 
+> Attention!!!
+> Be sure, that `exiftool` binary version is compliant with specification 
+> you use.
+
 ## Read metadata
 
 ```php
