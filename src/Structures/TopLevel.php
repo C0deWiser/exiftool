@@ -8,85 +8,88 @@ use Codewiser\Exiftool\Contracts\Multiple;
 use Codewiser\Exiftool\Contracts\Plain;
 
 /**
- * @property null|Multiple|CvTerm[] $aboutCvTerms
- * @property null|Plain $additionalModelInfo
- * @property null|AltLang $altTextAccessibility
- * @property null|Multiple|ArtworkOrObject[] $artworkOrObjects
+ * @property null|Multiple|CvTerm[] $aboutCvTerms CV-Term About Image.
+ * @property null|Plain $additionalModelInfo Additional model info.
+ * @property null|Plain $aIPromptInformation AI Prompt Information.
+ * @property null|Plain $aIPromptWriterNam AI Prompt Writer Name.
+ * @property null|Plain $aISystemUsed AI System Used.
+ * @property null|Plain $aISystemVersionUsed AI System Version Used.
+ * @property null|AltLang $altTextAccessibility Alt Text (Accessibility).
+ * @property null|Multiple|ArtworkOrObject[] $artworkOrObjects Artwork or object in the image.
  *
- * @property null|Plain $captionWriter
- * @property null|Plain $cityName
- * @property null|Multiple|EntityWRole[] $contributors
- * @property null|AltLang $copyrightNotice
- * @property null|Multiple|CopyrightOwner[] $copyrightOwners
- * @property null|Plain $countryCode
- * @property null|Plain $countryName
- * @property null|CreatorContactInfo $creatorContactInfo
- * @property null|Multiple|Plain[] $creatorNames
- * @property null|Plain $creditLine
+ * @property null|Plain $captionWriter Caption/Description writer.
+ * @property null|Plain $cityName City.
+ * @property null|Multiple|EntityWRole[] $contributors Contributor.
+ * @property null|AltLang $copyrightNotice Copyright Notice.
+ * @property null|Multiple|CopyrightOwner[] $copyrightOwners Copyright owner.
+ * @property null|Plain $countryCode ISO Country Code.
+ * @property null|Plain $countryName Country.
+ * @property null|CreatorContactInfo $creatorContactInfo Creator's Contact info.
+ * @property null|Multiple|Plain[] $creatorNames Creator.
+ * @property null|Plain $creditLine Credit Line.
  *
- * @property null|Plain $dataMining
- * @property null|DateTime $dateCreated
- * @property null|AltLang $description
- * @property null|Plain $digitalImageGuid
- * @property null|Plain $digitalSourceType
+ * @property null|Plain $dataMining Data Mining.
+ * @property null|DateTime $dateCreated Date Created.
+ * @property null|AltLang $description Caption/Description.
+ * @property null|Plain $digitalImageGuid Digital Image Identifier.
+ * @property null|Plain $digitalSourceType Type of source for this photo.
  *
- * @property null|Multiple|Plain[] $eventId
+ * @property null|Multiple|EmbdEncRightsExpr[] $embdEncRightsExprs Embedded Encoded Rights Expression.
+ * @property null|Multiple|Plain[] $eventId Event ID.
+ * @property null|AltLang $eventName Event Name.
+ * @property null|AltLang $extDescrAccessibility Extended Description (Accessibility).
  *
- * @property null|Multiple|EmbdEncRightsExpr[] $embdEncRightsExprs
- * @property null|AltLang $eventName
- * @property null|AltLang $extDescrAccessibility
+ * @property null|Multiple|CvTerm[] $genres Genre.
  *
- * @property null|Multiple|CvTerm[] $genres
+ * @property null|Plain $headline Headline.
  *
- * @property null|Plain $headline
+ * @property null|Multiple|ImageCreator[] $imageCreators Image Creator.
+ * @property null|Plain $imageRating Rating.
+ * @property null|Multiple|ImageRegion[] $imageRegion Image Region(s).
+ * @property null|Plain $imageSupplierImageId Image Supplier Image Id.
+ * @property null|Plain $instructions Instructions.
+ * @property null|Plain $intellectualGenre Intellectual genre.
  *
- * @property null|Multiple|ImageCreator[] $imageCreators
- * @property null|Plain $imageRating
- * @property null|Multiple|ImageRegion[] $imageRegion
- * @property null|Plain $imageSupplierImageId
- * @property null|Plain $instructions
- * @property null|Plain $intellectualGenre
+ * @property null|Plain $jobid Job Identifier.
+ * @property null|Plain $jobtitle Creator's Jobtitle.
  *
- * @property null|Plain $jobid
- * @property null|Plain $jobtitle
+ * @property null|Multiple|Plain[] $keywords Keywords.
  *
- * @property null|Multiple|Plain[] $keywords
+ * @property null|Multiple|Licensor[] $licensors Licensor.
+ * @property null|Multiple|LinkedEncRightsExpr[] $linkedEncRightsExprs Linked Encoded Rights Expression.
+ * @property null|Multiple|Location[] $locationCreated Location Created.
+ * @property null|Multiple|Location[] $locationsShown Location shown.
  *
- * @property null|Multiple|Licensor[] $licensors
- * @property null|Multiple|LinkedEncRightsExpr[] $linkedEncRightsExprs
- * @property null|Multiple|Location[] $locationCreated
- * @property null|Multiple|Location[] $locationsShown
+ * @property null|Plain $maxAvailHeight Maximum available height.
+ * @property null|Plain $maxAvailWidth Maximum available width.
+ * @property null|Plain $minorModelAgeDisclosure Minor Model Age Disclosure.
+ * @property null|Multiple|Plain[] $modelAges Model age.
+ * @property null|Multiple|Plain[] $modelReleaseDocuments Model Release Id.
+ * @property null|Plain $modelReleaseStatus Model Release Status.
  *
- * @property null|Plain $maxAvailHeight
- * @property null|Plain $maxAvailWidth
- * @property null|Plain $minorModelAgeDisclosure
- * @property null|Multiple|Plain[] $modelAges
- * @property null|Multiple|Plain[] $modelReleaseDocuments
- * @property null|Plain $modelReleaseStatus
+ * @property null|Multiple|Plain[] $organisationInImageCodes Code of featured Organisation.
+ * @property null|Multiple|Plain[] $organisationInImageNames Name of featured Organisation.
+ * @property null|AltLang $otherConstraints Constraint.
  *
- * @property null|Multiple|Plain[] $organisationInImageCodes
- * @property null|Multiple|Plain[] $organisationInImageNames
- * @property null|AltLang $otherConstraints
+ * @property null|Multiple|Plain[] $personInImageNames Person shown.
+ * @property null|Multiple|PersonWDetails[] $personsShown Person Shown (Details).
+ * @property null|Multiple|ProductWGtin[] $productsShown Product Shown.
+ * @property null|Multiple|Plain[] $propertyReleaseDocuments Property Release Id.
+ * @property null|Plain $propertyReleaseStatus Property Release Status.
+ * @property null|Plain $provinceState Province/State.
  *
- * @property null|Multiple|Plain[] $personInImageNames
- * @property null|Multiple|PersonWDetails[] $personsShown
- * @property null|Multiple|ProductWGtin[] $productsShown
- * @property null|Multiple|Plain[] $propertyReleaseDocuments
- * @property null|Plain $propertyReleaseStatus
- * @property null|Plain $provinceState
+ * @property null|Multiple|RegistryEntry[] $registryEntries Registry Entry.
+ * @property null|Multiple|Plain[] $sceneCodes IPTC Scene Code.
+ * @property null|Plain $source Source (Supply Chain).
+ * @property null|Multiple|Plain[] $subjectCodes IPTC Subject Code.
+ * @property null|Plain $sublocationName Sublocation.
+ * @property null|Multiple|ImageSupplier[] $suppliers Image Supplier.
  *
- * @property null|Multiple|RegistryEntry[] $registryEntries
- * @property null|Multiple|Plain[] $sceneCodes
- * @property null|Plain $source
- * @property null|Multiple|Plain[] $subjectCodes
- * @property null|Plain $sublocationName
- * @property null|Multiple|ImageSupplier[] $suppliers
+ * @property null|AltLang $title Title.
  *
- * @property null|AltLang $title
+ * @property null|AltLang $usageTerms Rights Usage Terms.
  *
- * @property null|AltLang $usageTerms
- *
- * @property null|Plain $webstatementRights
+ * @property null|Plain $webstatementRights Copyright Info URL.
  */
 interface TopLevel
 {
