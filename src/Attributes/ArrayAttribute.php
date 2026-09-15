@@ -218,7 +218,7 @@ class ArrayAttribute implements Contracts\Multiple
                 if ($attr instanceof Contracts\Structure) {
                     $value = $attr->fromJson($value);
                 } else {
-                    $value = $attr->fromJson([$offset => $value]);
+                    $value = $attr->fromJson([$offset ?? '' => $value]);
                 }
             }
 

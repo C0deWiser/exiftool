@@ -5,8 +5,8 @@ namespace Tests\Attributes;
 use Codewiser\Exiftool\Attributes\AltLangAttribute;
 use Codewiser\Exiftool\Attributes\ArrayAttribute;
 use Codewiser\Exiftool\Attributes\StructureAttribute;
+use Codewiser\Exiftool\Exceptions\MistypeException;
 use Codewiser\Exiftool\Spec\Specification;
-use Codewiser\Exiftool\Structures\CreatorContactInfo;
 use Codewiser\Exiftool\Structures\CvTerm;
 use Tests\TestCase;
 
@@ -23,7 +23,7 @@ class AttributeStructureTest extends TestCase
         AltLangAttribute::useLocale('ru', 'en');
     }
 
-    public function testCI()
+    public function testFromExiftool()
     {
         $raw = '{"CreatorContactInfo": {
                     "CiAdrCity": "Серпухов",
@@ -38,21 +38,75 @@ class AttributeStructureTest extends TestCase
 
         $spec = $this->spec->topLevel()->getAttributeByJsonName('creatorContactInfo');
 
-        /** @var CreatorContactInfo $attr */
+        /** @var \Codewiser\Exiftool\Structures\CreatorContactInfo $attr */
         $attr = new StructureAttribute($spec->struct());
 
         $attr->fromExiftool(json_decode($raw, true));
-        $this->assertCount(1, $attr->toExiftool($spec));
 
+        $this->assertEquals([
+            'city'       => 'Серпухов',
+            'country'    => 'Бразилия',
+            'address'    => '339417, Сахалинская область, город Истра, въезд Космонавтов, 48',
+            'postalCode' => '085286',
+            'region'     => '',
+            'emailwork'  => 'antonina87@rogova.ru',
+            'phonework'  => '+7 (922) 760-0483',
+            'weburlwork' => 'https://www.artemev.ru/numquam-quo-omnis-fuga-rerum-voluptas',
+        ], $attr->jsonSerialize());
+        $this->assertCount(1, $attr->toExiftool($spec));
+    }
+
+    public function testFieldAccess()
+    {
+        $spec = $this->spec->topLevel()->getAttributeByJsonName('creatorContactInfo');
+        $attr = new StructureAttribute($spec->struct());
+
+        $attr->fromExiftool([
+            'CreatorContactInfo' => [
+                'CiAdrCity' => 'Серпухов',
+                'CiAdrCtry' => 'Бразилия',
+            ]
+        ]);
+
+        $this->assertEquals('Серпухов', $attr->city->toString());
         $this->assertEquals('Серпухов', (string) $attr->city);
         $this->assertEquals('Бразилия', (string) $attr->country);
+    }
 
+    public function testFromJsonResetsStructure()
+    {
+        $spec = $this->spec->topLevel()->getAttributeByJsonName('creatorContactInfo');
+        $attr = new StructureAttribute($spec->struct());
+
+        $attr->fromExiftool([
+            'CreatorContactInfo' => [
+                'CiAdrCity' => 'Серпухов',
+                'CiAdrCtry' => 'Бразилия',
+            ]
+        ]);
+
+        // fromJson replaces all attributes with only the given ones
         $attr->fromJson(['city' => 'Ленинград']);
+        $this->assertEquals(['city' => 'Ленинград'], $attr->jsonSerialize());
         $this->assertEquals('Ленинград', (string) $attr->city);
         $this->assertFalse(isset($attr->country));
+    }
+
+    public function testDirectAssignmentAndNullReset()
+    {
+        $spec = $this->spec->topLevel()->getAttributeByJsonName('creatorContactInfo');
+        $attr = new StructureAttribute($spec->struct());
+
+        $attr->fromJson(['city' => 'Ленинград']);
 
         $attr->country = 'Россия';
         $this->assertEquals('Россия', (string) $attr->country);
+        $this->assertEquals(['city' => 'Ленинград', 'country' => 'Россия'], $attr->jsonSerialize());
+
+        // Setting null removes the field
+        $attr->city = null;
+        $this->assertFalse(isset($attr->city));
+        $this->assertEquals(['country' => 'Россия'], $attr->jsonSerialize());
     }
 
     public function testGenres()
@@ -82,6 +136,7 @@ class AttributeStructureTest extends TestCase
         $genre = $attr[1];
 
         $this->assertEquals('http://cv.iptc.org/newscodes/genre-3', (string) $genre->cvTermId);
+        $this->assertEquals('http://hane.com/', (string) $genre->cvId);
 
         $attr->fromJson([
             'genres' => [
@@ -96,6 +151,7 @@ class AttributeStructureTest extends TestCase
         /** @var CvTerm $genre */
         $genre = $attr[0];
         $this->assertEquals('https://example.com/term', (string) $genre->cvTermId);
+        $this->assertEquals('Term name', (string) $genre->cvTermName);
     }
 
     public function testNested()
@@ -118,6 +174,8 @@ class AttributeStructureTest extends TestCase
         $spec = $this->spec->topLevel()->getAttributeByJsonName('imageRegion');
         $attr = new ArrayAttribute(fn() => new StructureAttribute($spec->struct()));
         $attr->fromExiftool($raw);
+
+        $this->assertCount(1, $attr);
 
         $boundary = $attr[0];
 

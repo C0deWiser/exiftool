@@ -86,7 +86,7 @@ trait HasAttributes
         try {
             if (!($value instanceof Contracts\Attribute)) {
 
-                $attr = AttributeFactory::for($this->getAttributeSpec($name));
+                $attr = AttributeFactory::for($this->getAttributeSpec($name) ?? throw new MistypeException());
 
                 if ($attr instanceof Contracts\Structure) {
                     $value = $attr->fromJson($value);

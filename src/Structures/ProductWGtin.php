@@ -9,7 +9,7 @@ use Codewiser\Exiftool\Contracts\Structure;
 
 /**
  * @property null|Plain $gtin GTIN.
- * @property null|Plain $identifiers Identifier.
+ * @property null|Multiple|Plain[] $identifiers Identifier.
  * @property null|AltLang $name Name.
  * @property null|AltLang $description Description.
  */

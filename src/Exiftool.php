@@ -13,7 +13,18 @@ use Symfony\Component\Process\Process;
 class Exiftool
 {
     protected string|array|Specification $specification;
+
+    /**
+     * ExifTool `print conversion` mode.
+     *
+     * When **enabled**, ExifTool handles raw **internal** values.
+     *
+     * When **disabled**, ExifTool handles human-readable **external** values.
+     *
+     * Default is *disabled**
+     */
     public static bool $printConv = false;
+
     public static string $separator = ',';
 
     public function __construct(protected string $binary = 'exiftool', null|string|array $specification = null)
@@ -22,13 +33,27 @@ class Exiftool
     }
 
     /**
-     * Enable `print conversion` exiftool mode.
+     * ExifTool `print conversion` mode.
+     *
+     * When **enabled**, ExifTool handles raw **internal** values.
+     *
+     * When **disabled**, ExifTool handles human-readable **external** values.
      */
     public function printConv(bool $enable = true): static
     {
         self::$printConv = $enable;
 
         return $this;
+    }
+
+    public function useHumanValues(): static
+    {
+        return $this->printConv(false);
+    }
+
+    public function useMachineValues(): static
+    {
+        return $this->printConv();
     }
 
     /**
@@ -143,11 +168,19 @@ class Exiftool
      */
     public function read(string $filename): Iptc
     {
-        $process = $this->runProcess($filename, $this->readArguments());
-
-        $unicode = json_decode($process->getOutput(), true);
+        $unicode = $this->readRaw($filename);
 
         return $this->newMetadata()->fromExiftool($unicode[0]);
+    }
+
+    /**
+     * Read raw data from a file.
+     */
+    public function readRaw(string $filename): array
+    {
+        $process = $this->runProcess($filename, $this->readArguments());
+
+        return json_decode($process->getOutput(), true);
     }
 
     /**

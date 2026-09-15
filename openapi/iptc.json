@@ -1,0 +1,1954 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "IPTC Photo Metadadata Standard",
+        "description": "This TechReference release is the initial release of the standard version 2025.1, as of 2025-11-03. ",
+        "version": "2024.1"
+    },
+    "externalDocs": {
+        "url": "https://iptc.org/std/photometadata/documentation/techreference",
+        "description": "IPTC Specification"
+    },
+    "components": {
+        "schemas": {
+            "creatorContactInfo": {
+                "externalDocs": {
+                    "description": "Creator's Contact Info",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#creator's-contact-info"
+                },
+                "nullable": true,
+                "properties": {
+                    "address": {
+                        "externalDocs": {
+                            "description": "Address",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#address"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "city": {
+                        "externalDocs": {
+                            "description": "City",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#city"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "country": {
+                        "externalDocs": {
+                            "description": "Country",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#country"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "emailwork": {
+                        "externalDocs": {
+                            "description": "Email address(es)",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#email-addresses"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "phonework": {
+                        "externalDocs": {
+                            "description": "Phone number(s)",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#phone-numbers"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "postalCode": {
+                        "externalDocs": {
+                            "description": "Postal Code",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#postal-code"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "region": {
+                        "externalDocs": {
+                            "description": "State/Province",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#state/province"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "weburlwork": {
+                        "externalDocs": {
+                            "description": "Web URL(s)",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#web-urls"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "format": "uri"
+                    }
+                }
+            },
+            "artworkOrObjects": {
+                "externalDocs": {
+                    "description": "Artwork or Object in the Image",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#artwork-or-object-in-the-image"
+                },
+                "nullable": true,
+                "properties": {
+                    "circaDateCreated": {
+                        "externalDocs": {
+                            "description": "Circa Date Created",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#circa-date-created"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "contentDescription": {
+                        "externalDocs": {
+                            "description": "Content Description",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#content-description"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "contributionDescription": {
+                        "externalDocs": {
+                            "description": "Contribution Description",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#contribution-description"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "copyrightNotice": {
+                        "externalDocs": {
+                            "description": "Copyright Notice",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#copyright-notice"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "creatorNames": {
+                        "externalDocs": {
+                            "description": "Creator",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#creator"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "creatorIdentifiers": {
+                        "externalDocs": {
+                            "description": "Creator ID",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#creator-id"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "currentCopyrightOwnerIdentifier": {
+                        "externalDocs": {
+                            "description": "Current Copyright Owner ID",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#current-copyright-owner-id"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "currentCopyrightOwnerName": {
+                        "externalDocs": {
+                            "description": "Current Copyright Owner Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#current-copyright-owner-name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "currentLicensorIdentifier": {
+                        "externalDocs": {
+                            "description": "Current Licensor ID",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#current-licensor-id"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "currentLicensorName": {
+                        "externalDocs": {
+                            "description": "Current Licensor Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#current-licensor-name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "dateCreated": {
+                        "externalDocs": {
+                            "description": "Date Created",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#date-created"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "physicalDescription": {
+                        "externalDocs": {
+                            "description": "Physical Description",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#physical-description"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "source": {
+                        "externalDocs": {
+                            "description": "Source",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#source"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "sourceInventoryNr": {
+                        "externalDocs": {
+                            "description": "Source Inventory Number",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#source-inventory-number"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "sourceInventoryUrl": {
+                        "externalDocs": {
+                            "description": "Source Inventory URL",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#source-inventory-url"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "stylePeriod": {
+                        "externalDocs": {
+                            "description": "Style Period",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#style-period"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "title": {
+                        "externalDocs": {
+                            "description": "Title",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#title"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            },
+            "contributors": {
+                "externalDocs": {
+                    "description": "Contributor",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#contributor"
+                },
+                "nullable": true,
+                "properties": {
+                    "identifiers": {
+                        "externalDocs": {
+                            "description": "Identifier",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#identifier"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "name": {
+                        "externalDocs": {
+                            "description": "Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "role": {
+                        "externalDocs": {
+                            "description": "Role",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#role"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "copyrightOwners": {
+                "externalDocs": {
+                    "description": "Copyright Owner",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#copyright-owner"
+                },
+                "nullable": true,
+                "properties": {
+                    "copyrightOwnerId": {
+                        "externalDocs": {
+                            "description": "Copyright Owner ID",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#copyright-owner-id"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "copyrightOwnerName": {
+                        "externalDocs": {
+                            "description": "Copyright Owner Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#copyright-owner-name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            },
+            "aboutCvTerms": {
+                "externalDocs": {
+                    "description": "CV-Term About Image",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#cv-term-about-image"
+                },
+                "nullable": true,
+                "properties": {
+                    "cvId": {
+                        "externalDocs": {
+                            "description": "CV-Term CV ID",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#cv-term-cv-id"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "cvTermId": {
+                        "externalDocs": {
+                            "description": "CV-Term ID",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#cv-term-id"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "cvTermName": {
+                        "externalDocs": {
+                            "description": "CV-Term name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#cv-term-name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "cvTermRefinedAbout": {
+                        "externalDocs": {
+                            "description": "Refined 'about' Relationship of the CV-Term",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#refined-'about'-relationship-of-the-cv-term"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            },
+            "embdEncRightsExprs": {
+                "externalDocs": {
+                    "description": "Embedded Encoded Rights Expression",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#embedded-encoded-rights-expression"
+                },
+                "nullable": true,
+                "properties": {
+                    "encRightsExpr": {
+                        "externalDocs": {
+                            "description": "Encoded Rights Expression",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#encoded-rights-expression"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "rightsExprEncType": {
+                        "externalDocs": {
+                            "description": "Encoding type",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#encoding-type"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "rightsExprLangId": {
+                        "externalDocs": {
+                            "description": "Rights Expression Language ID",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#rights-expression-language-id"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            },
+            "genres": {
+                "externalDocs": {
+                    "description": "Genre",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#genre"
+                },
+                "nullable": true,
+                "properties": {
+                    "cvId": {
+                        "externalDocs": {
+                            "description": "CV-Term CV ID",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#cv-term-cv-id"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "cvTermId": {
+                        "externalDocs": {
+                            "description": "CV-Term ID",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#cv-term-id"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "cvTermName": {
+                        "externalDocs": {
+                            "description": "CV-Term name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#cv-term-name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "cvTermRefinedAbout": {
+                        "externalDocs": {
+                            "description": "Refined 'about' Relationship of the CV-Term",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#refined-'about'-relationship-of-the-cv-term"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            },
+            "imageCreators": {
+                "externalDocs": {
+                    "description": "Image Creator",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-creator"
+                },
+                "nullable": true,
+                "properties": {
+                    "imageCreatorId": {
+                        "externalDocs": {
+                            "description": "Image Creator ID",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-creator-id"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "imageCreatorName": {
+                        "externalDocs": {
+                            "description": "Image Creator Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-creator-name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            },
+            "rbVertices": {
+                "externalDocs": {
+                    "description": "Polygon Vertices",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#polygon-vertices"
+                },
+                "nullable": true,
+                "properties": {
+                    "rbX": {
+                        "externalDocs": {
+                            "description": "X-Axis Coordinate",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#x-axis-coordinate"
+                        },
+                        "nullable": true,
+                        "type": "number"
+                    },
+                    "rbY": {
+                        "externalDocs": {
+                            "description": "Y-Axis Coordinate",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#y-axis-coordinate"
+                        },
+                        "nullable": true,
+                        "type": "number"
+                    }
+                }
+            },
+            "regionBoundary": {
+                "externalDocs": {
+                    "description": "Region Boundary",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#region-boundary"
+                },
+                "nullable": true,
+                "properties": {
+                    "rbShape": {
+                        "externalDocs": {
+                            "description": "Boundary Shape",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#boundary-shape"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "enum": [
+                            "rectangle",
+                            "circle",
+                            "polygon"
+                        ]
+                    },
+                    "rbUnit": {
+                        "externalDocs": {
+                            "description": "Boundary Measuring Unit",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#boundary-measuring-unit"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "enum": [
+                            "pixel",
+                            "relative"
+                        ]
+                    },
+                    "rbX": {
+                        "externalDocs": {
+                            "description": "X-Axis Coordinate",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#x-axis-coordinate"
+                        },
+                        "nullable": true,
+                        "type": "number"
+                    },
+                    "rbY": {
+                        "externalDocs": {
+                            "description": "Y-Axis Coordinate",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#y-axis-coordinate"
+                        },
+                        "nullable": true,
+                        "type": "number"
+                    },
+                    "rbW": {
+                        "externalDocs": {
+                            "description": "Rectangle Width",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#rectangle-width"
+                        },
+                        "nullable": true,
+                        "type": "number"
+                    },
+                    "rbH": {
+                        "externalDocs": {
+                            "description": "Rectangle Height",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#rectangle-height"
+                        },
+                        "nullable": true,
+                        "type": "number"
+                    },
+                    "rbRx": {
+                        "externalDocs": {
+                            "description": "Circle Radius",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#circle-radius"
+                        },
+                        "nullable": true,
+                        "type": "number"
+                    },
+                    "rbVertices": {
+                        "externalDocs": {
+                            "description": "Polygon Vertices",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#polygon-vertices"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/rbVertices"
+                        }
+                    }
+                }
+            },
+            "rCtype": {
+                "externalDocs": {
+                    "description": "Region Content Type",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#region-content-type"
+                },
+                "nullable": true,
+                "properties": {
+                    "identifiers": {
+                        "externalDocs": {
+                            "description": "Identifier",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#identifier"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "name": {
+                        "externalDocs": {
+                            "description": "Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            },
+            "rRole": {
+                "externalDocs": {
+                    "description": "Region Role",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#region-role"
+                },
+                "nullable": true,
+                "properties": {
+                    "identifiers": {
+                        "externalDocs": {
+                            "description": "Identifier",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#identifier"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "name": {
+                        "externalDocs": {
+                            "description": "Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            },
+            "imageRegion": {
+                "externalDocs": {
+                    "description": "Image Region",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-region"
+                },
+                "nullable": true,
+                "properties": {
+                    "regionBoundary": {
+                        "externalDocs": {
+                            "description": "Region Boundary",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#region-boundary"
+                        },
+                        "nullable": true,
+                        "$ref": "#/components/schemas/regionBoundary"
+                    },
+                    "rId": {
+                        "externalDocs": {
+                            "description": "Region Identifier",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#region-identifier"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "name": {
+                        "externalDocs": {
+                            "description": "Region Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#region-name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "rCtype": {
+                        "externalDocs": {
+                            "description": "Region Content Type",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#region-content-type"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/rCtype"
+                        }
+                    },
+                    "rRole": {
+                        "externalDocs": {
+                            "description": "Region Role",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#region-role"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/rRole"
+                        }
+                    },
+                    "$anypmdproperty": {
+                        "externalDocs": {
+                            "description": "Other Metadata Property",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#other-metadata-property"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            },
+            "registryEntries": {
+                "externalDocs": {
+                    "description": "Image Registry Entry",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-registry-entry"
+                },
+                "nullable": true,
+                "properties": {
+                    "assetIdentifier": {
+                        "externalDocs": {
+                            "description": "Item Id",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#item-id"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "registryIdentifier": {
+                        "externalDocs": {
+                            "description": "Organisation Id",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#organisation-id"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "role": {
+                        "externalDocs": {
+                            "description": "Role",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#role"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            },
+            "suppliers": {
+                "externalDocs": {
+                    "description": "Image Supplier",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-supplier"
+                },
+                "nullable": true,
+                "properties": {
+                    "imageSupplierId": {
+                        "externalDocs": {
+                            "description": "Image Supplier ID",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-supplier-id"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "imageSupplierName": {
+                        "externalDocs": {
+                            "description": "Image Supplier Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-supplier-name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            },
+            "licensors": {
+                "externalDocs": {
+                    "description": "Licensor",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor"
+                },
+                "nullable": true,
+                "properties": {
+                    "licensorId": {
+                        "externalDocs": {
+                            "description": "Licensor ID",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-id"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "licensorName": {
+                        "externalDocs": {
+                            "description": "Licensor Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "licensorAddress": {
+                        "externalDocs": {
+                            "description": "Licensor Address",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-address"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "licensorAddressDetail": {
+                        "externalDocs": {
+                            "description": "Licensor Adress Detail",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-adress-detail"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "licensorCity": {
+                        "externalDocs": {
+                            "description": "Licensor City",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-city"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "licensorStateProvince": {
+                        "externalDocs": {
+                            "description": "Licensor State or Province",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-state-or-province"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "licensorPostalCode": {
+                        "externalDocs": {
+                            "description": "Licensor Postal Code",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-postal-code"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "licensorCountryName": {
+                        "externalDocs": {
+                            "description": "Licensor Country",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-country"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "licensorTelephoneType1": {
+                        "externalDocs": {
+                            "description": "Licensor Telephone Type 1",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-telephone-type-1"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "enum": [
+                            "cell",
+                            "fax",
+                            "home",
+                            "pager",
+                            "work"
+                        ]
+                    },
+                    "licensorTelephone1": {
+                        "externalDocs": {
+                            "description": "Licensor Telephone 1",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-telephone-1"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "licensorTelephoneType2": {
+                        "externalDocs": {
+                            "description": "Licensor Telephone Type 2",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-telephone-type-2"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "enum": [
+                            "cell",
+                            "fax",
+                            "home",
+                            "pager",
+                            "work"
+                        ]
+                    },
+                    "licensorTelephone2": {
+                        "externalDocs": {
+                            "description": "Licensor Telephone 2",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-telephone-2"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "licensorEmail": {
+                        "externalDocs": {
+                            "description": "Licensor Email",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-email"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "licensorUrl": {
+                        "externalDocs": {
+                            "description": "Licensor URL",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-url"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "format": "uri"
+                    }
+                }
+            },
+            "linkedEncRightsExprs": {
+                "externalDocs": {
+                    "description": "Linked  Encoded Rights Expression",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#linked--encoded-rights-expression"
+                },
+                "nullable": true,
+                "properties": {
+                    "linkedRightsExpr": {
+                        "externalDocs": {
+                            "description": "Link to Encoded Rights Expression",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#link-to-encoded-rights-expression"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "rightsExprEncType": {
+                        "externalDocs": {
+                            "description": "Encoding type",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#encoding-type"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "rightsExprLangId": {
+                        "externalDocs": {
+                            "description": "Rights Expression Language ID",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#rights-expression-language-id"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            },
+            "locationCreated": {
+                "externalDocs": {
+                    "description": "Location Created",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#location-created"
+                },
+                "nullable": true,
+                "properties": {
+                    "city": {
+                        "externalDocs": {
+                            "description": "City",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#city"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "countryCode": {
+                        "externalDocs": {
+                            "description": "Country ISO-Code",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#country-iso-code"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "countryName": {
+                        "externalDocs": {
+                            "description": "Country Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#country-name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "gpsAltitude": {
+                        "externalDocs": {
+                            "description": "GPS-Altitude",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#gps-altitude"
+                        },
+                        "nullable": true,
+                        "type": "number"
+                    },
+                    "gpsAltitudeRef": {
+                        "externalDocs": {
+                            "description": "GPS-Altitude Reference",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#gps-altitude-reference"
+                        },
+                        "nullable": true,
+                        "type": "number",
+                        "enum": [
+                            0,
+                            1
+                        ]
+                    },
+                    "gpsLatitude": {
+                        "externalDocs": {
+                            "description": "GPS-Latitude",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#gps-latitude"
+                        },
+                        "nullable": true,
+                        "type": "number"
+                    },
+                    "gpsLongitude": {
+                        "externalDocs": {
+                            "description": "GPS-Longitude",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#gps-longitude"
+                        },
+                        "nullable": true,
+                        "type": "number"
+                    },
+                    "identifiers": {
+                        "externalDocs": {
+                            "description": "Location Identifier",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#location-identifier"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "name": {
+                        "externalDocs": {
+                            "description": "Location Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#location-name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "provinceState": {
+                        "externalDocs": {
+                            "description": "Province or State",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#province-or-state"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "sublocation": {
+                        "externalDocs": {
+                            "description": "Sublocation",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#sublocation"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "worldRegion": {
+                        "externalDocs": {
+                            "description": "World Region",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#world-region"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            },
+            "locationsShown": {
+                "externalDocs": {
+                    "description": "Location Shown in the Image",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#location-shown-in-the-image"
+                },
+                "nullable": true,
+                "properties": {
+                    "city": {
+                        "externalDocs": {
+                            "description": "City",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#city"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "countryCode": {
+                        "externalDocs": {
+                            "description": "Country ISO-Code",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#country-iso-code"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "countryName": {
+                        "externalDocs": {
+                            "description": "Country Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#country-name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "gpsAltitude": {
+                        "externalDocs": {
+                            "description": "GPS-Altitude",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#gps-altitude"
+                        },
+                        "nullable": true,
+                        "type": "number"
+                    },
+                    "gpsAltitudeRef": {
+                        "externalDocs": {
+                            "description": "GPS-Altitude Reference",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#gps-altitude-reference"
+                        },
+                        "nullable": true,
+                        "type": "number",
+                        "enum": [
+                            0,
+                            1
+                        ]
+                    },
+                    "gpsLatitude": {
+                        "externalDocs": {
+                            "description": "GPS-Latitude",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#gps-latitude"
+                        },
+                        "nullable": true,
+                        "type": "number"
+                    },
+                    "gpsLongitude": {
+                        "externalDocs": {
+                            "description": "GPS-Longitude",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#gps-longitude"
+                        },
+                        "nullable": true,
+                        "type": "number"
+                    },
+                    "identifiers": {
+                        "externalDocs": {
+                            "description": "Location Identifier",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#location-identifier"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "name": {
+                        "externalDocs": {
+                            "description": "Location Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#location-name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "provinceState": {
+                        "externalDocs": {
+                            "description": "Province or State",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#province-or-state"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "sublocation": {
+                        "externalDocs": {
+                            "description": "Sublocation",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#sublocation"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "worldRegion": {
+                        "externalDocs": {
+                            "description": "World Region",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#world-region"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            },
+            "characteristics": {
+                "externalDocs": {
+                    "description": "Characteristics",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#characteristics"
+                },
+                "nullable": true,
+                "properties": {
+                    "cvId": {
+                        "externalDocs": {
+                            "description": "CV-Term CV ID",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#cv-term-cv-id"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "cvTermId": {
+                        "externalDocs": {
+                            "description": "CV-Term ID",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#cv-term-id"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "cvTermName": {
+                        "externalDocs": {
+                            "description": "CV-Term name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#cv-term-name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "cvTermRefinedAbout": {
+                        "externalDocs": {
+                            "description": "Refined 'about' Relationship of the CV-Term",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#refined-'about'-relationship-of-the-cv-term"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            },
+            "personsShown": {
+                "externalDocs": {
+                    "description": "Person Shown in the Image with Details",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#person-shown-in-the-image-with-details"
+                },
+                "nullable": true,
+                "properties": {
+                    "characteristics": {
+                        "externalDocs": {
+                            "description": "Characteristics",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#characteristics"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/characteristics"
+                        }
+                    },
+                    "description": {
+                        "externalDocs": {
+                            "description": "Description",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#description"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "identifiers": {
+                        "externalDocs": {
+                            "description": "Identifier",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#identifier"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "name": {
+                        "externalDocs": {
+                            "description": "Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            },
+            "productsShown": {
+                "externalDocs": {
+                    "description": "Product Shown in the Image",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#product-shown-in-the-image"
+                },
+                "nullable": true,
+                "properties": {
+                    "description": {
+                        "externalDocs": {
+                            "description": "Description",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#description"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "gtin": {
+                        "externalDocs": {
+                            "description": "GTIN",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#gtin"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "identifiers": {
+                        "externalDocs": {
+                            "description": "Identifier",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#identifier"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "name": {
+                        "externalDocs": {
+                            "description": "Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            },
+            "iptc": {
+                "externalDocs": {
+                    "description": "IPTC",
+                    "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata"
+                },
+                "type": "object",
+                "properties": {
+                    "altTextAccessibility": {
+                        "externalDocs": {
+                            "description": "Alt Text (Accessibility)",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#alt-text-accessibility"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "cityName": {
+                        "externalDocs": {
+                            "description": "City (legacy)",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#city-legacy"
+                        },
+                        "deprecated": true,
+                        "nullable": true,
+                        "type": "string",
+                        "maxLength": 32
+                    },
+                    "copyrightNotice": {
+                        "externalDocs": {
+                            "description": "Copyright Notice",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#copyright-notice"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "maxLength": 128
+                    },
+                    "countryName": {
+                        "externalDocs": {
+                            "description": "Country (legacy)",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#country-legacy"
+                        },
+                        "deprecated": true,
+                        "nullable": true,
+                        "type": "string",
+                        "maxLength": 64
+                    },
+                    "countryCode": {
+                        "externalDocs": {
+                            "description": "Country Code (legacy)",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#country-code-legacy"
+                        },
+                        "deprecated": true,
+                        "nullable": true,
+                        "type": "string",
+                        "maxLength": 3
+                    },
+                    "creatorNames": {
+                        "externalDocs": {
+                            "description": "Creator",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#creator"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "maxLength": 32
+                        }
+                    },
+                    "creatorContactInfo": {
+                        "externalDocs": {
+                            "description": "Creator's Contact Info",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#creator's-contact-info"
+                        },
+                        "nullable": true,
+                        "$ref": "#/components/schemas/creatorContactInfo"
+                    },
+                    "jobtitle": {
+                        "externalDocs": {
+                            "description": "Creator's jobtitle",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#creator's-jobtitle"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "maxLength": 32
+                    },
+                    "creditLine": {
+                        "externalDocs": {
+                            "description": "Credit Line",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#credit-line"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "maxLength": 32
+                    },
+                    "dateCreated": {
+                        "externalDocs": {
+                            "description": "Date Created",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#date-created"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "description": {
+                        "externalDocs": {
+                            "description": "Description",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#description"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "maxLength": 2000
+                    },
+                    "captionWriter": {
+                        "externalDocs": {
+                            "description": "Description Writer",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#description-writer"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "maxLength": 32
+                    },
+                    "extDescrAccessibility": {
+                        "externalDocs": {
+                            "description": "Extended Description (Accessibility)",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#extended-description-accessibility"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "headline": {
+                        "externalDocs": {
+                            "description": "Headline",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#headline"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "maxLength": 256
+                    },
+                    "instructions": {
+                        "externalDocs": {
+                            "description": "Instructions",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#instructions"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "maxLength": 256
+                    },
+                    "intellectualGenre": {
+                        "externalDocs": {
+                            "description": "Intellectual Genre (legacy)",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#intellectual-genre-legacy"
+                        },
+                        "deprecated": true,
+                        "nullable": true,
+                        "type": "string",
+                        "maxLength": 64
+                    },
+                    "jobid": {
+                        "externalDocs": {
+                            "description": "Job Id",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#job-id"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "maxLength": 32
+                    },
+                    "keywords": {
+                        "externalDocs": {
+                            "description": "Keywords",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#keywords"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "maxLength": 64
+                        }
+                    },
+                    "provinceState": {
+                        "externalDocs": {
+                            "description": "Province or State (legacy)",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#province-or-state-legacy"
+                        },
+                        "deprecated": true,
+                        "nullable": true,
+                        "type": "string",
+                        "maxLength": 32
+                    },
+                    "usageTerms": {
+                        "externalDocs": {
+                            "description": "Rights Usage Terms",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#rights-usage-terms"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "sceneCodes": {
+                        "externalDocs": {
+                            "description": "Scene Code",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#scene-code"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "source": {
+                        "externalDocs": {
+                            "description": "Source (Supply Chain)",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#source-supply-chain"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "maxLength": 32
+                    },
+                    "subjectCodes": {
+                        "externalDocs": {
+                            "description": "Subject Code (legacy)",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#subject-code-legacy"
+                        },
+                        "deprecated": true,
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "maxLength": 236
+                        }
+                    },
+                    "sublocationName": {
+                        "externalDocs": {
+                            "description": "Sublocation (legacy)",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#sublocation-legacy"
+                        },
+                        "deprecated": true,
+                        "nullable": true,
+                        "type": "string",
+                        "maxLength": 32
+                    },
+                    "title": {
+                        "externalDocs": {
+                            "description": "Title",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#title"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "maxLength": 64
+                    },
+                    "additionalModelInfo": {
+                        "externalDocs": {
+                            "description": "Additional Model Information",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#additional-model-information"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "aIPromptInformation": {
+                        "externalDocs": {
+                            "description": "AI Prompt Information",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#ai-prompt-information"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "aIPromptWriterNam": {
+                        "externalDocs": {
+                            "description": "AI Prompt Writer Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#ai-prompt-writer-name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "aISystemUsed": {
+                        "externalDocs": {
+                            "description": "AI System Used",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#ai-system-used"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "aISystemVersionUsed": {
+                        "externalDocs": {
+                            "description": "AI System Version Used",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#ai-system-version-used"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "artworkOrObjects": {
+                        "externalDocs": {
+                            "description": "Artwork or Object in the Image",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#artwork-or-object-in-the-image"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/artworkOrObjects"
+                        }
+                    },
+                    "organisationInImageCodes": {
+                        "externalDocs": {
+                            "description": "Code of Organisation Featured in the Image",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#code-of-organisation-featured-in-the-image"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "contributors": {
+                        "externalDocs": {
+                            "description": "Contributor",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#contributor"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/contributors"
+                        }
+                    },
+                    "copyrightOwners": {
+                        "externalDocs": {
+                            "description": "Copyright Owner",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#copyright-owner"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/copyrightOwners"
+                        }
+                    },
+                    "aboutCvTerms": {
+                        "externalDocs": {
+                            "description": "CV-Term About Image",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#cv-term-about-image"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/aboutCvTerms"
+                        }
+                    },
+                    "dataMining": {
+                        "externalDocs": {
+                            "description": "Data Mining",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#data-mining"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "enum": [
+                            "DMI-UNSPECIFIED",
+                            "DMI-ALLOWED",
+                            "DMI-PROHIBITED-AIMLTRAINING",
+                            "DMI-PROHIBITED-GENAIMLTRAINING",
+                            "DMI-PROHIBITED-EXCEPTSEARCHENGINEINDEXING",
+                            "DMI-PROHIBITED-SEECONSTRAINT",
+                            "DMI-PROHIBITED-SEEEMBEDDEDRIGHTSEXPR",
+                            "DMI-PROHIBITED-SEELINKEDRIGHTSEXPR"
+                        ]
+                    },
+                    "digitalImageGuid": {
+                        "externalDocs": {
+                            "description": "Digital Image GUID",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#digital-image-guid"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "digitalSourceType": {
+                        "externalDocs": {
+                            "description": "Digital Source Type",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#digital-source-type"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "embdEncRightsExprs": {
+                        "externalDocs": {
+                            "description": "Embedded Encoded Rights Expression",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#embedded-encoded-rights-expression"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/embdEncRightsExprs"
+                        }
+                    },
+                    "eventId": {
+                        "externalDocs": {
+                            "description": "Event Identifier",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#event-identifier"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "eventName": {
+                        "externalDocs": {
+                            "description": "Event Name",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#event-name"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "genres": {
+                        "externalDocs": {
+                            "description": "Genre",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#genre"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/genres"
+                        }
+                    },
+                    "imageCreators": {
+                        "externalDocs": {
+                            "description": "Image Creator",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-creator"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/imageCreators"
+                        }
+                    },
+                    "imageRating": {
+                        "externalDocs": {
+                            "description": "Image Rating",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-rating"
+                        },
+                        "nullable": true,
+                        "type": "number",
+                        "enum": [
+                            -1,
+                            0,
+                            1,
+                            2,
+                            3,
+                            4,
+                            5
+                        ]
+                    },
+                    "imageRegion": {
+                        "externalDocs": {
+                            "description": "Image Region",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-region"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/imageRegion"
+                        }
+                    },
+                    "registryEntries": {
+                        "externalDocs": {
+                            "description": "Image Registry Entry",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-registry-entry"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/registryEntries"
+                        }
+                    },
+                    "suppliers": {
+                        "externalDocs": {
+                            "description": "Image Supplier",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-supplier"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/suppliers"
+                        }
+                    },
+                    "imageSupplierImageId": {
+                        "externalDocs": {
+                            "description": "Image Supplier Image ID",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-supplier-image-id"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "licensors": {
+                        "externalDocs": {
+                            "description": "Licensor",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/licensors"
+                        }
+                    },
+                    "linkedEncRightsExprs": {
+                        "externalDocs": {
+                            "description": "Linked  Encoded Rights Expression",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#linked--encoded-rights-expression"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/linkedEncRightsExprs"
+                        }
+                    },
+                    "locationCreated": {
+                        "externalDocs": {
+                            "description": "Location Created",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#location-created"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/locationCreated"
+                        }
+                    },
+                    "locationsShown": {
+                        "externalDocs": {
+                            "description": "Location Shown in the Image",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#location-shown-in-the-image"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/locationsShown"
+                        }
+                    },
+                    "maxAvailHeight": {
+                        "externalDocs": {
+                            "description": "Max Avail Height",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#max-avail-height"
+                        },
+                        "nullable": true,
+                        "type": "integer"
+                    },
+                    "maxAvailWidth": {
+                        "externalDocs": {
+                            "description": "Max Avail Width",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#max-avail-width"
+                        },
+                        "nullable": true,
+                        "type": "integer"
+                    },
+                    "minorModelAgeDisclosure": {
+                        "externalDocs": {
+                            "description": "Minor Model Age Disclosure",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#minor-model-age-disclosure"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "enum": [
+                            "AG-UNK",
+                            "AG-A25",
+                            "AG-A24",
+                            "AG-A23",
+                            "AG-A22",
+                            "AG-A21",
+                            "AG-A20",
+                            "AG-A19",
+                            "AG-A18",
+                            "AG-A17",
+                            "AG-A16",
+                            "AG-A15",
+                            "AG-U14"
+                        ]
+                    },
+                    "modelAges": {
+                        "externalDocs": {
+                            "description": "Model Age",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#model-age"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "integer"
+                        }
+                    },
+                    "modelReleaseDocuments": {
+                        "externalDocs": {
+                            "description": "Model Release Id",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#model-release-id"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "modelReleaseStatus": {
+                        "externalDocs": {
+                            "description": "Model Release Status",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#model-release-status"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "enum": [
+                            "MR-NON",
+                            "MR-NAP",
+                            "MR-UMR",
+                            "MR-LMR"
+                        ]
+                    },
+                    "organisationInImageNames": {
+                        "externalDocs": {
+                            "description": "Name of Organisation Featured in the Image",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#name-of-organisation-featured-in-the-image"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "otherConstraints": {
+                        "externalDocs": {
+                            "description": "Other Constraints",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#other-constraints"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "personInImageNames": {
+                        "externalDocs": {
+                            "description": "Person Shown in the Image",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#person-shown-in-the-image"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "personsShown": {
+                        "externalDocs": {
+                            "description": "Person Shown in the Image with Details",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#person-shown-in-the-image-with-details"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/personsShown"
+                        }
+                    },
+                    "productsShown": {
+                        "externalDocs": {
+                            "description": "Product Shown in the Image",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#product-shown-in-the-image"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/productsShown"
+                        }
+                    },
+                    "propertyReleaseDocuments": {
+                        "externalDocs": {
+                            "description": "Property Release Id",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#property-release-id"
+                        },
+                        "nullable": true,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "propertyReleaseStatus": {
+                        "externalDocs": {
+                            "description": "Property Release Status",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#property-release-status"
+                        },
+                        "nullable": true,
+                        "type": "string",
+                        "enum": [
+                            "PR-NON",
+                            "PR-NAP",
+                            "PR-UPR",
+                            "PR-LPR"
+                        ]
+                    },
+                    "webstatementRights": {
+                        "externalDocs": {
+                            "description": "Web Statement of Rights",
+                            "url": "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#web-statement-of-rights"
+                        },
+                        "nullable": true,
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

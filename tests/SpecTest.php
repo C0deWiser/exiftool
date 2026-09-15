@@ -12,7 +12,7 @@ class SpecTest extends TestCase
     {
         parent::setUp();
 
-        $this->spec = Specification::fetch(__DIR__.'/../iptc-pmd-techreference_2023.2.json');
+        $this->spec = Specification::fetch(__DIR__.'/../iptc-pmd-techreference_2025.1.json');
     }
 
     public function test()

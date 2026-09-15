@@ -4,7 +4,7 @@ namespace Tests;
 
 class IptcClearTest extends TestCase
 {
-    protected string $template = __DIR__.'/IPTC-PhotometadataRef-Std2023.2.jpg';
+    protected string $template = __DIR__.'/Spec2023/IPTC-PhotometadataRef-Std2023.2.jpg';
     protected string $filename = __DIR__.'/IptcClearTest.jpg';
 
     protected function setUp(): void

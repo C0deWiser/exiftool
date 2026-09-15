@@ -10,8 +10,14 @@ use Faker\Factory;
 
 class PlainAttribute implements Contracts\Plain
 {
+    protected ?AttributeSpec $spec = null;
     protected array $et = [];
     protected string $value = '';
+
+    public function __construct(?AttributeSpec $spec = null)
+    {
+        $this->spec = $spec;
+    }
 
     public function fromExiftool(array $values, ?AttributeSpec $spec = null): static
     {
@@ -37,8 +43,20 @@ class PlainAttribute implements Contracts\Plain
     {
         $value = current($values);
 
-        if (!$value) {
+        $isEmpty = match ($this->spec?->dataType()) {
+            'any',
+            'number' => $value === null || $value === '' || $value === false,
+            default  => !$value,
+        };
+
+        if ($isEmpty) {
             throw new MistypeException();
+        }
+
+        if ($enum = $this->spec?->enum()) {
+            if (!in_array($value, $enum)) {
+                throw new MistypeException();
+            }
         }
 
         $this->value = $value;

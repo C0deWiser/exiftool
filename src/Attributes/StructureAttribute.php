@@ -28,9 +28,6 @@ class StructureAttribute implements Contracts\Structure
 
         foreach ($this->structure->getAttributes() as $spec) {
             $jsonName = $spec->jsonName();
-            if ($jsonName == 'gpsAltitudeRef') {
-                continue;
-            }
             $attr = AttributeFactory::for($spec);
             $faked[$jsonName] = $attr->fake($spec);
         }
@@ -78,9 +75,14 @@ class StructureAttribute implements Contracts\Structure
                             // Do not escape nested structs
                             $value = str_replace(['|', ','], ['||', '|,'], $value);
                         }
-                    }
-                    if (is_array($value)) {
-                        $value = '['.implode(',', $value).']';
+                    } elseif (is_array($value)) {
+                        // ExifTool treats ProductInImage.ProductId as a plain value.
+                        // We are forced to write just one identifier.
+                        if ($this->structure->name === 'ProductWGtin' && $jsonName === 'identifiers') {
+                            $value = (string) reset($value);
+                        } else {
+                            $value = '['.implode(',', $value).']';
+                        }
                     }
                     $values[] = $attrEtName.'='.$value;
                 }
@@ -109,12 +111,6 @@ class StructureAttribute implements Contracts\Structure
                 continue;
             }
             $attr = AttributeFactory::for($spec);
-
-            if ($this->structure->name == 'ProductWGtin' &&
-                $jsonName == 'identifiers')
-            {
-                $value = current($value);
-            }
 
             try {
                 if ($attr instanceof Contracts\Structure) {

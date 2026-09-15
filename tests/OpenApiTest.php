@@ -14,10 +14,14 @@ class OpenApiTest extends TestCase
     {
         AltLangAttribute::collapse();
 
-        $spec = (new Exiftool)->printConv()->specification();
+        $spec = (new Exiftool)->useMachineValues()->specification();
         $api = new OpenApi($spec, '2024.1');
         $spec = $api->make();
 
         dump($spec);
+
+        $api->save(__DIR__.'/../openapi/iptc.json');
+
+        $this->markTestSkipped();
     }
 }

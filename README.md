@@ -18,17 +18,15 @@ This package provides [some helpers](laravel.md) for Laravel.
 
 ## Known issues
 
-The IPTC specification describes `locationCreated` as a single element, but 
-`Exiftool` treats it as a bag and requires an array of `Location` structures.
+`ProductWGtin.identifiers` is `multi` by specification, but if we try to embed
+an array of shown product identifiers, the `exiftool` responds with warning
+and ignores it.
 
-The IPTC specification describes `ProductWGtin.identifiers` as a multiple 
-element (array), but `Exiftool` requires a single element.
+```shell
+Warning: ProductId is not a list in ProductDetails
+```
 
-`Exiftool` doesn't import `GPSAltitudeRef`, as `GPSAltitude` may be positive 
-or negative — this is enough.
-
-This library overrides the IPTC specification, making `locationCreated` multiple 
-and `ProductWGtin.identifiers` single, and ignores `GPSAltitudeRef`.
+So we forced to embed the first one identifier.
 
 ## Configuration
 

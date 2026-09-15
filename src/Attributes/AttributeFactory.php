@@ -20,7 +20,7 @@ class AttributeFactory
                 $factory = fn() => new DateTimeAttribute();
             } else {
                 $mergeValues = true;
-                $factory = fn() => new PlainAttribute();
+                $factory = fn() => new PlainAttribute($spec);
             }
         }
 
