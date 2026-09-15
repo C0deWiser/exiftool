@@ -46,7 +46,7 @@ class PlainAttribute implements Contracts\Plain
         $isEmpty = match ($this->spec?->dataType()) {
             'any',
             'number' => $value === null || $value === '' || $value === false,
-            default  => !$value,
+            default  => ! $value,
         };
 
         if ($isEmpty) {
@@ -54,7 +54,7 @@ class PlainAttribute implements Contracts\Plain
         }
 
         if ($enum = $this->spec?->enum()) {
-            if (!in_array($value, $enum)) {
+            if (! in_array($value, $enum)) {
                 throw new MistypeException();
             }
         }
@@ -83,10 +83,12 @@ class PlainAttribute implements Contracts\Plain
     {
         $faker = Factory::create('en_GB');
 
+        $id = fn() => $faker->domainName().'/'.$faker->slug(2);
+
         $this->value = match ($spec->dataType()) {
             'string' => match ($spec->dataFormat()) {
                 'url'   => $faker->url(),
-                'uri'   => $faker->slug(1),
+                'uri'   => $id(),
                 default => $faker->word()
             },
             'number' => match ($spec->dataFormat()) {
@@ -96,11 +98,24 @@ class PlainAttribute implements Contracts\Plain
             default  => $faker->word()
         };
 
+        if (
+            str_ends_with($spec->jsonName(), 'Id') ||
+            str_ends_with($spec->jsonName(), 'Identifier')
+        ) {
+            $this->value = $id();
+        }
+
         if ($enum = $spec->enum()) {
             $this->value = $faker->randomElement($enum);
         }
 
         $this->value = match ($spec->jsonName()) {
+            'role',
+            'jobid',
+            'digitalImageGuid',
+            'modelReleaseDocuments',
+            'propertyReleaseDocuments',
+            'organisationInImageCodes' => $id(),
             'countryCode'         => $faker->countryISOAlpha3(),
             'country',
             'licensorCountryName',
@@ -121,35 +136,39 @@ class PlainAttribute implements Contracts\Plain
             'headline',
             'instructions',
             'additionalModelInfo',
+            'aIPromptInformation',
             'copyrightNotice',
+            'encRightsExpr',
             'creditLine'          => $faker->sentence(),
-            'jobid'               => $faker->slug(2),
+            'circaDateCreated'    => $faker->dateTime()->format('r'),
             'sceneCodes'          => 'scn:'.$faker->numerify('######'),
             'subjectCodes'        => 'medtop:'.$faker->numerify('########'),
-            'webstatementRights',
-            'cvId',
-            'cvTermId',
-            'imageCreatorId'      => $faker->url(),
+            'rightsExprEncType'   => 'text/html',
             'captionWriter',
             'creatorNames',
             'currentCopyrightOwnerName',
             'licensorName',
             'copyrightOwnerName',
+            'aIPromptWriterNam',
             'personInImageNames',
             'imageCreatorName'    => $faker->name(),
+            'aISystemUsed'        => $faker->linuxPlatformToken(),
+            'aISystemVersionUsed' => $faker->semver(),
             'imageSupplierName',
             'organisationInImageNames',
+            'source',
             'currentLicensorName' => $faker->company(),
             'imageRating'         => rand(-1, 5),
             'modelAges'           => rand(10, 80),
             'gpsLatitude'         => round($faker->latitude(), 6),
             'gpsLongitude'        => round($faker->longitude(), 6),
             'gpsAltitude'         => $faker->randomFloat(2, -250, 2000),
+            'sourceInventoryNr',
             'gtin'                => $faker->numerify('##############'),
             default               => $this->value,
         };
 
-        if (!Exiftool::$printConv) {
+        if (! Exiftool::$printConv) {
             if ($spec->jsonName() == 'gpsAltitude') {
                 $this->value .= ' m';
             }

@@ -56,11 +56,11 @@ class AltLangAttribute implements Contracts\AltLang
         $this->values = match ($spec->jsonName()) {
             'name' =>[
                 'en' => Factory::create('en_GB')->name(),
-                'es' => Factory::create('es_ES')->name(),
+                'fr' => Factory::create('fr_FR')->name(),
             ],
             default => [
                 'en' => Factory::create('en_GB')->sentence(),
-                'es' => Factory::create('es_ES')->sentence(),
+                'fr' => Factory::create('fr_FR')->sentence(),
             ]
         };
 

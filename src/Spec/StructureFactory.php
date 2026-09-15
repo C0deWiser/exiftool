@@ -7,7 +7,7 @@ use Codewiser\Exiftool\Structures;;
 
 class StructureFactory
 {
-    protected function factory(string $name): StructureAttribute
+    public function make(string $name): StructureAttribute
     {
         return new StructureAttribute(
             Specification::make()->struct($name)
@@ -16,91 +16,91 @@ class StructureFactory
 
     public function artworkOrObject(): StructureAttribute|Structures\ArtworkOrObject
     {
-        return $this->factory('ArtworkOrObject');
+        return $this->make('ArtworkOrObject');
     }
 
     public function copyrightOwner(): StructureAttribute|Structures\CopyrightOwner
     {
-        return $this->factory('CopyrightOwner');
+        return $this->make('CopyrightOwner');
     }
 
     public function creatorContactInfo(): StructureAttribute|Structures\CreatorContactInfo
     {
-        return $this->factory('CreatorContactInfo');
+        return $this->make('CreatorContactInfo');
     }
 
     public function cvTerm(): StructureAttribute|Structures\CvTerm
     {
-        return $this->factory('CvTerm');
+        return $this->make('CvTerm');
     }
 
     public function embeddedEncodedRightsExpression(): StructureAttribute|Structures\EmbdEncRightsExpr
     {
-        return $this->factory('EmbdEncRightsExpr');
+        return $this->make('EmbdEncRightsExpr');
     }
 
     public function entity(): StructureAttribute|Structures\Entity
     {
-        return $this->factory('Entity');
+        return $this->make('Entity');
     }
 
     public function entityWithRole(): StructureAttribute|Structures\EntityWRole
     {
-        return $this->factory('EntityWRole');
+        return $this->make('EntityWRole');
     }
 
     public function imageCreator(): StructureAttribute|Structures\ImageCreator
     {
-        return $this->factory('ImageCreator');
+        return $this->make('ImageCreator');
     }
 
     public function imageRegion(): StructureAttribute|Structures\ImageRegion
     {
-        return $this->factory('ImageRegion');
+        return $this->make('ImageRegion');
     }
 
     public function imageSupplier(): StructureAttribute|Structures\ImageSupplier
     {
-        return $this->factory('ImageSupplier');
+        return $this->make('ImageSupplier');
     }
 
     public function licensor(): StructureAttribute|Structures\Licensor
     {
-        return $this->factory('Licensor');
+        return $this->make('Licensor');
     }
 
     public function linkedEncodedRightsExpression(): StructureAttribute|Structures\LinkedEncRightsExpr
     {
-        return $this->factory('LinkedEncRightsExpr');
+        return $this->make('LinkedEncRightsExpr');
     }
 
     public function location(): StructureAttribute|Structures\Location
     {
-        return $this->factory('Location');
+        return $this->make('Location');
     }
 
     public function personWithDetails(): StructureAttribute|Structures\PersonWDetails
     {
-        return $this->factory('PersonWDetails');
+        return $this->make('PersonWDetails');
     }
 
     public function productWithGtin(): StructureAttribute|Structures\ProductWGtin
     {
-        return $this->factory('ProductWGtin');
+        return $this->make('ProductWGtin');
     }
 
     public function regionBoundary(): StructureAttribute|Structures\RegionBoundary
     {
-        return $this->factory('RegionBoundary');
+        return $this->make('RegionBoundary');
     }
 
     public function regionBoundaryPoint(): StructureAttribute|Structures\RegionBoundaryPoint
     {
-        return $this->factory('RegionBoundaryPoint');
+        return $this->make('RegionBoundaryPoint');
     }
 
     public function registryEntry(): StructureAttribute|Structures\RegistryEntry
     {
-        return $this->factory('RegistryEntry');
+        return $this->make('RegistryEntry');
     }
 }

@@ -12,7 +12,7 @@ class OpenApiTest extends TestCase
 {
     public function test()
     {
-        AltLangAttribute::collapse();
+        //AltLangAttribute::collapse();
 
         $spec = (new Exiftool)->useMachineValues()->specification();
         $api = new OpenApi($spec, '2025.1');

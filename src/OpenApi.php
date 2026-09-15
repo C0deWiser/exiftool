@@ -3,6 +3,9 @@
 namespace Codewiser\Exiftool;
 
 use Codewiser\Exiftool\Attributes\AltLangAttribute;
+use Codewiser\Exiftool\Attributes\DateTimeAttribute;
+use Codewiser\Exiftool\Attributes\PlainAttribute;
+use Codewiser\Exiftool\Attributes\StructureAttribute;
 use Codewiser\Exiftool\Spec\Concerns\AttributeSpec;
 use Codewiser\Exiftool\Spec\Specification;
 use Codewiser\Exiftool\Spec\TopLevelAttributeSpec;
@@ -35,8 +38,19 @@ class OpenApi
 
         // Init first, then fill
         $this->openapi['components']['schemas']['iptc'] = [];
+
+        $attributes = $this->specification->topLevel()->getAttributes();
+
+        usort($attributes, function (TopLevelAttributeSpec $a, TopLevelAttributeSpec $b) {
+            if ($a->sortOrder() == $b->sortOrder()) {
+                return 0;
+            }
+
+            return $a->sortOrder() < $b->sortOrder() ? -1 : 1;
+        });
+
         $this->openapi['components']['schemas']['iptc'] = $this->makeTop(
-            $this->specification->topLevel()->getAttributes()
+            $attributes
         );
 
         return $this->openapi;
@@ -49,11 +63,13 @@ class OpenApi
      */
     protected function makeTop(array $attributes): array
     {
+        $externalLink = "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata";
+
         $top = [
-            'description'  => 'IPTC',
+            'description'  => "IPTC Photo Metadadata Standard\n\n[$externalLink]($externalLink)",
             'externalDocs' => [
                 'description' => 'IPTC',
-                'url'         => "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata"
+                'url'         => $externalLink
             ],
             'type'         => 'object',
             'properties'   => []
@@ -74,13 +90,26 @@ class OpenApi
 
     protected function makeDefault(AttributeSpec $attr): array
     {
+        $externalLink = "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata{$attr->specIdx()}";
+
+        $topic = $this->topic($attr);
+
         $api = [
-            'description'  => $attr->helpText() ?: $attr->name(),
+            'description'  => "{$attr->name()}".
+                ($topic ? "\n\n`$topic`" : '').
+                ($attr->helpText() ? "\n\n".$attr->helpText() : '').
+                ($attr->userNotes() ? "\n\n".$attr->userNotes() : '').
+                "\n\n".
+                "[$externalLink]($externalLink)",
             'externalDocs' => [
                 'description' => $attr->name(),
-                'url'         => "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata{$attr->specIdx()}"
+                'url'         => $externalLink
             ],
         ];
+
+        if ($topic) {
+            $api['tags'] = [$topic];
+        }
 
         if (str_contains($attr->name(), '(legacy)')) {
             $api['deprecated'] = true;
@@ -106,14 +135,34 @@ class OpenApi
         }
         if ($enum = $attr->enum()) {
             $item['enum'] = $enum;
-        } elseif ($attr->dataFormat() == 'url') {
-            $item['format'] = 'uri';
+        } elseif ($attr->dataFormat() == 'url' || $attr->dataFormat() == 'uri') {
+            $item['format'] = $attr->dataFormat();
         }
         if ($attr->dataFormat() == 'date-time') {
             $item['format'] = 'date-time';
         }
 
         return $item;
+    }
+
+    protected function makeExample(AttributeSpec $attr): mixed
+    {
+        $generator = match ($attr->dataFormat()) {
+            'AltLang'   => new AltLangAttribute(),
+            'date-time' => new DateTimeAttribute(),
+            default     => new PlainAttribute()
+        };
+
+        if ($attr->isSingle()) {
+            $example = $generator->fake($attr);
+        } else {
+            $example = [
+                $generator->fake($attr),
+                (clone $generator)->fake($attr)
+            ];
+        }
+
+        return $example;
     }
 
     protected function makePlain(AttributeSpec $attr): array
@@ -125,6 +174,10 @@ class OpenApi
         } else {
             $api['type'] = 'array';
             $api['items'] = $this->makeSingular($attr);
+        }
+        $example = $this->makeExample($attr);
+        if ($example !== null) {
+            $api['example'] = $example;
         }
 
         return $api;
@@ -139,6 +192,7 @@ class OpenApi
         } else {
             $api['type'] = 'object';
             $api['additionalProperties'] = $this->makeSingular($attr);
+            $api['example'] = $this->makeExample($attr);
         }
 
         return $api;
@@ -172,6 +226,23 @@ class OpenApi
         }
 
         return $api;
+    }
+
+    protected function topic(AttributeSpec $attr): ?string
+    {
+        $topic = $attr instanceof TopLevelAttributeSpec ? $attr->topic() : null;
+
+        return match ($topic) {
+            'admin'     => 'Administrative Details',
+            'gimgcont'  => 'General Image Content',
+            'imgreg'    => 'Image Region',
+            'licensing' => 'Licensing Use',
+            'location'  => 'Location',
+            'othings'   => 'Other Things Shown',
+            'person'    => 'Persons Shown',
+            'rights'    => 'Rights Information',
+            default     => $topic
+        };
     }
 
     public function save(string $filename): bool|int
