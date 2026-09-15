@@ -15,12 +15,10 @@ class OpenApiTest extends TestCase
         AltLangAttribute::collapse();
 
         $spec = (new Exiftool)->useMachineValues()->specification();
-        $api = new OpenApi($spec, '2024.1');
-        $spec = $api->make();
-
-        dump($spec);
-
+        $api = new OpenApi($spec, '2025.1');
         $api->save(__DIR__.'/../openapi/iptc.json');
+        // Then run:
+        // npx openapi-generate-html -i openapi/iptc.json --output=openapi/index.html --ui=stoplight
 
         $this->markTestSkipped();
     }

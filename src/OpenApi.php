@@ -33,6 +33,8 @@ class OpenApi
             'schemas' => []
         ];
 
+        // Init first, then fill
+        $this->openapi['components']['schemas']['iptc'] = [];
         $this->openapi['components']['schemas']['iptc'] = $this->makeTop(
             $this->specification->topLevel()->getAttributes()
         );
@@ -48,6 +50,7 @@ class OpenApi
     protected function makeTop(array $attributes): array
     {
         $top = [
+            'description'  => 'IPTC',
             'externalDocs' => [
                 'description' => 'IPTC',
                 'url'         => "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata"
@@ -72,6 +75,7 @@ class OpenApi
     protected function makeDefault(AttributeSpec $attr): array
     {
         $api = [
+            'description'  => $attr->helpText() ?: $attr->name(),
             'externalDocs' => [
                 'description' => $attr->name(),
                 'url'         => "https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata{$attr->specIdx()}"
@@ -82,7 +86,7 @@ class OpenApi
             $api['deprecated'] = true;
         }
 
-        if (!$attr->isRequired()) {
+        if (! $attr->isRequired()) {
             $api['nullable'] = true;
         }
 
