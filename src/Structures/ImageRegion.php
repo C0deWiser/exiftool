@@ -8,11 +8,11 @@ use Codewiser\Exiftool\Contracts\Plain;
 use Codewiser\Exiftool\Contracts\Structure;
 
 /**
- * @property null|AltLang $name
- * @property null|Multiple|Entity[] $rCtype
- * @property null|Plain $rId
- * @property null|Multiple|Entity[] $rRole
- * @property null|RegionBoundary $regionBoundary
+ * @property null|AltLang $name Name.
+ * @property null|Multiple|Entity[] $rCtype Content Type.
+ * @property null|Plain $rId Identifier.
+ * @property null|Multiple|Entity[] $rRole Role.
+ * @property null|RegionBoundary $regionBoundary Region Boundary.
  */
 interface ImageRegion extends Structure
 {

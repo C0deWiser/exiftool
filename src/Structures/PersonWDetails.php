@@ -8,10 +8,10 @@ use Codewiser\Exiftool\Contracts\Plain;
 use Codewiser\Exiftool\Contracts\Structure;
 
 /**
- * @property null|Multiple|CvTerm[] $characteristics
- * @property null|AltLang $description
- * @property null|Multiple|Plain[] $identifiers
- * @property null|AltLang $name
+ * @property null|Multiple|Plain[] $identifiers Identifier.
+ * @property null|AltLang $name Name.
+ * @property null|AltLang $description Description.
+ * @property null|Multiple|CvTerm[] $characteristics Characteristics.
  */
 interface PersonWDetails extends Structure
 {

@@ -2,14 +2,14 @@
 
     Using Exiftool. Using IPTC specification.
 
-This lightweight package based on 
+This lightweight package is based on the 
 [machine-readable specification](https://iptc.org/std/photometadata/specification/) 
 of IPTC provided by 
 [iptc.org](https://iptc.org/std/photometadata/documentation/techreference/).
 
-As specification describes how exiftool exports/imports metadata, describes 
-every attribute and every structure — this package uses json-version 
-of specification as a framework.
+As the specification describes how exiftool exports/imports metadata, and describes 
+every attribute and every structure — this package uses the json version 
+of the specification as a framework.
 
 This package provides an object-oriented programmatic interface to work 
 with iptc attributes as objects.
@@ -18,17 +18,17 @@ This package provides [some helpers](laravel.md) for Laravel.
 
 ## Known issues
 
-IPTC specification describes `locationCreated` as a single element, but 
-`Exiftool` counts it as a bag and requires an array of `Location` structures.
+The IPTC specification describes `locationCreated` as a single element, but 
+`Exiftool` treats it as a bag and requires an array of `Location` structures.
 
-IPTC specification describes `ProductWGtin.identifiers` as multiple element 
-(array), but `Exiftool` requires single element.
+The IPTC specification describes `ProductWGtin.identifiers` as a multiple 
+element (array), but `Exiftool` requires a single element.
 
-`Exiftool` doesnt import `GPSAltitudeRef` as `GPSAltitude` may be positive 
+`Exiftool` doesn't import `GPSAltitudeRef`, as `GPSAltitude` may be positive 
 or negative — this is enough.
 
-This library overrides IPTC specification, making `locationCreated` multiple 
-and `ProductWGtin.identifiers` single. And ignores `GPSAltitudeRef`.
+This library overrides the IPTC specification, making `locationCreated` multiple 
+and `ProductWGtin.identifiers` single, and ignores `GPSAltitudeRef`.
 
 ## Configuration
 
@@ -49,7 +49,7 @@ You may find the latest specification on
 [iptc.org repository](https://iptc.org/std/photometadata/specification/).
 
 > Attention!!!
-> Be sure, that `exiftool` binary version is compliant with specification 
+> Be sure that the `exiftool` binary version is compliant with the specification 
 > you use.
 
 ## Read metadata
@@ -183,7 +183,7 @@ $data->description?->toString();
 $data->description = 'about';
 ```
 
-It has `toArray` method te get all localized values.
+It has a `toArray` method to get all localized values.
 
 ```php
 $data->description?->toArray();
@@ -197,10 +197,10 @@ isset($data->description['cn']);
 $data->description['en'] = 'about';
 ```
 
-When your backend-end responds with metadata to a front-end, the `AltLang` 
+When your back-end responds with metadata to a front-end, the `AltLang` 
 attribute responds as an array. Sometimes you may want to collapse `AltLang` 
-values to a string with current locale (or best matched) value. To do that,  
-instruct attribute to collapse values before respond.
+values to a string with the current locale (or best matched) value. To do that,  
+instruct the attribute to collapse values before responding.
 
 ```php
 use Codewiser\Exiftool\Attributes\AltLangAttribute;
@@ -267,12 +267,12 @@ $data->locationsShown = [
 
 Read https://exiftool.org/under.html
 
-Without enabling `$exiftool->printConv()` all values is human-readable. For 
-example, `GPSLatitude` may have value `45 deg 20' 11.00"`.
+Without enabling `$exiftool->printConv()` all values are human-readable. For 
+example, `GPSLatitude` may have the value `45 deg 20' 11.00"`.
 
 If you call `$exiftool->printConv()` before importing/exporting IPTC 
 metadata, you should use _dirty_ values. For example, `GPSLatitude` may have 
-value `45.3363888888889`.
+the value `45.3363888888889`.
 
 This is very important in context of `enum` attributes — that must use 
 values from a limited list. Exiftool will reject value if it is not from a list.
@@ -315,9 +315,9 @@ For example, this is enum values for `modelReleaseStatus` attribute:
 ]
 ```
 
-If you call `enum()` on attribute without enabling `printConv`, you will 
-gat values of such an array. If you call `enum()` on attribute with enabled 
-`printConv`, you will gat keys of such an array.
+If you call `enum()` on an attribute without enabling `printConv`, you will 
+get the values of such an array. If you call `enum()` on an attribute with 
+`printConv` enabled, you will get the keys of such an array.
 
 ## Controlled Vocabularies
 

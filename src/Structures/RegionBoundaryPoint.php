@@ -6,8 +6,8 @@ use Codewiser\Exiftool\Contracts\Plain;
 use Codewiser\Exiftool\Contracts\Structure;
 
 /**
- * @property null|Plain $rbX
- * @property null|Plain $rbY
+ * @property null|Plain $rbX X-Axis Coordinate.
+ * @property null|Plain $rbY Y-Axis Coordinate.
  */
 interface RegionBoundaryPoint extends Structure
 {

@@ -6,14 +6,14 @@ use Codewiser\Exiftool\Contracts\Plain;
 use Codewiser\Exiftool\Contracts\Structure;
 
 /**
- * @property null|Plain $address
- * @property null|Plain $city
- * @property null|Plain $country
- * @property null|Plain $emailwork
- * @property null|Plain $phonework
- * @property null|Plain $postalCode
- * @property null|Plain $region
- * @property null|Plain $weburlwork
+ * @property null|Plain $address Address.
+ * @property null|Plain $city City.
+ * @property null|Plain $country Country.
+ * @property null|Plain $emailwork Email(s).
+ * @property null|Plain $phonework Phone(s).
+ * @property null|Plain $postalCode Postal Code.
+ * @property null|Plain $region State/Province.
+ * @property null|Plain $weburlwork Web URL(s).
  */
 interface CreatorContactInfo extends Structure
 {

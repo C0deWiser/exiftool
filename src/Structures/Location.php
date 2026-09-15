@@ -8,18 +8,18 @@ use Codewiser\Exiftool\Contracts\Plain;
 use Codewiser\Exiftool\Contracts\Structure;
 
 /**
- * @property null|Plain $city
- * @property null|Plain $countryCode
- * @property null|Plain $countryName
- * @property null|Plain $gpsAltitude
- * @property null|Plain $gpsAltitudeRef
- * @property null|Plain $gpsLatitude
- * @property null|Plain $gpsLongitude
- * @property null|Multiple|Plain[] $identifiers
- * @property null|AltLang $name
- * @property null|Plain $provinceState
- * @property null|Plain $sublocation
- * @property null|Plain $worldRegion
+ * @property null|AltLang $name Location Name.
+ * @property null|Multiple|Plain[] $identifiers Location ID.
+ * @property null|Plain $city City.
+ * @property null|Plain $sublocation Sublocation.
+ * @property null|Plain $countryName Country Name.
+ * @property null|Plain $countryCode Country ISO-Code.
+ * @property null|Plain $provinceState Province/State.
+ * @property null|Plain $gpsAltitude GPS-Altitude.
+ * @property null|Plain $gpsAltitudeRef GPS-Altitude Ref.
+ * @property null|Plain $gpsLongitude GPS-Longitude.
+ * @property null|Plain $gpsLatitude GPS-Latitude.
+ * @property null|Plain $worldRegion World Region.
  */
 interface Location extends Structure
 {

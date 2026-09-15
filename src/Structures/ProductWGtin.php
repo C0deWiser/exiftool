@@ -8,10 +8,10 @@ use Codewiser\Exiftool\Contracts\Plain;
 use Codewiser\Exiftool\Contracts\Structure;
 
 /**
- * @property null|AltLang $description
- * @property null|Plain $gtin
- * @property null|Plain $identifiers
- * @property null|AltLang $name
+ * @property null|Plain $gtin GTIN.
+ * @property null|Plain $identifiers Identifier.
+ * @property null|AltLang $name Name.
+ * @property null|AltLang $description Description.
  */
 interface ProductWGtin extends Structure
 {

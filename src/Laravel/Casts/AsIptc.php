@@ -14,6 +14,7 @@ class AsIptc implements CastsAttributes
 
     public function __construct()
     {
+        // No DI supported here
         $this->exiftool = app(Exiftool::class);
     }
 

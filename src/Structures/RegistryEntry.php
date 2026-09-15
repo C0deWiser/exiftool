@@ -6,9 +6,9 @@ use Codewiser\Exiftool\Contracts\Plain;
 use Codewiser\Exiftool\Contracts\Structure;
 
 /**
- * @property null|Plain $assetIdentifier
- * @property null|Plain $registryIdentifier
- * @property null|Plain $role
+ * @property null|Plain $registryIdentifier Organisation Identifier.
+ * @property null|Plain $assetIdentifier Item Identifier.
+ * @property null|Plain $role Role.
  */
 interface RegistryEntry extends Structure
 {

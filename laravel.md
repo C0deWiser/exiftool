@@ -1,6 +1,6 @@
 # Laravel
 
-It is expecting, that you register `Exiftool` in `ApplicationServiceProvider`.
+It is expected that you register `Exiftool` in `ApplicationServiceProvider`.
 
 ## Cast
 
@@ -31,25 +31,25 @@ $media->iptc = app(Exiftool::class)->read('filename.jpg');
 
 ## Request validation rules
 
-We may use iptc specification to automatically build request validation rules. 
+We may use the IPTC specification to automatically build request validation rules. 
 
-Specification marks some attributes as numeric, as uri, as url or as date-time.
-Actually, most of url and uri attributes accepts comma-separated values, so 
-we shouldn't apply `url` rule to them.
+The specification marks some attributes as numeric, as uri, as url or as date-time.
+Actually, most url and uri attributes accept comma-separated values, so 
+we shouldn't apply the `url` rule to them.
 
-Sometimes we work with legacy data, where values meets `max` limitations.
+Sometimes we work with legacy data, where values meet `max` limitations.
 
-That's why, `getValidationRules()` without configuration will return 
-rules, that requires all attributes to be just a string. But you may enable 
+That's why `getValidationRules()` without configuration will return 
+rules that require all attributes to be just a string. But you may enable 
 strict behaviour as shown below:
 
 ```php
 use Codewiser\Exiftool\Exiftool;
 use Codewiser\Exiftool\IptcExt;
 
-$exiftool = new Exiftool();
-
-$ext = new IptcExt($exiftool->specification());
+$ext = new IptcExt(
+    app(Exiftool::class)->specification()
+);
 
 $rules = $ext->getValidationRules([
     // Require numbers conform to `numeric` rule
@@ -68,9 +68,9 @@ Finally, you may apply collected rules to a `FormRequest`.
 
 ## Flatten array of attributes
 
-Flatten array of attributes may be useful for automated building of 
-user interface. It is a key-value array, there key is full-qualified 
-attribute name (as in `rules` array) and value is raw attribute specification. 
+The flattened array of attributes may be useful for automated building of a 
+user interface. It is a key-value array, where the key is the full-qualified 
+attribute name (as in the `rules` array) and the value is the raw attribute specification. 
 
 Some attributes may have an `enum` property. [Read more](README.md#enum-values).
 
@@ -78,9 +78,9 @@ Some attributes may have an `enum` property. [Read more](README.md#enum-values).
 use Codewiser\Exiftool\Exiftool;
 use Codewiser\Exiftool\IptcExt;
 
-$exiftool = new Exiftool();
-
-$ext = new IptcExt($exiftool->specification());
+$ext = new IptcExt(
+    app(Exiftool::class)->specification()
+);
 
 $ext->asDotArray();
 ```
@@ -89,16 +89,16 @@ $ext->asDotArray();
 
 You may get a list of controlled vocabulary urls associated with attributes.
 
-List is a key-value array, there key is full-qualified
-attribute name (as in `rules` array) and value is controlled vocabularies url.
+The list is a key-value array, where the key is the full-qualified
+attribute name (as in the `rules` array) and the value is the controlled vocabulary url.
 
 ```php
 use Codewiser\Exiftool\Exiftool;
 use Codewiser\Exiftool\IptcExt;
 
-$exiftool = new Exiftool();
-
-$ext = new IptcExt($exiftool->specification());
+$ext = new IptcExt(
+    app(Exiftool::class)->specification()
+);
 
 $ext->getNewsCodes();
 ```

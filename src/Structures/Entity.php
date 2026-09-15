@@ -8,8 +8,8 @@ use Codewiser\Exiftool\Contracts\Plain;
 use Codewiser\Exiftool\Contracts\Structure;
 
 /**
- * @property null|Multiple|Plain[] $identifiers
- * @property null|AltLang $name
+ * @property null|Multiple|Plain[] $identifiers Identifier.
+ * @property null|AltLang $name Name.
  */
 interface Entity extends Structure
 {
