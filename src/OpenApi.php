@@ -21,14 +21,22 @@ class OpenApi
 
     public function make(): array
     {
+        $externalLink = $this->specification->externalDocumentation();
+        $printConv = Exiftool::$printConv;
+
         $this->openapi['openapi'] = '3.1.0';
         $this->openapi['info'] = [
             'title'       => 'IPTC Photo Metadadata Standard',
-            'description' => $this->specification->releaseComment(),
+            'description' => $this->specification->releaseComment().
+                "\n\n[$externalLink]($externalLink)\n\n `Print Conversion` is ".
+                ($printConv
+                    ? '**enabled**, values in internal machine-readable format.'
+                    : '**disabled**, values in external human-readable format.'
+                ),
             'version'     => $this->version,
         ];
         $this->openapi['externalDocs'] = [
-            'url'         => $this->specification->externalDocumentation(),
+            'url'         => $externalLink,
             'description' => 'IPTC Specification'
         ];
 
