@@ -13,7 +13,7 @@ class TestCase extends \PHPUnit\Framework\TestCase
     {
         parent::setUp();
 
-        $this->exiftool = new Exiftool('/opt/homebrew/Cellar/exiftool/12.76/bin/exiftool');
+        $this->exiftool = new Exiftool();
 
         AltLangAttribute::useLocale('en');
     }

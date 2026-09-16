@@ -153,7 +153,9 @@ class OpenApi
             default     => new PlainAttribute()
         };
 
-        if ($attr->isSingle()) {
+        if ($attr->dataType() == 'any') {
+            $example = null;
+        } elseif ($attr->isSingle()) {
             $example = $generator->fake($attr);
         } else {
             $example = [
@@ -169,7 +171,9 @@ class OpenApi
     {
         $api = $this->makeDefault($attr);
 
-        if ($attr->isSingle()) {
+        if ($attr->dataType() == 'any') {
+            $api['type'] = 'any';
+        } elseif ($attr->isSingle()) {
             $api = array_merge($api, $this->makeSingular($attr));
         } else {
             $api['type'] = 'array';

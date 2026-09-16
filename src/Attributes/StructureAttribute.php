@@ -42,6 +42,13 @@ class StructureAttribute implements Contracts\Structure
         $this->et = array_merge($this->et, $values);
 
         foreach ($this->et as $attributes) {
+            // ExifTool 2023 known bug:
+            // Spec 2023 says, that locationCreated is single, but ExifTool returns an array.
+            // Unwrap it.
+            if (array_is_list($attributes)) {
+                $attributes = (array) reset($attributes);
+            }
+
             foreach ($attributes as $etName => $value) {
                 // Spec may not be found in case of wrong structure. Just skip it, we cant fix it.
                 if ($spec = $this->structure->getAttributeByEtName($etName)) {

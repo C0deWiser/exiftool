@@ -18,6 +18,17 @@ This package provides [some helpers](laravel.md) for Laravel.
 
 ## Known issues
 
+### LocationCreated
+
+2023 specification says, that `LocationCreated` is `single`, but exiftool 
+exports it as an array. Later specs fixes it, counting `LocationCreated` as 
+`multi`. 
+
+If you are using 2023 spec, the `LocationCreated` will be single. If you are 
+using later specs, the `LocationCreated` will be an array.
+
+### ProductWGtin
+
 `ProductWGtin.identifiers` is `multi` by specification, but if we try to embed
 an array of shown product identifiers, the `exiftool` responds with warning
 and ignores it.
@@ -26,7 +37,7 @@ and ignores it.
 Warning: ProductId is not a list in ProductDetails
 ```
 
-So we forced to embed the first one identifier.
+So we forced to embed the first one identifier, dropping the rest.
 
 ## Configuration
 

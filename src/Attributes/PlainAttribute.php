@@ -81,14 +81,37 @@ class PlainAttribute implements Contracts\Plain
 
     public function fake(?AttributeSpec $spec = null): static
     {
-        $faker = Factory::create('en_GB');
+        $faker = Factory::create('en_US');
 
-        $id = fn() => $faker->domainName().'/'.$faker->slug(2);
+        $id = fn(string $name) => match ($name) {
+                'jobid'                           => 'job',
+                'digitalImageGuid'                => 'guid',
+                'modelReleaseDocuments',
+                'propertyReleaseDocuments'        => 'document',
+                'organisationInImageCodes'        => 'organisation',
+                'imageCreatorId',
+                'creatorIdentifiers'              => 'creator',
+                'copyrightOwnerId',
+                'currentCopyrightOwnerIdentifier' => 'owner',
+                'licensorId',
+                'currentLicensorIdentifier'       => 'licensor',
+                'cvId'                            => 'cv',
+                'cvTermId'                        => 'term',
+                'cvTermRefinedAbout'              => 'about',
+                'identifiers'                     => 'id',
+                'imageSupplierId',
+                'imageSupplierImageId'            => 'supplier',
+                'registryIdentifier'              => 'registry',
+                'assetIdentifier'                 => 'asset',
+                'digitalSourceType'               => 'type',
+                'eventId'                         => 'event',
+                default                           => $name
+            }.':'.$faker->slug(1);
 
         $this->value = match ($spec->dataType()) {
             'string' => match ($spec->dataFormat()) {
                 'url'   => $faker->url(),
-                'uri'   => $id(),
+                'uri'   => $id($spec->jsonName()),
                 default => $faker->word()
             },
             'number' => match ($spec->dataFormat()) {
@@ -102,7 +125,7 @@ class PlainAttribute implements Contracts\Plain
             str_ends_with($spec->jsonName(), 'Id') ||
             str_ends_with($spec->jsonName(), 'Identifier')
         ) {
-            $this->value = $id();
+            $this->value = $id($spec->jsonName());
         }
 
         if ($enum = $spec->enum()) {
@@ -115,35 +138,64 @@ class PlainAttribute implements Contracts\Plain
             'digitalImageGuid',
             'modelReleaseDocuments',
             'propertyReleaseDocuments',
-            'organisationInImageCodes' => $id(),
-            'countryCode'         => $faker->countryISOAlpha3(),
+            'organisationInImageCodes' => $id($spec->jsonName()),
+            'countryCode'              => $faker->countryISOAlpha3(),
             'country',
             'licensorCountryName',
-            'countryName'         => $faker->country(),
+            'countryName'              => $faker->country(),
             'city',
             'licensorCity',
-            'cityName'            => $faker->city(),
+            'cityName'                 => $faker->city(),
             'licensorAddress',
-            'address'             => $faker->address(),
+            'address'                  => $faker->address(),
             'licensorEmail',
-            'emailwork'           => $faker->email(),
+            'emailwork'                => $faker->email(),
             'licensorPostalCode',
-            'postalCode'          => $faker->postcode(),
+            'postalCode'               => $faker->postcode(),
+            'licensorStateProvince',
+            'provinceState',
+            'region'                   => $faker->randomElement([
+                'California', 'Texas', 'New York', 'Florida',
+                'New South Wales', 'Queensland', 'Victoria',
+                'Bavaria', 'Saxony', 'Hesse',
+                'Maharashtra', 'Kerala', 'Punjab',
+                'Ontario', 'Quebec', 'British Columbia', 'Alberta',
+                'Gauteng', 'Western Cape', 'KwaZulu-Natal',
+                'Málaga', 'Seville', 'Zaragoza'
+            ]),
+            'worldRegion'              => $faker->randomElement([
+                'North America', 'Latin America and the Caribbean',
+                'Europe', 'Sub-Saharan Africa',
+                'Middle East and North Africa', 'Asia', 'Oceania'
+            ]),
+            'sublocationName',
+            'sublocation'              => $faker->randomElement([
+                'Manhattan', 'Brooklyn', 'Westminster', 'Camden',
+                'Mitte', 'SoHo', 'Beverly Hills', 'Notting Hill',
+                'Montmartre', 'Shibuya', 'City Centre Ward'
+            ]),
+            'rightsExprLangId'         => 'lang:'.$faker->languageCode(),
             'licensorTelephone1',
             'licensorTelephone2',
-            'phonework'           => $faker->phoneNumber(),
-            'jobtitle'            => $faker->jobTitle(),
+            'phonework'                => $faker->phoneNumber(),
+            'keywords',
+            'jobtitle'                 => $faker->jobTitle(),
             'headline',
             'instructions',
             'additionalModelInfo',
             'aIPromptInformation',
-            'copyrightNotice',
+            'licensorAddressDetail'    => $faker->realText(80),
+            'creditLine',
             'encRightsExpr',
-            'creditLine'          => $faker->sentence(),
-            'circaDateCreated'    => $faker->dateTime()->format('r'),
-            'sceneCodes'          => 'scn:'.$faker->numerify('######'),
-            'subjectCodes'        => 'medtop:'.$faker->numerify('########'),
-            'rightsExprEncType'   => 'text/html',
+            'copyrightNotice'          => 'All rights reserved. '.$faker->realText(80),
+            'webstatementRights'       => $faker->url(),
+            'circaDateCreated'         => 'between '.
+                $faker->dateTimeBetween('-1000 years', '-500 years')->format('Y').
+                ' and '.
+                $faker->dateTimeBetween('-499 years', '-100 years')->format('Y'),
+            'sceneCodes'               => 'scn:'.$faker->numerify('######'),
+            'subjectCodes'             => 'medtop:'.$faker->numerify('########'),
+            'rightsExprEncType'        => 'text/html',
             'captionWriter',
             'creatorNames',
             'currentCopyrightOwnerName',
@@ -151,21 +203,28 @@ class PlainAttribute implements Contracts\Plain
             'copyrightOwnerName',
             'aIPromptWriterNam',
             'personInImageNames',
-            'imageCreatorName'    => $faker->name(),
-            'aISystemUsed'        => $faker->linuxPlatformToken(),
-            'aISystemVersionUsed' => $faker->semver(),
+            'imageCreatorName'         => $faker->name(),
+            'stylePeriod'              => $faker->randomElement([
+                'Baroque', 'Ancient Egyptian', 'Classical Greek', 'Gothic',
+                'Renaissance', 'Impressionism', 'Cubism', 'Surrealism'
+            ]),
+            'intellectualGenre'        => $faker->randomElement([
+                'Feature', 'Reportage', 'Conceptual', 'Interview', 'Press release'
+            ]),
+            'aISystemUsed'             => $faker->linuxPlatformToken(),
+            'aISystemVersionUsed'      => $faker->semver(),
             'imageSupplierName',
             'organisationInImageNames',
             'source',
-            'currentLicensorName' => $faker->company(),
-            'imageRating'         => rand(-1, 5),
-            'modelAges'           => rand(10, 80),
-            'gpsLatitude'         => round($faker->latitude(), 6),
-            'gpsLongitude'        => round($faker->longitude(), 6),
-            'gpsAltitude'         => $faker->randomFloat(2, -250, 2000),
+            'currentLicensorName'      => $faker->company(),
+            'imageRating'              => rand(-1, 5),
+            'modelAges'                => rand(10, 80),
+            'gpsLatitude'              => round($faker->latitude(), 6),
+            'gpsLongitude'             => round($faker->longitude(), 6),
+            'gpsAltitude'              => $faker->randomFloat(2, -250, 2000),
             'sourceInventoryNr',
-            'gtin'                => $faker->numerify('##############'),
-            default               => $this->value,
+            'gtin'                     => $faker->numerify('##############'),
+            default                    => $this->value,
         };
 
         if (! Exiftool::$printConv) {

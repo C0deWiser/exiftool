@@ -53,15 +53,28 @@ class AltLangAttribute implements Contracts\AltLang
 
     public function fake(?AttributeSpec $spec = null): static
     {
+        $en = Factory::create('en_US');
+        $fr = Factory::create('fr_FR');
+
+        $text = [
+            'en' => $en->realTextBetween(60, 100, 1),
+            'fr' => $fr->realTextBetween(60, 100, 1),
+        ];
+
         $this->values = match ($spec->jsonName()) {
-            'name' =>[
-                'en' => Factory::create('en_GB')->name(),
-                'fr' => Factory::create('fr_FR')->name(),
+            'name'            => [
+                'en' => $en->name(),
+                'fr' => $fr->name(),
             ],
-            default => [
-                'en' => Factory::create('en_GB')->sentence(),
-                'fr' => Factory::create('fr_FR')->sentence(),
-            ]
+            'cvTermName'      => [
+                'en' => $en->jobTitle(),
+                'fr' => $fr->jobTitle(),
+            ],
+            'copyrightNotice' => [
+                'en' => 'All rights reserved. '.$text['en'],
+                'fr' => 'Tous droits réservés. '.$text['fr'],
+            ],
+            default           => $text
         };
 
         return $this;
@@ -116,13 +129,13 @@ class AltLangAttribute implements Contracts\AltLang
     {
         $values = current($values);
 
-        if (!is_array($values)) {
+        if (! is_array($values)) {
             $values = [$this->getLocale() => $values];
         }
 
         $values = array_filter($values);
 
-        if (!$values) {
+        if (! $values) {
             throw new MistypeException();
         }
 

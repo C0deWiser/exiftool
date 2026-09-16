@@ -1,12 +1,8 @@
 <?php
 
-namespace Tests\Spec2023;
+namespace Tests\Spec2025;
 
-use Codewiser\Exiftool\Attributes\AltLangAttribute;
-use Codewiser\Exiftool\Iptc;
-use Tests\TestCase;
-
-class IptcReadPrintConvTest extends IptcReadTest
+class IptcReadPrintConvTest extends \Tests\Spec2025\IptcReadTest
 {
     protected function setUp(): void
     {
@@ -28,11 +24,11 @@ class IptcReadPrintConvTest extends IptcReadTest
                     "rCtype"         => [
                         0 => [
                             "identifiers" => [
-                                0 => "https://example.org/rctype/type_ref2023.2-a",
-                                1 => "https://example.org/rctype/type_ref2023.2-b"
+                                0 => "https://example.org/rctype/type_ref2025.1-a",
+                                1 => "https://example.org/rctype/type_ref2025.1-b"
                             ],
                             "name"        => [
-                                "en" => "Region Boundary Content Type Name (ref2023.2)"
+                                "en" => "Region Boundary Content Type Name (ref2025.1)"
                             ]
                         ]
                     ],
@@ -40,11 +36,11 @@ class IptcReadPrintConvTest extends IptcReadTest
                     "rRole"          => [
                         0 => [
                             "identifiers" => [
-                                0 => "https://example.org/rrole/role_ref2023.2-a",
-                                1 => "https://example.org/rrole/role_ref2023.2-b"
+                                0 => "https://example.org/rrole/role_ref2025.1-a",
+                                1 => "https://example.org/rrole/role_ref2025.1-b"
                             ],
                             "name"        => [
-                                "en" => "Region Boundary Content Role Name (ref2023.2)"
+                                "en" => "Region Boundary Content Role Name (ref2025.1)"
                             ]
                         ]
                     ],
@@ -64,11 +60,11 @@ class IptcReadPrintConvTest extends IptcReadTest
                     "rCtype"         => [
                         0 => [
                             "identifiers" => [
-                                0 => "https://example.org/rctype/type_ref2023.2-a",
-                                1 => "https://example.org/rctype/type_ref2023.2-b"
+                                0 => "https://example.org/rctype/type_ref2025.1-a",
+                                1 => "https://example.org/rctype/type_ref2025.1-b"
                             ],
                             "name"        => [
-                                "en" => "Region Boundary Content Type Name (ref2023.2)"
+                                "en" => "Region Boundary Content Type Name (ref2025.1)"
                             ]
                         ]
                     ],
@@ -76,16 +72,16 @@ class IptcReadPrintConvTest extends IptcReadTest
                     "rRole"          => [
                         0 => [
                             "identifiers" => [
-                                0 => "https://example.org/rrole/role_ref2023.2-a",
-                                1 => "https://example.org/rrole/role_ref2023.2-b"
+                                0 => "https://example.org/rrole/role_ref2025.1-a",
+                                1 => "https://example.org/rrole/role_ref2025.1-b"
                             ],
                             "name"        => [
-                                "en" => "Region Boundary Content Role Name (ref2023.2)"
+                                "en" => "Region Boundary Content Role Name (ref2025.1)"
                             ]
                         ]
                     ],
                     "regionBoundary" => [
-                        "rbRx"     => "0.068",
+                        "rbRx"    => "0.068",
                         "rbShape" => "circle",
                         "rbUnit"  => "relative",
                         "rbX"     => "0.59",
@@ -99,11 +95,11 @@ class IptcReadPrintConvTest extends IptcReadTest
                     "rCtype"         => [
                         0 => [
                             "identifiers" => [
-                                0 => "https://example.org/rctype/type_ref2023.2-a",
-                                1 => "https://example.org/rctype/type_ref2023.2-b"
+                                0 => "https://example.org/rctype/type_ref2025.1-a",
+                                1 => "https://example.org/rctype/type_ref2025.1-b"
                             ],
                             "name"        => [
-                                "en" => "Region Boundary Content Type Name (ref2023.2)"
+                                "en" => "Region Boundary Content Type Name (ref2025.1)"
                             ]
                         ]
                     ],
@@ -111,11 +107,11 @@ class IptcReadPrintConvTest extends IptcReadTest
                     "rRole"          => [
                         0 => [
                             "identifiers" => [
-                                0 => "https://example.org/rrole/role_ref2023.2-a",
-                                1 => "https://example.org/rrole/role_ref2023.2-b"
+                                0 => "https://example.org/rrole/role_ref2025.1-a",
+                                1 => "https://example.org/rrole/role_ref2025.1-b"
                             ],
                             "name"        => [
-                                "en" => "Region Boundary Content Role Name (ref2023.2)"
+                                "en" => "Region Boundary Content Role Name (ref2025.1)"
                             ]
                         ]
                     ],
@@ -150,42 +146,42 @@ class IptcReadPrintConvTest extends IptcReadTest
         $this->assertEquals(
             [
                 [
-                    "city"           => "City (Location shown1) (ref2023.2)",
-                    "countryCode"    => "R23",
-                    "countryName"    => "CountryName (Location shown1) (ref2023.2)",
+                    "city"           => "City (Location shown1) (ref2025.1)",
+                    "countryCode"    => "R25",
+                    "countryName"    => "CountryName (Location shown1) (ref2025.1)",
                     "gpsAltitude"    => "140",
                     "gpsAltitudeRef" => "0",
                     "gpsLatitude"    => "48.147",
                     "gpsLongitude"   => "17.098",
                     "identifiers"    => [
-                        0 => "Location Id 1a(Location shown1) (ref2023.2)",
-                        1 => "Location Id 1b(Location shown1) (ref2023.2)"
+                        0 => "Location Id 1a(Location shown1) (ref2025.1)",
+                        1 => "Location Id 1b(Location shown1) (ref2025.1)"
                     ],
                     "name"           => [
-                        "en" => "Location Name (Location shown1) (ref2023.2)"
+                        "en" => "Location Name (Location shown1) (ref2025.1)"
                     ],
-                    "provinceState"  => "Province/State (Location shown1) (ref2023.2)",
-                    "sublocation"    => "Sublocation (Location shown1) (ref2023.2)",
-                    "worldRegion"    => "Worldregion (Location shown1) (ref2023.2)"
+                    "provinceState"  => "Province/State (Location shown1) (ref2025.1)",
+                    "sublocation"    => "Sublocation (Location shown1) (ref2025.1)",
+                    "worldRegion"    => "Worldregion (Location shown1) (ref2025.1)"
                 ],
                 [
-                    "city"           => "City (Location shown2) (ref2023.2)",
-                    "countryCode"    => "R23",
-                    "countryName"    => "CountryName (Location shown2) (ref2023.2)",
+                    "city"           => "City (Location shown2) (ref2025.1)",
+                    "countryCode"    => "R25",
+                    "countryName"    => "CountryName (Location shown2) (ref2025.1)",
                     "gpsAltitude"    => "120",
                     "gpsAltitudeRef" => "0",
                     "gpsLatitude"    => "47.952",
                     "gpsLongitude"   => "16.83",
                     "identifiers"    => [
-                        0 => "Location Id 2a(Location shown2) (ref2023.2)",
-                        1 => "Location Id 2b(Location shown2) (ref2023.2)"
+                        0 => "Location Id 2a(Location shown2) (ref2025.1)",
+                        1 => "Location Id 2b(Location shown2) (ref2025.1)"
                     ],
                     "name"           => [
-                        "en" => "Location Name (Location shown2) (ref2023.2)"
+                        "en" => "Location Name (Location shown2) (ref2025.1)"
                     ],
-                    "provinceState"  => "Province/State (Location shown2) (ref2023.2)",
-                    "sublocation"    => "Sublocation (Location shown2) (ref2023.2)",
-                    "worldRegion"    => "Worldregion (Location shown2) (ref2023.2)"
+                    "provinceState"  => "Province/State (Location shown2) (ref2025.1)",
+                    "sublocation"    => "Sublocation (Location shown2) (ref2025.1)",
+                    "worldRegion"    => "Worldregion (Location shown2) (ref2025.1)"
                 ]
             ],
             $iptc->locationsShown->jsonSerialize()
@@ -209,36 +205,36 @@ class IptcReadPrintConvTest extends IptcReadTest
         $this->assertEquals(
             [
                 [
-                    "licensorId"             => "Licensor ID 1 (ref2023.2)",
-                    "licensorName"           => "Licensor Name 1 (ref2023.2)",
-                    "licensorAddress"        => "Licensor Street Addr 1 (ref2023.2)",
-                    "licensorAddressDetail"  => "Licensor Ext Addr 1 (ref2023.2)",
-                    "licensorCity"           => "Licensor City 1 (ref2023.2)",
-                    "licensorStateProvince"  => "Licensor Region 1 (ref2023.2)",
-                    "licensorPostalCode"     => "Licensor Postcode 1 (ref2023.2)",
-                    "licensorCountryName"    => "Licensor Country 1 (ref2023.2)",
+                    "licensorId"             => "Licensor ID 1 (ref2025.1)",
+                    "licensorName"           => "Licensor Name 1 (ref2025.1)",
+                    "licensorAddress"        => "Licensor Street Addr 1 (ref2025.1)",
+                    "licensorAddressDetail"  => "Licensor Ext Addr 1 (ref2025.1)",
+                    "licensorCity"           => "Licensor City 1 (ref2025.1)",
+                    "licensorStateProvince"  => "Licensor Region 1 (ref2025.1)",
+                    "licensorPostalCode"     => "Licensor Postcode 1 (ref2025.1)",
+                    "licensorCountryName"    => "Licensor Country 1 (ref2025.1)",
                     "licensorTelephoneType1" => "work",
-                    "licensorTelephone1"     => "Licensor Phone1 1 (ref2023.2)",
+                    "licensorTelephone1"     => "Licensor Phone1 1 (ref2025.1)",
                     "licensorTelephoneType2" => "cell",
-                    "licensorTelephone2"     => "Licensor Phone2 1 (ref2023.2)",
-                    "licensorEmail"          => "Licensor Email 1 (ref2023.2)",
-                    "licensorUrl"            => "https://example.com/LicensorURL_1_ref2023.2"
+                    "licensorTelephone2"     => "Licensor Phone2 1 (ref2025.1)",
+                    "licensorEmail"          => "Licensor Email 1 (ref2025.1)",
+                    "licensorUrl"            => "https://example.com/LicensorURL_1_ref2025.1"
                 ],
                 [
-                    "licensorId"             => "Licensor ID 2 (ref2023.2)",
-                    "licensorName"           => "Licensor Name 2 (ref2023.2)",
-                    "licensorAddress"        => "Licensor Street Addr 2 (ref2023.2)",
-                    "licensorAddressDetail"  => "Licensor Ext Addr 2 (ref2023.2)",
-                    "licensorCity"           => "Licensor City 2 (ref2023.2)",
-                    "licensorStateProvince"  => "Licensor Region 2 (ref2023.2)",
-                    "licensorPostalCode"     => "Licensor Postcode 2 (ref2023.2)",
-                    "licensorCountryName"    => "Licensor Country 2 (ref2023.2)",
+                    "licensorId"             => "Licensor ID 2 (ref2025.1)",
+                    "licensorName"           => "Licensor Name 2 (ref2025.1)",
+                    "licensorAddress"        => "Licensor Street Addr 2 (ref2025.1)",
+                    "licensorAddressDetail"  => "Licensor Ext Addr 2 (ref2025.1)",
+                    "licensorCity"           => "Licensor City 2 (ref2025.1)",
+                    "licensorStateProvince"  => "Licensor Region 2 (ref2025.1)",
+                    "licensorPostalCode"     => "Licensor Postcode 2 (ref2025.1)",
+                    "licensorCountryName"    => "Licensor Country 2 (ref2025.1)",
                     "licensorTelephoneType1" => "work",
-                    "licensorTelephone1"     => "Licensor Phone1 2 (ref2023.2)",
+                    "licensorTelephone1"     => "Licensor Phone1 2 (ref2025.1)",
                     "licensorTelephoneType2" => "cell",
-                    "licensorTelephone2"     => "Licensor Phone2 2 (ref2023.2)",
-                    "licensorEmail"          => "Licensor Email 2 (ref2023.2)",
-                    "licensorUrl"            => "https://example.com/LicensorURL_2_ref2023.2"
+                    "licensorTelephone2"     => "Licensor Phone2 2 (ref2025.1)",
+                    "licensorEmail"          => "Licensor Email 2 (ref2025.1)",
+                    "licensorUrl"            => "https://example.com/LicensorURL_2_ref2025.1"
                 ]
             ],
             $iptc->licensors->jsonSerialize()
@@ -256,8 +252,8 @@ class IptcReadPrintConvTest extends IptcReadTest
 
         $this->assertEquals(
             [
-                0 => "Model Release ID 1 (ref2023.2)",
-                1 => "Model Release ID 2 (ref2023.2)"
+                0 => "Model Release ID 1 (ref2025.1)",
+                1 => "Model Release ID 2 (ref2025.1)"
             ],
             $iptc->modelReleaseDocuments->jsonSerialize()
         );
@@ -274,8 +270,8 @@ class IptcReadPrintConvTest extends IptcReadTest
 
         $this->assertEquals(
             [
-                0 => "Property Release ID 1 (ref2023.2)",
-                1 => "Property Release ID 2 (ref2023.2)"
+                0 => "Property Release ID 1 (ref2025.1)",
+                1 => "Property Release ID 2 (ref2025.1)"
             ],
             $iptc->propertyReleaseDocuments->jsonSerialize()
         );
@@ -292,22 +288,24 @@ class IptcReadPrintConvTest extends IptcReadTest
 
         $this->assertEquals(
             [
-                "city"           => "City (Location created1) (ref2023.2)",
-                "countryCode"    => "R23",
-                "countryName"    => "CountryName (Location created1) (ref2023.2)",
-                "gpsAltitude"    => "480",
-                "gpsAltitudeRef" => "0",
-                "gpsLatitude"    => "48.275",
-                "gpsLongitude"   => "16.338",
-                "identifiers"    => [
-                    0 => "Location Id (Location created1) (ref2023.2)"
-                ],
-                "name"           => [
-                    "en" => "Location Name (Location created1) (ref2023.2)"
-                ],
-                "provinceState"  => "Province/State (Location created1) (ref2023.2)",
-                "sublocation"    => "Sublocation (Location created1) (ref2023.2)",
-                "worldRegion"    => "Worldregion (Location created1) (ref2023.2)"
+                [
+                    "city"           => "City (Location created1) (ref2025.1)",
+                    "countryCode"    => "R25",
+                    "countryName"    => "CountryName (Location created1) (ref2025.1)",
+                    "gpsAltitude"    => "480",
+                    "gpsAltitudeRef" => "0",
+                    "gpsLatitude"    => "48.275",
+                    "gpsLongitude"   => "16.338",
+                    "identifiers"    => [
+                        0 => "Location Id (Location created1) (ref2025.1)"
+                    ],
+                    "name"           => [
+                        "en" => "Location Name (Location created1) (ref2025.1)"
+                    ],
+                    "provinceState"  => "Province/State (Location created1) (ref2025.1)",
+                    "sublocation"    => "Sublocation (Location created1) (ref2025.1)",
+                    "worldRegion"    => "Worldregion (Location created1) (ref2025.1)"
+                ]
             ],
             $iptc->locationCreated->jsonSerialize()
         );
