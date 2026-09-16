@@ -99,6 +99,7 @@ class PlainAttribute implements Contracts\Plain
                 'cvTermId'                        => 'term',
                 'cvTermRefinedAbout'              => 'about',
                 'identifiers'                     => 'id',
+                'rId'                             => 'region',
                 'imageSupplierId',
                 'imageSupplierImageId'            => 'supplier',
                 'registryIdentifier'              => 'registry',

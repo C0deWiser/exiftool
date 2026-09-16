@@ -14,7 +14,7 @@ class OpenApiTest extends TestCase
     {
         //AltLangAttribute::collapse();
 
-        $spec = (new Exiftool)->useMachineValues()->specification();
+        $spec = (new Exiftool)->useHumanValues()->specification();
         $api = new OpenApi($spec, '2025.1');
         $api->save(__DIR__.'/../openapi/iptc.json');
         // Then run:

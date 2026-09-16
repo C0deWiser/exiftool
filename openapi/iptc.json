@@ -30,7 +30,7 @@
                         ],
                         "nullable": true,
                         "type": "string",
-                        "example": "THIS size: why, I should have croqueted the Queen's shrill cries to the jury."
+                        "example": "Queen. 'Can you play croquet with the edge of the garden, called out as loud."
                     },
                     "aIPromptInformation": {
                         "description": "AI Prompt Information\n\n`Administrative Details`\n\nEnter the information given to the generative AI service as \u201cprompt(s)\u201d in order to generate this image.\n\nThis may include negative [excludes] and positive [includes] statements in the prompt.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#ai-prompt-information](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#ai-prompt-information)",
@@ -43,7 +43,7 @@
                         ],
                         "nullable": true,
                         "type": "string",
-                        "example": "March Hare. Alice was thoroughly puzzled. 'Does the boots and shoes!' she."
+                        "example": "I can guess that,' she added in an offended tone, 'was, that the hedgehog to."
                     },
                     "aIPromptWriterNam": {
                         "description": "AI Prompt Writer Name\n\n`Administrative Details`\n\nEnter the name of the person who wrote the prompt used for generating this image.\n\nThis person should not be considered as the image creator.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#ai-prompt-writer-name](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#ai-prompt-writer-name)",
@@ -56,7 +56,7 @@
                         ],
                         "nullable": true,
                         "type": "string",
-                        "example": "Gladys Lemke"
+                        "example": "Stephanie Schmeler"
                     },
                     "aISystemUsed": {
                         "description": "AI System Used\n\n`Administrative Details`\n\nEnter the name of the AI system and/or the model name used to generate this image.\n\nFor example, ChatGPT DALL-E, Google Gemini, ChatGPT.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#ai-system-used](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#ai-system-used)",
@@ -69,7 +69,7 @@
                         ],
                         "nullable": true,
                         "type": "string",
-                        "example": "X11; Linux x86_64"
+                        "example": "X11; Linux i686"
                     },
                     "aISystemVersionUsed": {
                         "description": "AI System Version Used\n\n`Administrative Details`\n\nEnter the name or number of the version of the AI system used to generate this image.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#ai-system-version-used](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#ai-system-version-used)",
@@ -82,7 +82,7 @@
                         ],
                         "nullable": true,
                         "type": "string",
-                        "example": "8.1.7"
+                        "example": "7.94.1"
                     },
                     "altTextAccessibility": {
                         "description": "Alt Text (Accessibility)\n\n`General Image Content`\n\nEnter text describing the appearance of the image from a visual perspective, focusing on details that are relevant to the purpose and meaning of the image\n\nThis property should not be confused with the IPTC property Headline, which is a brief synopsis or summary of the contents of the image. This property is required for conformance with the W3C Web Content Accessibility Guidelines (WCAG).\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#alt-text-accessibility](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#alt-text-accessibility)",
@@ -99,8 +99,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "Would not, would only answered three of these in: but she tried to it,' said the silence. Alice.",
-                            "fr": "Emma baissant la journ\u00e9e fun\u00e8bre. Tout \u00e0 l'autre, ne le visage maigre, entour\u00e9 de chambre \u00e9tait."
+                            "en": "She'll get in all she muttered to the Queen, and till you have their shoulders, that she did not.",
+                            "fr": "Rouault disait avoir ces pr\u00e9jug\u00e9s, et, sur ses torchons. Mais, chaque matin, \u00e0 des p\u00e9rils."
                         }
                     },
                     "artworkOrObjects": {
@@ -131,7 +131,7 @@
                         "nullable": true,
                         "type": "string",
                         "maxLength": 32,
-                        "example": "East Leopoldo"
+                        "example": "Coramouth"
                     },
                     "organisationInImageCodes": {
                         "description": "Code of Organisation Featured in the Image\n\n`Other Things Shown`\n\nEnter an identifier for the controlled vocabulary, then a colon, and finally the code from the vocabulary assigned to the organisation shown in this image (e.g. nasdaq:companyA)\n\nFor example a stock ticker symbol may be used.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#code-of-organisation-featured-in-the-image](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#code-of-organisation-featured-in-the-image)",
@@ -148,8 +148,8 @@
                             "type": "string"
                         },
                         "example": [
-                            "organisation:distinctio-voluptas",
-                            "organisation:illo"
+                            "organisation:sunt",
+                            "organisation:et-quae"
                         ]
                     },
                     "contributors": {
@@ -183,8 +183,8 @@
                             "maxLength": 128
                         },
                         "example": {
-                            "en": "All rights reserved. Caterpillar. 'Is that accounts for this, and pencils had been found that, you were always HATED.",
-                            "fr": "Tous droits r\u00e9serv\u00e9s. Homais souffrait pas. Il se permit des choses si \u00e9panouie quand ils n'avaient sans doute qu'aux."
+                            "en": "All rights reserved. When the Gryphon went on, half high time and the subject,' the Mock Turtle. 'Seals, turtles.",
+                            "fr": "Tous droits r\u00e9serv\u00e9s. Virginie, d\u00e9cid\u00e9ment, commence \u00e0 partir de s\u00e8ve, de la grosse \u00e9pingle rest\u00e9e l\u00e0, ce geste de."
                         }
                     },
                     "copyrightOwners": {
@@ -215,7 +215,7 @@
                         "nullable": true,
                         "type": "string",
                         "maxLength": 64,
-                        "example": "Kenya"
+                        "example": "Dominica"
                     },
                     "countryCode": {
                         "description": "Country Code (legacy)\n\n`Location`\n\nEnter the 2 or 3 letter ISO 3166 Country Code of the Country pictured in this image\n\nThis is a detail of a location with blurred semantics as it does not clearly indicate whether it is the location in the image or the location the photo was taken - which can be different. Two more concise properties are available in IPTC Extension with Location Created and Location Shown in the Image.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#country-code-legacy](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#country-code-legacy)",
@@ -230,7 +230,7 @@
                         "nullable": true,
                         "type": "string",
                         "maxLength": 3,
-                        "example": "ERI"
+                        "example": "TGO"
                     },
                     "creatorNames": {
                         "description": "Creator\n\n`Rights Information`\n\nEnter the name of the person that created this image\n\nThe creator can be expressed in a more controlled way using the \"Image Creator\" of PLUS  in the IPTC Extension additionally. It is the user's responsibility to keep the values of the IPTC Core and the PLUS fields in sync.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#creator](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#creator)",
@@ -248,8 +248,8 @@
                             "maxLength": 32
                         },
                         "example": [
-                            "Justyn Jenkins",
-                            "Misael Pacocha"
+                            "Joey Veum",
+                            "Prof. Kaylah Denesik DVM"
                         ]
                     },
                     "creatorContactInfo": {
@@ -276,7 +276,7 @@
                         "nullable": true,
                         "type": "string",
                         "maxLength": 32,
-                        "example": "Fiberglass Laminator and Fabricator"
+                        "example": "Physical Scientist"
                     },
                     "creditLine": {
                         "description": "Credit Line\n\n`Rights Information`\n\nEnter who should be credited when this image is published\n\nNote 1: For more formal identifications of the creator or the owner of the copyrights of this image other rights properties may be used. \nNote 2: This property was named \"Credit\" by the IIM metadata, then it was renamed to \"Provider\" in IPTC Core 1.0. In IPTC Core 1.1. it has been renamed to \"Credit Line\" as the field is used for this purpose by many users.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#credit-line](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#credit-line)",
@@ -290,7 +290,7 @@
                         "nullable": true,
                         "type": "string",
                         "maxLength": 32,
-                        "example": "All rights reserved. Queen put on his slate with one eye; 'I seem to put his mouth close to her."
+                        "example": "All rights reserved. I know!' exclaimed Alice, who had meanwhile been examining the roses. 'Off."
                     },
                     "aboutCvTerms": {
                         "description": "CV-Term About Image\n\n`General Image Content`\n\nEnter one or more topics, themes or entities the image is about, each one expressed by a term from a Controlled Vocabulary\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#cv-term-about-image](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#cv-term-about-image)",
@@ -319,16 +319,16 @@
                         "nullable": true,
                         "type": "string",
                         "enum": [
-                            "DMI-UNSPECIFIED",
-                            "DMI-ALLOWED",
-                            "DMI-PROHIBITED-AIMLTRAINING",
-                            "DMI-PROHIBITED-GENAIMLTRAINING",
-                            "DMI-PROHIBITED-EXCEPTSEARCHENGINEINDEXING",
-                            "DMI-PROHIBITED-SEECONSTRAINT",
-                            "DMI-PROHIBITED-SEEEMBEDDEDRIGHTSEXPR",
-                            "DMI-PROHIBITED-SEELINKEDRIGHTSEXPR"
+                            "Unspecified - no prohibition defined",
+                            "Allowed",
+                            "Prohibited for AI/ML training",
+                            "Prohibited for Generative AI/ML training",
+                            "Prohibited except for search engine indexing",
+                            "Prohibited, see plus:OtherConstraints",
+                            "Prohibited, see iptcExt:EmbdEncRightsExpr",
+                            "Prohibited, see iptcExt:LinkedEncRightsExpr"
                         ],
-                        "example": "DMI-PROHIBITED-GENAIMLTRAINING"
+                        "example": "Prohibited, see iptcExt:LinkedEncRightsExpr"
                     },
                     "dateCreated": {
                         "description": "Date Created\n\n`Administrative Details`\n\nEnter the Date the image was taken\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#date-created](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#date-created)",
@@ -342,7 +342,7 @@
                         "nullable": true,
                         "type": "string",
                         "format": "date-time",
-                        "example": "2008-08-01T23:38:55+00:00"
+                        "example": "2008-03-05T17:43:59+00:00"
                     },
                     "description": {
                         "description": "Description\n\n`General Image Content`\n\nEnter a \"caption\" describing the who, what, and why of what is happening in this image, this might include names of people, and/or their role in the action that is taking place within the image\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#description](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#description)",
@@ -360,8 +360,8 @@
                             "maxLength": 2000
                         },
                         "example": {
-                            "en": "Mock Turtle a minute. Alice thought Alice,) and expecting every day--' 'I'VE been the Gryphon.",
-                            "fr": "Ne pouvait-on se r\u00e9fugier dans le reste. Elle se mettre en riant, l'attirait \u00e0 ne sais pas ce nom."
+                            "en": "Queen said the beautiful Soup? Beau--ootiful Soo--oop! Soo--oop of the pack, she had but come back.",
+                            "fr": "Ils en s'\u00e9criant: -- Peut-\u00eatre qu'avec un murmure; -- Eh bien, si fort, et la peine, leur."
                         }
                     },
                     "captionWriter": {
@@ -376,7 +376,7 @@
                         "nullable": true,
                         "type": "string",
                         "maxLength": 32,
-                        "example": "Barbara Buckridge"
+                        "example": "Frederique Cassin"
                     },
                     "digitalImageGuid": {
                         "description": "Digital Image GUID\n\n`Administrative Details`\n\nIf an ID already exists, don't change - otherwise enter a globally unique identifier for this digital image\n\nThe identifier will probably be generated by the technical means of an imaging device or software and should be applied to the digital image file as early as possible in its life cycle. This identifier does not identify any pictured content, particularly in case of a scan of non-digital images, only this digital representation.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#digital-image-guid](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#digital-image-guid)",
@@ -389,7 +389,7 @@
                         ],
                         "nullable": true,
                         "type": "string",
-                        "example": "guid:tempora"
+                        "example": "guid:esse-soluta"
                     },
                     "digitalSourceType": {
                         "description": "Digital Source Type\n\n`Administrative Details`\n\nSelect one of the values for identifying the type of the source of the digital image from the controlled vocabulary\n\nPlease check the Digital Source Type NewsCodes vocabulary, it was updated in 2022.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#digital-source-type](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#digital-source-type)",
@@ -403,7 +403,7 @@
                         "nullable": true,
                         "type": "string",
                         "format": "uri",
-                        "example": "type:consequatur"
+                        "example": "type:nihil-sed"
                     },
                     "embdEncRightsExprs": {
                         "description": "Embedded Encoded Rights Expression\n\n`Licensing Use`\n\nShows an encoded rights expression. These values cannot be changed by metadata panels\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#embedded-encoded-rights-expression](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#embedded-encoded-rights-expression)",
@@ -436,8 +436,8 @@
                             "format": "uri"
                         },
                         "example": [
-                            "event:sit-placeat",
-                            "event:at"
+                            "event:autem",
+                            "event:quis"
                         ]
                     },
                     "eventName": {
@@ -455,8 +455,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "I could see the roof of anything, but he spoke, 'we learned French mouse, you talking again. The.",
-                            "fr": "Aussi poussa-t-il un calice bleu. Dans l'apr\u00e8s-midi, et, sur des paquets. On entendait toujours \u00e0."
+                            "en": "Caterpillar contemptuously. 'I am to repeat it, when it trot away the little eyes, 'Of course you.",
+                            "fr": "Yonville, confectionnait sa fille, aujourd'hui! Il ne vous \u00eates donc lire fort peu ses doigts. Et."
                         }
                     },
                     "extDescrAccessibility": {
@@ -474,8 +474,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "Alice said the same order,' continued the Hatter said, turning purple. 'I can't go from beginning.",
-                            "fr": "\u00c0 quoi bon? d'\u00e9crire \u00e0 l'amour de musique, s'assoupissait d'indiff\u00e9rence au moment d'\u00eatre profonde."
+                            "en": "Very soon got behind her. 'Poor little eyes, but they WOULD put his Normans--\" How I wish you got.",
+                            "fr": "F\u00e9licit\u00e9 courut chez lui parut r\u00e9ussir; rien rappeler ainsi perdue de Quincampoix. \u00c0 chaque angle."
                         }
                     },
                     "genres": {
@@ -505,7 +505,7 @@
                         "nullable": true,
                         "type": "string",
                         "maxLength": 256,
-                        "example": "White Rabbit, trotting slowly back to the fifth bend, I think?' 'I had NOT!'."
+                        "example": "Alice, and tried to say anything. 'Why,' said the Hatter. 'I deny it!' said."
                     },
                     "imageCreators": {
                         "description": "Image Creator\n\n`Rights Information`\n\nEnter details about the creator or creators of this image\n\nThe creator can be additionally expressed in free-text using the IPTC Core Creator field. In many countries, the Image Creator must be attributed in association with any use of the image. The Image Creator, Copyright Owner, Image Supplier and Licensor may be the same or different entities.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-creator](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-creator)",
@@ -534,15 +534,15 @@
                         "nullable": true,
                         "type": "number",
                         "enum": [
-                            -1,
-                            0,
+                            "Rejected",
+                            "Unrated",
                             1,
                             2,
                             3,
                             4,
                             5
                         ],
-                        "example": "2"
+                        "example": "5"
                     },
                     "imageRegion": {
                         "description": "Image Region\n\n`Image Region`\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-region](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-region)",
@@ -600,7 +600,7 @@
                         ],
                         "nullable": true,
                         "type": "string",
-                        "example": "supplier:numquam"
+                        "example": "supplier:illum-ad"
                     },
                     "instructions": {
                         "description": "Instructions\n\n`Administrative Details`\n\nEnter information about embargoes, or other restrictions not covered by the Rights Usage field\n\nThe Instructions may include any of the following: embargoes (NewsMagazines OUT) and other restrictions not covered by the \"Rights Usage Terms\" field; information regarding the original means of capture (scanning notes, colourspace info) or other specific text information that the user may need for accurate reproduction; additional permissions required when publishing; credits for publishing if they exceed the IIM length of the credit field\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#instructions](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#instructions)",
@@ -614,7 +614,7 @@
                         "nullable": true,
                         "type": "string",
                         "maxLength": 256,
-                        "example": "And she's such a thing. After a while she was now only ten inches high, and."
+                        "example": "Crab, a little way out of THIS!' (Sounds of more broken glass.) 'Now tell me."
                     },
                     "intellectualGenre": {
                         "description": "Intellectual Genre (legacy)\n\n`General Image Content`\n\nEnter a term to describe the nature of the image in terms of its intellectual or journalistic characteristics\n\nNote on \"legacy\": the Intellectual Genre can be expressed in a more controlled way using the \"Genre\" property of the IPTC Extension, IPTC recommends using it.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#intellectual-genre-legacy](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#intellectual-genre-legacy)",
@@ -629,7 +629,7 @@
                         "nullable": true,
                         "type": "string",
                         "maxLength": 64,
-                        "example": "Conceptual"
+                        "example": "Feature"
                     },
                     "jobid": {
                         "description": "Job Id\n\n`Administrative Details`\n\nEnter a number or identifier needed for workflow control or tracking\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#job-id](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#job-id)",
@@ -643,7 +643,7 @@
                         "nullable": true,
                         "type": "string",
                         "maxLength": 32,
-                        "example": "job:quae-distinctio"
+                        "example": "job:in"
                     },
                     "keywords": {
                         "description": "Keywords\n\n`General Image Content`\n\nEnter any number of keywords, terms or phrases to express the subject and other aspects of the content of the image.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#keywords](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#keywords)",
@@ -661,8 +661,8 @@
                             "maxLength": 64
                         },
                         "example": [
-                            "Housekeeping Supervisor",
-                            "Retail Salesperson"
+                            "Agricultural Science Technician",
+                            "Pressure Vessel Inspector"
                         ]
                     },
                     "licensors": {
@@ -736,7 +736,7 @@
                         ],
                         "nullable": true,
                         "type": "integer",
-                        "example": "1"
+                        "example": "7"
                     },
                     "maxAvailWidth": {
                         "description": "Max Avail Width\n\n`Administrative Details`\n\nEnter the maximum available width in pixels of the original photo from which this photo has been derived by downsizing\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#max-avail-width](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#max-avail-width)",
@@ -749,7 +749,7 @@
                         ],
                         "nullable": true,
                         "type": "integer",
-                        "example": "62"
+                        "example": "6354"
                     },
                     "minorModelAgeDisclosure": {
                         "description": "Minor Model Age Disclosure\n\n`Persons Shown`\n\nEnter the age of the youngest model pictured in this image, at the time that this image was made\n\nThis age should not be displayed to the public on open web portals and the like. But it may be used by image repositories in a B2B enviroment.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#minor-model-age-disclosure](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#minor-model-age-disclosure)",
@@ -763,21 +763,21 @@
                         "nullable": true,
                         "type": "string",
                         "enum": [
-                            "AG-UNK",
-                            "AG-A25",
-                            "AG-A24",
-                            "AG-A23",
-                            "AG-A22",
-                            "AG-A21",
-                            "AG-A20",
-                            "AG-A19",
-                            "AG-A18",
-                            "AG-A17",
-                            "AG-A16",
-                            "AG-A15",
-                            "AG-U14"
+                            "Age Unknown",
+                            "Age 25 or Over",
+                            "Age 24",
+                            "Age 23",
+                            "Age 22",
+                            "Age 21",
+                            "Age 20",
+                            "Age 19",
+                            "Age 18",
+                            "Age 17",
+                            "Age 16",
+                            "Age 15",
+                            "Age 14 or Under"
                         ],
-                        "example": "AG-A18"
+                        "example": "Age 23"
                     },
                     "modelAges": {
                         "description": "Model Age\n\n`Persons Shown`\n\nEnter the age of the human model(s) at the time this image was made\n\nThe user should be aware of any legal implications of providing ages for young models. Ages below 18 years should not be included.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#model-age](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#model-age)",
@@ -794,7 +794,7 @@
                             "type": "integer"
                         },
                         "example": [
-                            "34",
+                            "42",
                             "66"
                         ]
                     },
@@ -813,8 +813,8 @@
                             "type": "string"
                         },
                         "example": [
-                            "document:qui-qui",
-                            "document:est-molestiae"
+                            "document:qui-et",
+                            "document:dignissimos-non"
                         ]
                     },
                     "modelReleaseStatus": {
@@ -829,12 +829,12 @@
                         "nullable": true,
                         "type": "string",
                         "enum": [
-                            "MR-NON",
-                            "MR-NAP",
-                            "MR-UMR",
-                            "MR-LMR"
+                            "None",
+                            "Not Applicable",
+                            "Unlimited Model Releases",
+                            "Limited or Incomplete Model Releases"
                         ],
-                        "example": "MR-LMR"
+                        "example": "Unlimited Model Releases"
                     },
                     "organisationInImageNames": {
                         "description": "Name of Organisation Featured in the Image\n\n`Other Things Shown`\n\nEnter the name of the organisation which is featured by this image\n\nMay be supplemented by values from a controlled vocabulary in the Organisation Code field.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#name-of-organisation-featured-in-the-image](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#name-of-organisation-featured-in-the-image)",
@@ -851,8 +851,8 @@
                             "type": "string"
                         },
                         "example": [
-                            "Moen-Brakus",
-                            "Cummings-Schamberger"
+                            "Runte-Lehner",
+                            "Brakus, Heidenreich and Ebert"
                         ]
                     },
                     "otherConstraints": {
@@ -870,8 +870,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "I've got its right into hers that it please your eye was busily on the top of conversation. While.",
-                            "fr": "Comme il se haussant jusqu'au soir fussent promen\u00e9s sur le bord de m\u00eame qu'elle se relevait, cela."
+                            "en": "Dormouse indignantly. However, I've got altered.' 'It WAS no name of it IS it spoke. Alice said.",
+                            "fr": "Mais, si elle murmurait dans une sorte de la promesse incertaine se serait forc\u00e9 de duels, de."
                         }
                     },
                     "personInImageNames": {
@@ -889,8 +889,8 @@
                             "type": "string"
                         },
                         "example": [
-                            "Mrs. Elizabeth Denesik I",
-                            "Dr. Ebony Doyle Jr."
+                            "Jarret Ortiz",
+                            "Osbaldo Effertz"
                         ]
                     },
                     "personsShown": {
@@ -938,8 +938,8 @@
                             "type": "string"
                         },
                         "example": [
-                            "document:sunt",
-                            "document:enim-unde"
+                            "document:consectetur-vel",
+                            "document:nihil"
                         ]
                     },
                     "propertyReleaseStatus": {
@@ -954,12 +954,12 @@
                         "nullable": true,
                         "type": "string",
                         "enum": [
-                            "PR-NON",
-                            "PR-NAP",
-                            "PR-UPR",
-                            "PR-LPR"
+                            "None",
+                            "Not Applicable",
+                            "Unlimited Property Releases",
+                            "Limited or Incomplete Property Releases"
                         ],
-                        "example": "PR-NON"
+                        "example": "Not Applicable"
                     },
                     "provinceState": {
                         "description": "Province or State (legacy)\n\n`Location`\n\nEnter the name of the province or state pictured in this image\n\nThis is a detail of a location with blurred semantics as it does not clearly indicate whether it is the location in the image or the location the photo was taken - which can be different. Two more concise properties are available in IPTC Extension with Location Created and Location Shown in the Image.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#province-or-state-legacy](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#province-or-state-legacy)",
@@ -974,7 +974,7 @@
                         "nullable": true,
                         "type": "string",
                         "maxLength": 32,
-                        "example": "Texas"
+                        "example": "Bavaria"
                     },
                     "usageTerms": {
                         "description": "Rights Usage Terms\n\n`Licensing Use`\n\nEnter instructions on how this image can legally be used\n\nRights and licensing related properties of the IPTC Extension can be used in parallel to express the licensed usage in more controlled terms.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#rights-usage-terms](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#rights-usage-terms)",
@@ -991,8 +991,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "DON'T know,' said it was a bright flower-beds and gloves, and was I do,' said Alice: 'she's so she.",
-                            "fr": "Lefran\u00e7ois, que de la lecture de la chandelle. Elle avait ouvert le pharmacien, et Emma se parut."
+                            "en": "Seven. 'Yes, I must have you like the strange tale, perhaps even Stigand, the Mock Turtle repeated.",
+                            "fr": "Morel doit toujours couci-couci, entre ses cahiers de passer de son \u00e9poux, \u00e0 son amour; et levant."
                         }
                     },
                     "sceneCodes": {
@@ -1010,8 +1010,8 @@
                             "type": "string"
                         },
                         "example": [
-                            "scn:401029",
-                            "scn:728005"
+                            "scn:670439",
+                            "scn:424124"
                         ]
                     },
                     "source": {
@@ -1026,7 +1026,7 @@
                         "nullable": true,
                         "type": "string",
                         "maxLength": 32,
-                        "example": "Trantow Ltd"
+                        "example": "Lueilwitz, Kovacek and Greenfelder"
                     },
                     "subjectCodes": {
                         "description": "Subject Code (legacy)\n\n`General Image Content`\n\nEnter only the 8-digit codes from the IPTC Subject NewsCode Controlled Vocabulary (see: http://cv.iptc.org/newscodes/subjectcode)\n\nNote on \"legacy\": The Subject Codes were retired by IPTC before 2010. For the classification of images use the IPTC Media Topics vocabulary now, see: http://cv.iptc.org/newscodes/mediatopic For the Media Topics  the CV Term About Image property must be used.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#subject-code-legacy](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#subject-code-legacy)",
@@ -1045,8 +1045,8 @@
                             "maxLength": 236
                         },
                         "example": [
-                            "medtop:54915935",
-                            "medtop:06715916"
+                            "medtop:82731367",
+                            "medtop:54820646"
                         ]
                     },
                     "sublocationName": {
@@ -1062,7 +1062,7 @@
                         "nullable": true,
                         "type": "string",
                         "maxLength": 32,
-                        "example": "Shibuya"
+                        "example": "City Centre Ward"
                     },
                     "title": {
                         "description": "Title\n\n`Administrative Details`\n\nEnter a short verbal and human readable name for the image, this may be the file name\n\nMany use the Title field to store the filename of the image, though the field may be used in many ways. Formal identifiers are provided by the Digital Image Id, or the Registry Entry property of the IPTC Extension.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#title](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#title)",
@@ -1080,8 +1080,8 @@
                             "maxLength": 64
                         },
                         "example": {
-                            "en": "March Hare,) '--it was not quite silent for two people. 'But about it would deny it over to meet.",
-                            "fr": "Bovary n'y pensa Lheureux, qui vous surtout, lorsque devant soi un b\u00e9nitier tout bas morceaux de."
+                            "en": "Alice. 'Why, they're not,' Alice thought to grow large mustard-mine near the Caterpillar. Alice.",
+                            "fr": "Comme il allait de chasse aux envahissements lyriques de larmes d'un plat ventre en faire."
                         }
                     },
                     "webstatementRights": {
@@ -1096,7 +1096,7 @@
                         "nullable": true,
                         "type": "string",
                         "format": "uri",
-                        "example": "http://swaniawski.com/"
+                        "example": "http://prosacco.org/"
                     }
                 }
             },
@@ -1119,7 +1119,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "between 1498 and 1890"
+                        "example": "between 1368 and 1898"
                     },
                     "contentDescription": {
                         "description": "Content Description\n\nDescribe the content depicted in the artwork or object in free-text\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#content-description](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#content-description)",
@@ -1133,8 +1133,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "Alice, as he went on a mile high,' said the thought this here with her hand, and both its eyes.",
-                            "fr": "Emma, silencieuse, regardait vaguement de trouver au caf\u00e9 moulu qui avait retrouv\u00e9s dans le disque."
+                            "en": "King, 'that saves a good deal: this time). 'Don't you ask help me like the bright flower-beds and.",
+                            "fr": "Puis elle s'accrochait de dessous et leur bonheur, elle vint une sonorit\u00e9 cristalline et hydrog\u00e8ne."
                         }
                     },
                     "contributionDescription": {
@@ -1149,8 +1149,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "Mock Turtle, 'but why it up and repeated the Duchess?' 'Hush! Hush!' said the other dish? Who for.",
-                            "fr": "\u00c0 peine inutile s'ajoutait aux d\u00e9licatesses du coiffeur et dix mois!... O\u00f9 pouvait-elle s'accouder."
+                            "en": "I shouldn't talk,' said Alice, a long as she thought, and Alice, who was gone, if you were.",
+                            "fr": "Emma; ne la tente dans les plus ancienne maison. Emma n'arrivait pas. Eh bien, les deux vitres; au."
                         }
                     },
                     "copyrightNotice": {
@@ -1161,7 +1161,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "All rights reserved. Mock Turtle, and to her ear. 'You're thinking about something, my dear, and."
+                        "example": "All rights reserved. White Rabbit blew three blasts on the top of her sister, as well as she could."
                     },
                     "creatorNames": {
                         "description": "Creator\n\nEnter the name of the artist who has created artwork or an object in this image\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#creator](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#creator)",
@@ -1175,8 +1175,8 @@
                             "type": "string"
                         },
                         "example": [
-                            "Rolando Wuckert I",
-                            "Millie Beatty I"
+                            "Lyda Kiehn",
+                            "Lyda Rolfson"
                         ]
                     },
                     "creatorIdentifiers": {
@@ -1192,8 +1192,8 @@
                             "format": "uri"
                         },
                         "example": [
-                            "creator:eaque",
-                            "creator:expedita-commodi"
+                            "creator:quibusdam-fuga",
+                            "creator:hic"
                         ]
                     },
                     "currentCopyrightOwnerIdentifier": {
@@ -1205,7 +1205,7 @@
                         "nullable": true,
                         "type": "string",
                         "format": "uri",
-                        "example": "owner:placeat-praesentium"
+                        "example": "owner:omnis-ad"
                     },
                     "currentCopyrightOwnerName": {
                         "description": "Current Copyright Owner Name\n\nEnter the name of the current owner of the copyright of the artwork or object\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#current-copyright-owner-name](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#current-copyright-owner-name)",
@@ -1215,7 +1215,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "Maci Tremblay MD"
+                        "example": "Johann Lindgren"
                     },
                     "currentLicensorIdentifier": {
                         "description": "Current Licensor ID\n\nEnter a globally unique identifier for the current licensor e.g. issued by an online registry of persons or companies\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#current-licensor-id](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#current-licensor-id)",
@@ -1226,7 +1226,7 @@
                         "nullable": true,
                         "type": "string",
                         "format": "uri",
-                        "example": "licensor:nihil"
+                        "example": "licensor:debitis-veritatis"
                     },
                     "currentLicensorName": {
                         "description": "Current Licensor Name\n\nEnter the name of the current licensor of the artwork or object\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#current-licensor-name](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#current-licensor-name)",
@@ -1236,7 +1236,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "Hauck PLC"
+                        "example": "Collins LLC"
                     },
                     "dateCreated": {
                         "description": "Date Created\n\nEnter the date and optionally the time when the artwork or object in this image was created\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#date-created](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#date-created)",
@@ -1247,7 +1247,7 @@
                         "nullable": true,
                         "type": "string",
                         "format": "date-time",
-                        "example": "1972-06-22T23:02:16+00:00"
+                        "example": "2018-08-20T14:39:39+00:00"
                     },
                     "physicalDescription": {
                         "description": "Physical Description\n\nDescribe the physical characteristics of the artwork or object as free-text, without referring to the subject depicted. Object type, materials-techniques and measurements may be described\n\nObject type, materials-techniques and measurements may be described.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#physical-description](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#physical-description)",
@@ -1261,8 +1261,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "If they all brightened up both its head impatiently; and, taking it muttering to tell you, won't.",
-                            "fr": "Charles, \u00e0 soigner, mille \u00e9cus, il la vue de statistique, et l'\u00e9curie. Elle allait donc de."
+                            "en": "Alice like what a voice along--'Catch him, you think you're growing small again.' She felt a Lory.",
+                            "fr": "Vaubyessard et la soir\u00e9e, lui seul dans des plats qu'il est le lit; elle demanda le visage comme."
                         }
                     },
                     "source": {
@@ -1273,7 +1273,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "Turner-Lemke"
+                        "example": "Yundt Group"
                     },
                     "sourceInventoryNr": {
                         "description": "Source Inventory Number\n\nEnter the inventory number issued by the organisation or body holding and registering the artwork or object in this image\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#source-inventory-number](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#source-inventory-number)",
@@ -1283,7 +1283,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "76073651843028"
+                        "example": "07935729947099"
                     },
                     "sourceInventoryUrl": {
                         "description": "Source Inventory URL\n\nEnter a reference URL for the metadata record of the inventory maintained by the Source\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#source-inventory-url](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#source-inventory-url)",
@@ -1294,7 +1294,7 @@
                         "nullable": true,
                         "type": "string",
                         "format": "url",
-                        "example": "http://gulgowski.com/non-sit-dolor-labore-maiores-voluptas-ut-sint-blanditiis"
+                        "example": "https://www.spencer.org/dicta-necessitatibus-assumenda-itaque-aperiam-molestias-ut"
                     },
                     "stylePeriod": {
                         "description": "Style Period\n\nEnter the style, historical or artistic period, movement, group, or school whose characteristics are represented in the artwork or object\n\nIt is advised to take the terms from a Controlled Vocabulary.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#style-period](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#style-period)",
@@ -1308,8 +1308,8 @@
                             "type": "string"
                         },
                         "example": [
-                            "Classical Greek",
-                            "Renaissance"
+                            "Baroque",
+                            "Ancient Egyptian"
                         ]
                     },
                     "title": {
@@ -1324,8 +1324,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "ALL PERSONS MORE than Alice was shrinking rapidly; so much!' Alas! it her,' said Alice, 'we.",
-                            "fr": "Le jour sans moi, voyez-vous! J'ai tort, dit Rodolphe. -- Ah! elle s'obstinait toujours: \u00abEt qui."
+                            "en": "Alice again. The Gryphon said to the first was beginning very decidedly, and held out who ran.",
+                            "fr": "Elle s'arr\u00eata; puis, son \u00e2me comme le printemps sur son maintien. Il \u00e9tait impossible de sucre en."
                         }
                     }
                 }
@@ -1354,8 +1354,8 @@
                             "format": "uri"
                         },
                         "example": [
-                            "id:facere",
-                            "id:sit-est"
+                            "id:aut",
+                            "id:nostrum"
                         ]
                     },
                     "name": {
@@ -1370,8 +1370,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "Nina Wilderman",
-                            "fr": "Pauline Gosselin"
+                            "en": "Saige Hegmann",
+                            "fr": "Capucine-Manon Pons"
                         }
                     },
                     "role": {
@@ -1386,8 +1386,8 @@
                             "type": "string"
                         },
                         "example": [
-                            "role:illo-et",
-                            "role:quis-necessitatibus"
+                            "role:sed",
+                            "role:architecto-illum"
                         ]
                     }
                 }
@@ -1411,7 +1411,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "owner:eos"
+                        "example": "owner:ut-sint"
                     },
                     "copyrightOwnerName": {
                         "description": "Copyright Owner Name\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#copyright-owner-name](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#copyright-owner-name)",
@@ -1421,7 +1421,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "Wilfred Gaylord DVM"
+                        "example": "Prof. Lindsey Predovic"
                     }
                 }
             },
@@ -1444,7 +1444,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "971 Jones Points\nHarmonton, OH 83101"
+                        "example": "77488 Jacky Wall Suite 472\nNorth Cierramouth, NY 68497"
                     },
                     "city": {
                         "description": "City\n\nEnter the City for the address of the person that created this image\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#city](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#city)",
@@ -1454,7 +1454,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "Lake Lori"
+                        "example": "New Priceview"
                     },
                     "country": {
                         "description": "Country\n\nEnter the Country name for the address of the person that created this image\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#country](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#country)",
@@ -1464,7 +1464,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "Guam"
+                        "example": "Slovakia (Slovak Republic)"
                     },
                     "emailwork": {
                         "description": "Email address(es)\n\nEnter the work Email address(es) for the person that created this image, such as name@domain.com\n\nMultiple email addresses can be given. May have to be separated by a comma in the user interface.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#email-addresses](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#email-addresses)",
@@ -1474,7 +1474,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "vivianne.green@bins.biz"
+                        "example": "garfield.ebert@ritchie.com"
                     },
                     "phonework": {
                         "description": "Phone number(s)\n\nEnter the work Phone number(s) for the person that created this image, using the international format, such as +1 (123) 456789\n\nMultiple numbers can be given. May have to be separated by a comma in the user interface.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#phone-numbers](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#phone-numbers)",
@@ -1484,7 +1484,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "(801) 565-8646"
+                        "example": "1-443-260-9280"
                     },
                     "postalCode": {
                         "description": "Postal Code\n\nEnter the Postal Code for the address of the person that created this image\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#postal-code](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#postal-code)",
@@ -1494,7 +1494,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "86311-9137"
+                        "example": "82309-9308"
                     },
                     "region": {
                         "description": "State/Province\n\nEnter the State for the address of the person that created this image\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#state/province](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#state/province)",
@@ -1504,7 +1504,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "Kerala"
+                        "example": "Saxony"
                     },
                     "weburlwork": {
                         "description": "Web URL(s)\n\nEnter the work Web URL(s) for the person that created this image, such as http://www.domain.com/\n\nMultiple URL can be given. May have to be separated by a comma in the user interface.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#web-urls](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#web-urls)",
@@ -1515,7 +1515,7 @@
                         "nullable": true,
                         "type": "string",
                         "format": "url",
-                        "example": "https://lemke.com/id-id-quia-beatae-in.html"
+                        "example": "http://www.swift.net/"
                     }
                 }
             },
@@ -1536,7 +1536,7 @@
                         "nullable": true,
                         "type": "string",
                         "format": "uri",
-                        "example": "cv:saepe"
+                        "example": "cv:ut-vel"
                     },
                     "cvTermId": {
                         "description": "CV-Term ID\n\nEnter the globally unique identifier of the term from a Controlled Vocabulary\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#cv-term-id](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#cv-term-id)",
@@ -1547,7 +1547,7 @@
                         "nullable": true,
                         "type": "string",
                         "format": "uri",
-                        "example": "term:dolores"
+                        "example": "term:voluptatum"
                     },
                     "cvTermName": {
                         "description": "CV-Term name\n\nEnter the name of the term from a Controlled Vocabulary as free-text\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#cv-term-name](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#cv-term-name)",
@@ -1561,8 +1561,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "File Clerk",
-                            "fr": "Second de cuisine"
+                            "en": "Securities Sales Agent",
+                            "fr": "Staffeur"
                         }
                     },
                     "cvTermRefinedAbout": {
@@ -1574,7 +1574,7 @@
                         "nullable": true,
                         "type": "string",
                         "format": "uri",
-                        "example": "about:error-et"
+                        "example": "about:labore-ipsam"
                     }
                 }
             },
@@ -1597,7 +1597,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "All rights reserved. After a time there could be no use in waiting by the hand, it hurried off."
+                        "example": "All rights reserved. I suppose?' 'Yes,' said Alice thoughtfully: 'but then--I shouldn't be hungry."
                     },
                     "rightsExprEncType": {
                         "description": "Encoding type\n\nShows the encoding type of the rights expression by an IANA Media Type\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#encoding-type](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#encoding-type)",
@@ -1618,7 +1618,7 @@
                         "nullable": true,
                         "type": "string",
                         "format": "uri",
-                        "example": "lang:hi"
+                        "example": "lang:sr"
                     }
                 }
             },
@@ -1641,7 +1641,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "creator:incidunt"
+                        "example": "creator:nihil-rem"
                     },
                     "imageCreatorName": {
                         "description": "Image Creator Name\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-creator-name](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-creator-name)",
@@ -1651,7 +1651,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "Jackeline Klocko IV"
+                        "example": "Reagan Bailey"
                     }
                 }
             },
@@ -1671,7 +1671,7 @@
                         },
                         "nullable": true,
                         "type": "number",
-                        "example": "121259387.07058"
+                        "example": "1653779.1"
                     },
                     "rbY": {
                         "description": "Y-Axis Coordinate\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#y-axis-coordinate](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#y-axis-coordinate)",
@@ -1681,7 +1681,7 @@
                         },
                         "nullable": true,
                         "type": "number",
-                        "example": "11329890.171821"
+                        "example": "50.72512"
                     }
                 }
             },
@@ -1702,11 +1702,11 @@
                         "nullable": true,
                         "type": "string",
                         "enum": [
-                            "rectangle",
-                            "circle",
-                            "polygon"
+                            "Rectangle",
+                            "Circle",
+                            "Polygon"
                         ],
-                        "example": "polygon"
+                        "example": "Circle"
                     },
                     "rbUnit": {
                         "description": "Boundary Measuring Unit\n\nThe applicable units are: \n\n* _pixel_ = A pixel of a digital image setting an absolute value \n* _relative_ = Relative part of the size of an image along the x- or the y-axis. The range of the value is from 0 to 1 representing the proportion of the full size of an image along the x-axis or the y-axis.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#boundary-measuring-unit](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#boundary-measuring-unit)",
@@ -1717,10 +1717,10 @@
                         "nullable": true,
                         "type": "string",
                         "enum": [
-                            "pixel",
-                            "relative"
+                            "Pixel",
+                            "Relative"
                         ],
-                        "example": "relative"
+                        "example": "Pixel"
                     },
                     "rbX": {
                         "description": "X-Axis Coordinate\n\nUsed only by the shapes _rectangle_ and _circle_. See also the User Notes of the link:#region-boundary-structure[Region Boundary structure]\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#x-axis-coordinate](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#x-axis-coordinate)",
@@ -1730,7 +1730,7 @@
                         },
                         "nullable": true,
                         "type": "number",
-                        "example": "2644326.864799"
+                        "example": "132.33627887"
                     },
                     "rbY": {
                         "description": "Y-Axis Coordinate\n\nUsed only by the shapes _rectangle_ and _circle_. See also the User Notes of the link:#region-boundary-structure[Region Boundary structure]\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#y-axis-coordinate](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#y-axis-coordinate)",
@@ -1740,7 +1740,7 @@
                         },
                         "nullable": true,
                         "type": "number",
-                        "example": "595.81008956"
+                        "example": "92390.48512"
                     },
                     "rbW": {
                         "description": "Rectangle Width\n\nUsed only by the shape _rectangle_.See also the User Notes of the link:#region-boundary-structure[Region Boundary structure]\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#rectangle-width](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#rectangle-width)",
@@ -1750,7 +1750,7 @@
                         },
                         "nullable": true,
                         "type": "number",
-                        "example": "1.163964388"
+                        "example": "437768"
                     },
                     "rbH": {
                         "description": "Rectangle Height\n\nUsed only by the shape _rectangle_.See also the User Notes of the link:#region-boundary-structure[Region Boundary structure]\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#rectangle-height](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#rectangle-height)",
@@ -1770,7 +1770,7 @@
                         },
                         "nullable": true,
                         "type": "number",
-                        "example": "2236.05093791"
+                        "example": "12.1886387"
                     },
                     "rbVertices": {
                         "description": "Polygon Vertices\n\nUsed only by the shape _polygon_. See also the User Notes of the link:#region-boundary-structure[Region Boundary structure]\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#polygon-vertices](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#polygon-vertices)",
@@ -1807,8 +1807,8 @@
                             "format": "uri"
                         },
                         "example": [
-                            "id:omnis",
-                            "id:distinctio-quo"
+                            "id:accusantium",
+                            "id:accusamus-et"
                         ]
                     },
                     "name": {
@@ -1823,8 +1823,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "Miss Annalise Jones DVM",
-                            "fr": "Martin-William Olivier"
+                            "en": "Shannon Bashirian",
+                            "fr": "Marthe-Odette Barbier"
                         }
                     }
                 }
@@ -1857,7 +1857,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "rId:mollitia"
+                        "example": "region:dignissimos-est"
                     },
                     "name": {
                         "description": "Region Name\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#region-name](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#region-name)",
@@ -1871,8 +1871,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "Mr. Russell Weimann III",
-                            "fr": "Patricia Loiseau"
+                            "en": "Adell Swift",
+                            "fr": "Alex Le Gonzalez"
                         }
                     },
                     "rCtype": {
@@ -1929,7 +1929,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "asset:quod"
+                        "example": "asset:tenetur"
                     },
                     "registryIdentifier": {
                         "description": "Organisation Id\n\nEnter the identifier for the registry which issued the corresponding Registry Image ID\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#organisation-id](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#organisation-id)",
@@ -1939,7 +1939,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "registry:et"
+                        "example": "registry:voluptas-ea"
                     },
                     "role": {
                         "description": "Role\n\nEnter an identifier of the role of this registry entry in the context of other entries.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#role](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#role)",
@@ -1950,7 +1950,7 @@
                         "nullable": true,
                         "type": "string",
                         "format": "uri",
-                        "example": "role:quia-ut"
+                        "example": "role:quia"
                     }
                 }
             },
@@ -1973,7 +1973,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "supplier:officia-in"
+                        "example": "supplier:nemo"
                     },
                     "imageSupplierName": {
                         "description": "Image Supplier Name\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-supplier-name](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#image-supplier-name)",
@@ -1983,7 +1983,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "Hoeger, Hintz and Yundt"
+                        "example": "Smitham-Roberts"
                     }
                 }
             },
@@ -2006,7 +2006,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "licensor:omnis"
+                        "example": "licensor:debitis"
                     },
                     "licensorName": {
                         "description": "Licensor Name\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-name](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-name)",
@@ -2016,7 +2016,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "Devante Schultz"
+                        "example": "Emelia Funk DDS"
                     },
                     "licensorAddress": {
                         "description": "Licensor Address\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-address](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-address)",
@@ -2026,7 +2026,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "25205 Macejkovic Knolls Apt. 763\nNoemyland, NJ 18218"
+                        "example": "64029 Koch Extensions Suite 077\nMcCulloughbury, MS 91810-6190"
                     },
                     "licensorAddressDetail": {
                         "description": "Licensor Adress Detail\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-adress-detail](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-adress-detail)",
@@ -2036,7 +2036,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "Alice was beginning to feel which way you can;--but I must go back by."
+                        "example": "Alice went on growing, and she heard a little timidly: 'but it's no use in the."
                     },
                     "licensorCity": {
                         "description": "Licensor City\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-city](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-city)",
@@ -2046,7 +2046,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "North Camillefort"
+                        "example": "Ozellaberg"
                     },
                     "licensorStateProvince": {
                         "description": "Licensor State or Province\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-state-or-province](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-state-or-province)",
@@ -2056,7 +2056,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "Punjab"
+                        "example": "Ontario"
                     },
                     "licensorPostalCode": {
                         "description": "Licensor Postal Code\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-postal-code](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-postal-code)",
@@ -2066,7 +2066,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "30312"
+                        "example": "17380-8996"
                     },
                     "licensorCountryName": {
                         "description": "Licensor Country\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-country](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-country)",
@@ -2076,7 +2076,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "Cyprus"
+                        "example": "Paraguay"
                     },
                     "licensorTelephoneType1": {
                         "description": "Licensor Telephone Type 1\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-telephone-type-1](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-telephone-type-1)",
@@ -2087,13 +2087,13 @@
                         "nullable": true,
                         "type": "string",
                         "enum": [
-                            "cell",
-                            "fax",
-                            "home",
-                            "pager",
-                            "work"
+                            "Cell",
+                            "FAX",
+                            "Home",
+                            "Pager",
+                            "Work"
                         ],
-                        "example": "home"
+                        "example": "FAX"
                     },
                     "licensorTelephone1": {
                         "description": "Licensor Telephone 1\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-telephone-1](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-telephone-1)",
@@ -2103,7 +2103,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "+1.419.672.5659"
+                        "example": "+13858221338"
                     },
                     "licensorTelephoneType2": {
                         "description": "Licensor Telephone Type 2\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-telephone-type-2](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-telephone-type-2)",
@@ -2114,13 +2114,13 @@
                         "nullable": true,
                         "type": "string",
                         "enum": [
-                            "cell",
-                            "fax",
-                            "home",
-                            "pager",
-                            "work"
+                            "Cell",
+                            "FAX",
+                            "Home",
+                            "Pager",
+                            "Work"
                         ],
-                        "example": "home"
+                        "example": "Home"
                     },
                     "licensorTelephone2": {
                         "description": "Licensor Telephone 2\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-telephone-2](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-telephone-2)",
@@ -2130,7 +2130,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "509.972.7664"
+                        "example": "+1.636.813.7654"
                     },
                     "licensorEmail": {
                         "description": "Licensor Email\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-email](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-email)",
@@ -2140,7 +2140,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "vshanahan@gmail.com"
+                        "example": "cayla.pacocha@kreiger.com"
                     },
                     "licensorUrl": {
                         "description": "Licensor URL\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-url](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#licensor-url)",
@@ -2151,7 +2151,7 @@
                         "nullable": true,
                         "type": "string",
                         "format": "url",
-                        "example": "https://www.dibbert.com/quia-et-modi-possimus-quae-a-illo"
+                        "example": "http://mills.net/dolorum-numquam-iusto-dolores-eaque"
                     }
                 }
             },
@@ -2175,7 +2175,7 @@
                         "nullable": true,
                         "type": "string",
                         "format": "url",
-                        "example": "http://www.conn.com/"
+                        "example": "http://pollich.com/"
                     },
                     "rightsExprEncType": {
                         "description": "Encoding type\n\nEnter the encoding type of the rights expression by using an IANA Media Type\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#encoding-type](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#encoding-type)",
@@ -2197,7 +2197,7 @@
                         "nullable": true,
                         "type": "string",
                         "format": "uri",
-                        "example": "lang:id"
+                        "example": "lang:gu"
                     }
                 }
             },
@@ -2220,7 +2220,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "New Stephanieland"
+                        "example": "Daniellestad"
                     },
                     "countryCode": {
                         "description": "Country ISO-Code\n\nEnter the 2 or 3 letter ISO 3166 Country Code of the Country\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#country-iso-code](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#country-iso-code)",
@@ -2230,7 +2230,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "COK"
+                        "example": "CHN"
                     },
                     "countryName": {
                         "description": "Country Name\n\nEnter the name of the Country\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#country-name](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#country-name)",
@@ -2240,7 +2240,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "Vanuatu"
+                        "example": "Cook Islands"
                     },
                     "gpsAltitude": {
                         "description": "GPS-Altitude\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#gps-altitude](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#gps-altitude)",
@@ -2250,7 +2250,7 @@
                         },
                         "nullable": true,
                         "type": "number",
-                        "example": "687.96"
+                        "example": "1957.61 m"
                     },
                     "gpsAltitudeRef": {
                         "description": "GPS-Altitude Reference\n\nThe WGS84 reference level is the surface of the mathematical representation of the earth's globe. At a specific location this level may be a few metres above of below the Mean Sea Level of an ocean or a sea.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#gps-altitude-reference](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#gps-altitude-reference)",
@@ -2261,10 +2261,10 @@
                         "nullable": true,
                         "type": "number",
                         "enum": [
-                            0,
-                            1
+                            "Above Sea Level",
+                            "Below Sea Level"
                         ],
-                        "example": "1"
+                        "example": "Below Sea Level"
                     },
                     "gpsLatitude": {
                         "description": "GPS-Latitude\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#gps-latitude](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#gps-latitude)",
@@ -2274,7 +2274,7 @@
                         },
                         "nullable": true,
                         "type": "number",
-                        "example": "-38.762264"
+                        "example": "69 deg 1' 1.10\" N"
                     },
                     "gpsLongitude": {
                         "description": "GPS-Longitude\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#gps-longitude](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#gps-longitude)",
@@ -2284,7 +2284,7 @@
                         },
                         "nullable": true,
                         "type": "number",
-                        "example": "-88.257392"
+                        "example": "171 deg 1' 1.10\" W"
                     },
                     "identifiers": {
                         "description": "Location Identifier\n\nEnter globally unique identifier(s) of the location\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#location-identifier](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#location-identifier)",
@@ -2299,8 +2299,8 @@
                             "format": "uri"
                         },
                         "example": [
-                            "id:pariatur",
-                            "id:adipisci"
+                            "id:ut-modi",
+                            "id:eos"
                         ]
                     },
                     "name": {
@@ -2315,8 +2315,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "Sharon Rath",
-                            "fr": "Benjamin Mace-Grondin"
+                            "en": "Dr. Kyleigh Lemke",
+                            "fr": "Juliette Descamps-Hardy"
                         }
                     },
                     "provinceState": {
@@ -2327,7 +2327,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "KwaZulu-Natal"
+                        "example": "Kerala"
                     },
                     "sublocation": {
                         "description": "Sublocation\n\nEnter the name of the Sublocation\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#sublocation](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#sublocation)",
@@ -2337,7 +2337,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "Brooklyn"
+                        "example": "Westminster"
                     },
                     "worldRegion": {
                         "description": "World Region\n\nEnter the name of the World Region\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#world-region](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#world-region)",
@@ -2347,7 +2347,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "Middle East and North Africa"
+                        "example": "Asia"
                     }
                 }
             },
@@ -2386,8 +2386,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "Alice: 'besides, that's not yet!' the chimney as well as she went on. 'We beg pardon, your.",
-                            "fr": "Sommes-nous pr\u00eats? En effet, elle se demanda-t-il. -- Advienne que je t'en prie, ne ruine \u00e0 la."
+                            "en": "I give you didn't sound of the pepper-box in a doze; but, alas! either way into the master was a.",
+                            "fr": "Signez-moi cela, cependant, et une transparence bleu\u00e2tre, qui fumaient sur son dos tranquille."
                         }
                     },
                     "identifiers": {
@@ -2403,8 +2403,8 @@
                             "format": "uri"
                         },
                         "example": [
-                            "id:explicabo",
-                            "id:ut-similique"
+                            "id:libero",
+                            "id:et-excepturi"
                         ]
                     },
                     "name": {
@@ -2419,8 +2419,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "Alivia Bashirian",
-                            "fr": "Maurice Perrier"
+                            "en": "Miss Diana Monahan Sr.",
+                            "fr": "Maurice Fouquet"
                         }
                     }
                 }
@@ -2448,8 +2448,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "Crab took me executed, whether the Dormouse; '--well in.' This was the Rabbit's voice has won?'.",
-                            "fr": "Ils causaient philosophiquement des expansions \u00e9taient si ce nom extraordinaire en haut, et, au."
+                            "en": "When the Hatter: 'as the window.' 'THAT you how I eat bats?' and she had made Alice again, and.",
+                            "fr": "Elles marchaient en s'excusant en soulevant de long \u00e0 travers une de musique allemande, celle."
                         }
                     },
                     "gtin": {
@@ -2460,7 +2460,7 @@
                         },
                         "nullable": true,
                         "type": "string",
-                        "example": "72480478438470"
+                        "example": "40532166549573"
                     },
                     "identifiers": {
                         "description": "Identifier\n\nEnter globally unique identifier(s) for the product, such as those from WikiData\n\nThis should be an identifier as it is used with semantic web technology.\n\n[https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#identifier](https://www.iptc.org/std/photometadata/specification/IPTC-PhotoMetadata#identifier)",
@@ -2475,8 +2475,8 @@
                             "format": "uri"
                         },
                         "example": [
-                            "id:aut-sed",
-                            "id:aut"
+                            "id:architecto-doloribus",
+                            "id:rerum"
                         ]
                     },
                     "name": {
@@ -2491,8 +2491,8 @@
                             "type": "string"
                         },
                         "example": {
-                            "en": "Prof. Ottilie Jones V",
-                            "fr": "\u00c9lodie Le Vidal"
+                            "en": "Gladyce Feeney",
+                            "fr": "Michelle Richard"
                         }
                     }
                 }
