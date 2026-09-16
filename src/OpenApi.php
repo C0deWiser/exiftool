@@ -37,7 +37,7 @@ class OpenApi
         ];
 
         // Init first, then fill
-        $this->openapi['components']['schemas']['iptc'] = [];
+        $this->openapi['components']['schemas']['IPTC'] = [];
 
         $attributes = $this->specification->topLevel()->getAttributes();
 
@@ -49,7 +49,7 @@ class OpenApi
             return $a->sortOrder() < $b->sortOrder() ? -1 : 1;
         });
 
-        $this->openapi['components']['schemas']['iptc'] = $this->makeTop(
+        $this->openapi['components']['schemas']['IPTC'] = $this->makeTop(
             $attributes
         );
 
@@ -218,15 +218,15 @@ class OpenApi
             }
         }
 
-        $this->openapi['components']['schemas'][$struct->jsonName()] = $el;
+        $this->openapi['components']['schemas'][$struct->dataFormat()] = $el;
 
         $api = $this->makeDefault($struct);
 
         if ($struct->isSingle()) {
-            $api['$ref'] = '#/components/schemas/'.$struct->jsonName();
+            $api['$ref'] = '#/components/schemas/'.$struct->dataFormat();
         } else {
             $api['type'] = 'array';
-            $api['items'] = ['$ref' => '#/components/schemas/'.$struct->jsonName()];
+            $api['items'] = ['$ref' => '#/components/schemas/'.$struct->dataFormat()];
         }
 
         return $api;
